@@ -1,0 +1,12 @@
+PODS:
+  - SideMenu (2.0.3)
+
+DEPENDENCIES:
+  - SideMenu
+
+SPEC CHECKSUMS:
+  SideMenu: f179260f85c68ed9b283b4a505600f2e6cbdfb10
+
+PODFILE CHECKSUM: c8f68c5edbe07a8703ab4465bc07d1a06d8bb1ce
+
+COCOAPODS: 1.1.0.rc.2
