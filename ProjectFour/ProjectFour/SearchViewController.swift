@@ -59,4 +59,21 @@ class SearchViewController: UIViewController {
     
     
 }
-    
+
+//extension SearchViewController {
+//    
+//    private func segueToChoices(_ selectedIndex:Int) {
+//        
+//        self.selectedIndex = selectedIndex
+//        self.performSegue(withIdentifier: "toChoices", sender: AnyObject?) {
+//            
+//            let destination = segue.ChoicesCollectionViewController
+//            
+//            if let recipeChoices = destination as? SearchViewController, let selectedIndex = sender as? Int {
+//                
+//                
+//            }
+//        }
+//    }
+//}
+

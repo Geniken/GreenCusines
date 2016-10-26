@@ -99,8 +99,8 @@
 		8B1AEE5D1DBF50E4008CFBF6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8B1AEE581DBF4DC6008CFBF6 /* ChoicesCollectionViewController.swift */,
 				8B1AEE601DBFBFBB008CFBF6 /* ChoicesCollectionViewCell.swift */,
+				8B1AEE581DBF4DC6008CFBF6 /* ChoicesCollectionViewController.swift */,
 				8BE7187B1DB98A340096577E /* SearchViewController.swift */,
 				8B1AEE561DBF4339008CFBF6 /* RecipeInfoViewController.swift */,
 			);
