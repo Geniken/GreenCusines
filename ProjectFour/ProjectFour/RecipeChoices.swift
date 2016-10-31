@@ -13,15 +13,25 @@ struct RecipeChoices {
     
     var image:UIImage?           //image
     var calories:Double?         //calories
-    var yield:Int?               //yield
-    var site:URL?                //url
+    var url:URL?
+    //    var yield:Int?               //yield
+    //    var site:URL?                //url
     
-//    init(image:UIImage?, calories:Double?, yield:Int?, site:URL?) {
-//        
-//        self.image = image
-//        self.calories = calories
-//        self.yield = yield
-//        self.site = site
+    
+    
+    static func resultingRecipeChoices (dict:NSDictionary) -> RecipeChoices? {
+        
+        guard let type = dict["image"] as? String,
+            let url = URL(string: type),
+            let data = try? Data(contentsOf: url),
+            let image = UIImage(data: data),
+            let calories = dict["calories"] as? Double
+            else {return nil}
+        
+        return RecipeChoices(image: image, calories:calories, url:url)
+        
+        
+    }
     
 }
 

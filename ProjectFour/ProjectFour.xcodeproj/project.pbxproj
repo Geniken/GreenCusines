@@ -7,18 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B0EE6111DC7AF6A00958B03 /* MapVariation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0EE6101DC7AF6A00958B03 /* MapVariation.swift */; };
 		8B1AEE571DBF4339008CFBF6 /* RecipeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1AEE561DBF4339008CFBF6 /* RecipeInfoViewController.swift */; };
-		8B1AEE591DBF4DC6008CFBF6 /* ChoicesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1AEE581DBF4DC6008CFBF6 /* ChoicesCollectionViewController.swift */; };
 		8B1AEE5B1DBF50D2008CFBF6 /* RecipeChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1AEE5A1DBF50D2008CFBF6 /* RecipeChoices.swift */; };
 		8B1AEE5F1DBF5299008CFBF6 /* RecipeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1AEE5E1DBF5299008CFBF6 /* RecipeInfo.swift */; };
-		8B1AEE611DBFBFBB008CFBF6 /* ChoicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1AEE601DBFBFBB008CFBF6 /* ChoicesCollectionViewCell.swift */; };
 		8B1AEE641DBFC2BC008CFBF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1AEE631DBFC2BC008CFBF6 /* ViewController.swift */; };
+		8BB6A7041DC2684600817591 /* ChoicesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB6A7031DC2684600817591 /* ChoicesCollectionViewController.swift */; };
+		8BB6A7361DC2B7FA00817591 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB6A7351DC2B7FA00817591 /* MapViewController.swift */; };
+		8BB6A7381DC2BBE600817591 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB6A7371DC2BBE600817591 /* CoreLocation.framework */; };
 		8BE7187A1DB98A340096577E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE718791DB98A340096577E /* AppDelegate.swift */; };
 		8BE7187C1DB98A340096577E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7187B1DB98A340096577E /* SearchViewController.swift */; };
 		8BE7187F1DB98A340096577E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BE7187D1DB98A340096577E /* Main.storyboard */; };
 		8BE718811DB98A340096577E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BE718801DB98A340096577E /* Assets.xcassets */; };
 		8BE718841DB98A340096577E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BE718821DB98A340096577E /* LaunchScreen.storyboard */; };
 		8BE7188F1DB98A340096577E /* ProjectFourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7188E1DB98A340096577E /* ProjectFourTests.swift */; };
+		8BEE116E1DC6AC6900865509 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEE116D1DC6AC6900865509 /* SearchTableViewController.swift */; };
+		8BEE11701DC6BE8100865509 /* RecipeChoicesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEE116F1DC6BE8100865509 /* RecipeChoicesTableViewCell.swift */; };
+		8BEE11731DC6F02F00865509 /* FavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEE11721DC6F02F00865509 /* FavoriteTableViewController.swift */; };
 		9E9C4D4E4E42EB99697B1A9B /* Pods_ProjectFour.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD00E79A38CB62EC060B4221 /* Pods_ProjectFour.framework */; };
 		AFDB4EA632C849487ECB29F2 /* Pods_ProjectFourTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD07F429E1ED179420DD7965 /* Pods_ProjectFourTests.framework */; };
 /* End PBXBuildFile section */
@@ -35,12 +40,14 @@
 
 /* Begin PBXFileReference section */
 		27D88346E7E1F5E52BEF8999 /* Pods-ProjectFourTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectFourTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectFourTests/Pods-ProjectFourTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8B0EE6101DC7AF6A00958B03 /* MapVariation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVariation.swift; sourceTree = "<group>"; };
 		8B1AEE561DBF4339008CFBF6 /* RecipeInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeInfoViewController.swift; sourceTree = "<group>"; };
-		8B1AEE581DBF4DC6008CFBF6 /* ChoicesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoicesCollectionViewController.swift; sourceTree = "<group>"; };
 		8B1AEE5A1DBF50D2008CFBF6 /* RecipeChoices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeChoices.swift; sourceTree = "<group>"; };
 		8B1AEE5E1DBF5299008CFBF6 /* RecipeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeInfo.swift; sourceTree = "<group>"; };
-		8B1AEE601DBFBFBB008CFBF6 /* ChoicesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoicesCollectionViewCell.swift; sourceTree = "<group>"; };
 		8B1AEE631DBFC2BC008CFBF6 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8BB6A7031DC2684600817591 /* ChoicesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoicesCollectionViewController.swift; sourceTree = "<group>"; };
+		8BB6A7351DC2B7FA00817591 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		8BB6A7371DC2BBE600817591 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8BE718761DB98A340096577E /* ProjectFour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectFour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE718791DB98A340096577E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BE7187B1DB98A340096577E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +58,9 @@
 		8BE7188A1DB98A340096577E /* ProjectFourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectFourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE7188E1DB98A340096577E /* ProjectFourTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFourTests.swift; sourceTree = "<group>"; };
 		8BE718901DB98A340096577E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BEE116D1DC6AC6900865509 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		8BEE116F1DC6BE8100865509 /* RecipeChoicesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeChoicesTableViewCell.swift; sourceTree = "<group>"; };
+		8BEE11721DC6F02F00865509 /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewController.swift; sourceTree = "<group>"; };
 		B7899B649AF12AF2AA1EECEA /* Pods-ProjectFour.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectFour.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectFour/Pods-ProjectFour.debug.xcconfig"; sourceTree = "<group>"; };
 		CD00E79A38CB62EC060B4221 /* Pods_ProjectFour.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectFour.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBFC14B9128BB2A9223AC3E5 /* Pods-ProjectFourTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectFourTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectFourTests/Pods-ProjectFourTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -63,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BB6A7381DC2BBE600817591 /* CoreLocation.framework in Frameworks */,
 				9E9C4D4E4E42EB99697B1A9B /* Pods_ProjectFour.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,6 +92,7 @@
 		0973A8E181B85B34AE908135 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8BB6A7371DC2BBE600817591 /* CoreLocation.framework */,
 				CD00E79A38CB62EC060B4221 /* Pods_ProjectFour.framework */,
 				FD07F429E1ED179420DD7965 /* Pods_ProjectFourTests.framework */,
 			);
@@ -99,10 +111,10 @@
 		8B1AEE5D1DBF50E4008CFBF6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8B1AEE601DBFBFBB008CFBF6 /* ChoicesCollectionViewCell.swift */,
-				8B1AEE581DBF4DC6008CFBF6 /* ChoicesCollectionViewController.swift */,
-				8BE7187B1DB98A340096577E /* SearchViewController.swift */,
+				8BEE116D1DC6AC6900865509 /* SearchTableViewController.swift */,
 				8B1AEE561DBF4339008CFBF6 /* RecipeInfoViewController.swift */,
+				8BB6A7351DC2B7FA00817591 /* MapViewController.swift */,
+				8BEE11721DC6F02F00865509 /* FavoriteTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -111,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				8B1AEE5A1DBF50D2008CFBF6 /* RecipeChoices.swift */,
+				8BEE116F1DC6BE8100865509 /* RecipeChoicesTableViewCell.swift */,
 				8B1AEE5E1DBF5299008CFBF6 /* RecipeInfo.swift */,
 			);
 			name = Model;
@@ -145,6 +158,7 @@
 				8B1AEE5C1DBF50DB008CFBF6 /* Views */,
 				8B1AEE621DBFC28A008CFBF6 /* Model */,
 				8B1AEE5D1DBF50E4008CFBF6 /* ViewControllers */,
+				8BEE11711DC6D94E00865509 /* Old */,
 				8BE718801DB98A340096577E /* Assets.xcassets */,
 			);
 			path = ProjectFour;
@@ -157,6 +171,16 @@
 				8BE718901DB98A340096577E /* Info.plist */,
 			);
 			path = ProjectFourTests;
+			sourceTree = "<group>";
+		};
+		8BEE11711DC6D94E00865509 /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				8BB6A7031DC2684600817591 /* ChoicesCollectionViewController.swift */,
+				8BE7187B1DB98A340096577E /* SearchViewController.swift */,
+				8B0EE6101DC7AF6A00958B03 /* MapVariation.swift */,
+			);
+			name = Old;
 			sourceTree = "<group>";
 		};
 		96D6C1A6B250E773E672A4EC /* Pods */ = {
@@ -374,12 +398,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B1AEE611DBFBFBB008CFBF6 /* ChoicesCollectionViewCell.swift in Sources */,
+				8BB6A7041DC2684600817591 /* ChoicesCollectionViewController.swift in Sources */,
 				8B1AEE5F1DBF5299008CFBF6 /* RecipeInfo.swift in Sources */,
 				8BE7187C1DB98A340096577E /* SearchViewController.swift in Sources */,
+				8BB6A7361DC2B7FA00817591 /* MapViewController.swift in Sources */,
+				8B0EE6111DC7AF6A00958B03 /* MapVariation.swift in Sources */,
 				8B1AEE5B1DBF50D2008CFBF6 /* RecipeChoices.swift in Sources */,
-				8B1AEE591DBF4DC6008CFBF6 /* ChoicesCollectionViewController.swift in Sources */,
+				8BEE11731DC6F02F00865509 /* FavoriteTableViewController.swift in Sources */,
+				8BEE11701DC6BE8100865509 /* RecipeChoicesTableViewCell.swift in Sources */,
 				8BE7187A1DB98A340096577E /* AppDelegate.swift in Sources */,
+				8BEE116E1DC6AC6900865509 /* SearchTableViewController.swift in Sources */,
 				8B1AEE641DBFC2BC008CFBF6 /* ViewController.swift in Sources */,
 				8B1AEE571DBF4339008CFBF6 /* RecipeInfoViewController.swift in Sources */,
 			);
