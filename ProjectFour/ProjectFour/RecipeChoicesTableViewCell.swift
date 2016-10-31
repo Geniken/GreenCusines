@@ -14,6 +14,7 @@ class RecipeChoicesTableViewCell: UITableViewCell {
     
     @IBOutlet weak var caloriesLabel: UILabel!
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

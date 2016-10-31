@@ -12,6 +12,9 @@ class SearchTableViewController: UITableViewController {
     
     var images:[UIImage] = []
     
+    var selectedImage:String?
+    var selectedLabel:String?
+    
     var recipeChoices:[RecipeChoices] = []
     
     var selectedIndex: Int?
@@ -21,6 +24,9 @@ class SearchTableViewController: UITableViewController {
     @IBOutlet var myTableView: UITableView!
     
     @IBOutlet weak var searchBar: UISearchBar!
+    
+    
+    // Search based on keyword
     
     @IBAction func searchButton(_ sender: AnyObject) {
         
@@ -54,8 +60,9 @@ class SearchTableViewController: UITableViewController {
                         DispatchQueue.main.async {
                             self.searchBar.reloadInputViews()
                             self.myTableView.reloadData()
+
                         }
-                        
+                    
                     }
                     
                     print (jsonResult)
@@ -97,6 +104,8 @@ class SearchTableViewController: UITableViewController {
     }
     
     
+    //reusuable table view cell
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "choiceCell", for: indexPath) as? RecipeChoicesTableViewCell {
@@ -111,40 +120,67 @@ class SearchTableViewController: UITableViewController {
             
             
             cell.recipeImage.image = imageObject
-//            cell.caloriesLabel. = recipeforRow.calories
+            //            cell.caloriesLabel. = recipeforRow.calories
             
             
-
-        return cell
+            return cell
             
         }
         
         return UITableViewCell()
     }
-    
-    
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
+
+extension SearchTableViewController {
+    
+    override func tableView(_ tableView:UITableView, didSelectRowAt indexPath:IndexPath) {
+        
+        let row = (indexPath as NSIndexPath).row
+        
+        guard row >= 0 && row < recipeChoices.count else {return}
+        
+        self.segueToReceipeInfo(row)
+    }
+}
+
+
+//Prepare for Segue
+
+extension SearchTableViewController {
+    
+    func segueToReceipeInfo(_ selectedIndex:Int) {
+        
+        self.selectedIndex = selectedIndex
+        self.performSegue(withIdentifier: "toRecipeInfo", sender: selectedIndex)
+    }
+    
+    func prepareForSegue(segue:UIStoryboardSegue, sender: AnyObject?) {
+        
+        let destination = segue.destination
+        
+        if let recipeInfo = destination as? RecipeInfoViewController, let selectedIndex = sender as? Int {
+            
+            let recipe = recipeChoices[selectedIndex]
+            
+            recipeInfo.recipe = recipe
+        }
+    }
+}
+
+
+// Allow Edit/Delete
+
+func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    if editingStyle == .delete {
+        
+        tableView.deleteRows(at: [indexPath], with: .fade)
+    } else if editingStyle == .insert {
+      
+    }
+}
+
+
+
+
+
+
