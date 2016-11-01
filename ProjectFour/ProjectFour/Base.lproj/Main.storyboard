@@ -28,7 +28,7 @@
                                     <frame key="frameInset" width="375" height="209"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yET-hM-B7X">
+                                        <view alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yET-hM-B7X">
                                             <frame key="frameInset" minX="19" minY="8" width="338" height="192"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
@@ -36,8 +36,19 @@
                                                     <frame key="frameInset" minX="10" minY="10" width="318" height="172"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPW-Ec-SQE">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPW-Ec-SQE">
                                                     <frame key="frameInset" minX="16" minY="151" width="223" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="13"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <size key="shadowOffset" width="0.0" height="1.5"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcc-0i-E5d">
+                                                    <frame key="frameInset" minX="16" minY="128" width="223" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -53,8 +64,11 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="borderViewOutlet" destination="yET-hM-B7X" id="utk-1Y-6hD"/>
                                     <outlet property="caloriesLabel" destination="qPW-Ec-SQE" id="pEM-Jv-siL"/>
+                                    <outlet property="caloriesLabelOutlet" destination="qPW-Ec-SQE" id="28v-Xj-07B"/>
                                     <outlet property="recipeImage" destination="IhL-7y-IwF" id="mXa-cP-pnf"/>
+                                    <outlet property="recipeImageOutlet" destination="IhL-7y-IwF" id="kwQ-vI-5Ih"/>
                                     <segue destination="LfR-GY-bEA" kind="show" identifier="toRecipeInfo" id="65O-6w-LWk"/>
                                 </connections>
                             </tableViewCell>
@@ -93,17 +107,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingredients" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fM-ZJ-65y">
-                                <frame key="frameInset" minX="16" minY="516" width="179" height="143"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.031372549020000001" green="0.7725490196" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <size key="shadowOffset" width="0.0" height="1"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recipe Instructions:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZB2-N0-I7k">
-                                <frame key="frameInset" minX="27" minY="443" width="187" height="21"/>
+                                <frame key="frameInset" minX="27" minY="459" width="187" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="19"/>
                                 <nil key="textColor"/>
@@ -112,10 +117,10 @@
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEz-7A-Dwz">
-                                <frame key="frameInset" minX="274" minY="437" width="73" height="33"/>
+                                <frame key="frameInset" minX="274" minY="452" width="73" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.031372549020000001" green="0.77164465319999997" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="17"/>
                                 <size key="titleShadowOffset" width="0.0" height="1.5"/>
                                 <state key="normal" title="Source">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -125,8 +130,8 @@
                                     <action selector="recipeSourceButton:" destination="LfR-GY-bEA" eventType="touchUpInside" id="mm9-4s-zX8"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jof-dC-38S">
-                                <frame key="frameInset" minX="27" minY="102" width="320" height="320"/>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jof-dC-38S">
+                                <frame key="frameInset" minX="27" minY="114" width="320" height="320"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y04-46-e0e">
@@ -137,7 +142,7 @@
                                 <color key="backgroundColor" red="0.031372549020000001" green="0.77164465319999997" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nutrition" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmP-sh-Rzs">
-                                <frame key="frameInset" minX="181" minY="516" width="166" height="143"/>
+                                <frame key="frameInset" minX="27" minY="531" width="320" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="14"/>
                                 <nil key="textColor"/>
@@ -146,10 +151,10 @@
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XrA-VF-bMb">
-                                <frame key="frameInset" minX="27" minY="478" width="151" height="30"/>
+                                <frame key="frameInset" minX="27" minY="493" width="151" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.031372549020000001" green="0.7725490196" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="16"/>
                                 <size key="titleShadowOffset" width="0.0" height="1.5"/>
                                 <state key="normal" title="Share to Twitter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -160,10 +165,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2h-yS-yse">
-                                <frame key="frameInset" minX="196" minY="478" width="151" height="30"/>
+                                <frame key="frameInset" minX="196" minY="493" width="151" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.031372549020000001" green="0.7725490196" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="16"/>
                                 <size key="titleShadowOffset" width="0.0" height="1.5"/>
                                 <state key="normal" title="Share to Facebook">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -173,6 +178,17 @@
                                     <action selector="shareToFacebook:" destination="LfR-GY-bEA" eventType="touchUpInside" id="zIk-dr-YWt"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IkI-PI-n9A">
+                                <frame key="frameInset" minX="27" minY="72" width="320" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.031372549020000001" green="0.7725490196" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="0.0" height="2"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.98511982681087429" green="0.98701219210885782" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -191,7 +207,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageBorder" destination="Jof-dC-38S" id="Bnz-i5-eTs"/>
-                        <outlet property="ingredientsLabel" destination="6fM-ZJ-65y" id="YKf-HK-wZl"/>
                         <outlet property="nutritionLabel" destination="tmP-sh-Rzs" id="irf-9C-7Ko"/>
                         <outlet property="recipeImage" destination="y04-46-e0e" id="mH5-Me-u9N"/>
                         <outlet property="shareToFacebookButton" destination="m2h-yS-yse" id="qaH-FW-EJt"/>
@@ -282,6 +297,8 @@
                                                     <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" red="0.031372549020000001" green="0.77164465319999997" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingredients" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPh-UE-MHS">
                                                     <frame key="frameInset" minX="104" minY="44" width="266" height="21"/>

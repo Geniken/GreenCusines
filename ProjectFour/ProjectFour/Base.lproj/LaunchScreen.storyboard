@@ -40,8 +40,8 @@
                                 <frame key="frameInset" minX="134" minY="74" width="106" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GreenThumb" translatesAutoresizingMaskIntoConstraints="NO" id="lol-4b-SLd">
-                                        <frame key="frameInset" minX="24" minY="22" width="58" height="58"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GreenThumb.png" translatesAutoresizingMaskIntoConstraints="NO" id="lol-4b-SLd">
+                                        <frame key="frameInset" minX="24" minY="14" width="58" height="58"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -57,7 +57,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="GreenThumb" width="298" height="298"/>
+        <image name="GreenThumb.png" width="298" height="298"/>
         <image name="HeathyFoods" width="800" height="469"/>
     </resources>
 </document>

@@ -11,6 +11,7 @@ import UIKit
 
 struct RecipeChoices {
     
+//    var name:String?             //label
     var image:UIImage?           //image
     var calories:Double?         //calories
     var url:URL?
@@ -25,6 +26,7 @@ struct RecipeChoices {
             let url = URL(string: type),
             let data = try? Data(contentsOf: url),
             let image = UIImage(data: data),
+//            let name = dict["title"] as? String,
             let calories = dict["calories"] as? Double
             else {return nil}
         

@@ -24,8 +24,6 @@ class RecipeInfoViewController:UIViewController {
     
     @IBOutlet weak var imageBorder: UIView!
     
-    @IBOutlet weak var ingredientsLabel: UILabel!
-    
     @IBOutlet weak var nutritionLabel: UILabel!
     
     @IBAction func shareToFacebook(_ sender: UIButton) {
@@ -41,15 +39,11 @@ class RecipeInfoViewController:UIViewController {
         self.present(shareToTwitter, animated:true, completion:nil)
         
     }
-
+    
     
     @IBAction func recipeSourceButton(_ sender: AnyObject) {
         
-        
-        
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,21 +57,28 @@ class RecipeInfoViewController:UIViewController {
         recipeImage.image = recipe?.image
         
         
-        
-        // Make Image border circular 
+        // Make Image border circular
         imageBorder.layer.borderWidth = 1
         imageBorder.layer.masksToBounds = false
         imageBorder.layer.cornerRadius = imageBorder.frame.height/2
         imageBorder.clipsToBounds = true
-
+        
         
         //Round the corners of the share/source buttons
         
-        shareToTwitterButton.layer.cornerRadius = 10
+        shareToTwitterButton.layer.cornerRadius = 5
         
-        shareToFacebookButton.layer.cornerRadius = 10
+        shareToFacebookButton.layer.cornerRadius = 5
         
-        sourceButton.layer.cornerRadius = 10
-
+        sourceButton.layer.cornerRadius = 5
+        
+        //Call Data
+        
+        guard let recipeView = recipe else {
+            recipeImage.image = nil
+            return
+        }
+        
+        recipeImage.image = recipeView.image
     }
 }

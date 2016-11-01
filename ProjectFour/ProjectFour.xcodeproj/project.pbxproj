@@ -13,6 +13,7 @@
 		8B1AEE5B1DBF50D2008CFBF6 /* RecipeChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1AEE5A1DBF50D2008CFBF6 /* RecipeChoices.swift */; };
 		8B1AEE5F1DBF5299008CFBF6 /* RecipeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1AEE5E1DBF5299008CFBF6 /* RecipeInfo.swift */; };
 		8B1AEE641DBFC2BC008CFBF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1AEE631DBFC2BC008CFBF6 /* ViewController.swift */; };
+		8B6119441DC8037B00A04CDE /* GreenThumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B6119431DC8037B00A04CDE /* GreenThumb.png */; };
 		8BB6A7041DC2684600817591 /* ChoicesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB6A7031DC2684600817591 /* ChoicesCollectionViewController.swift */; };
 		8BB6A7361DC2B7FA00817591 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB6A7351DC2B7FA00817591 /* MapViewController.swift */; };
 		8BB6A7381DC2BBE600817591 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB6A7371DC2BBE600817591 /* CoreLocation.framework */; };
@@ -47,6 +48,7 @@
 		8B1AEE5A1DBF50D2008CFBF6 /* RecipeChoices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeChoices.swift; sourceTree = "<group>"; };
 		8B1AEE5E1DBF5299008CFBF6 /* RecipeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeInfo.swift; sourceTree = "<group>"; };
 		8B1AEE631DBFC2BC008CFBF6 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8B6119431DC8037B00A04CDE /* GreenThumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenThumb.png; sourceTree = "<group>"; };
 		8BB6A7031DC2684600817591 /* ChoicesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoicesCollectionViewController.swift; sourceTree = "<group>"; };
 		8BB6A7351DC2B7FA00817591 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8BB6A7371DC2BBE600817591 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -179,6 +181,7 @@
 		8BEE11711DC6D94E00865509 /* Old */ = {
 			isa = PBXGroup;
 			children = (
+				8B6119431DC8037B00A04CDE /* GreenThumb.png */,
 				8BB6A7031DC2684600817591 /* ChoicesCollectionViewController.swift */,
 				8BE7187B1DB98A340096577E /* SearchViewController.swift */,
 				8B0EE6101DC7AF6A00958B03 /* MapVariation.swift */,
@@ -291,6 +294,7 @@
 				8BE718841DB98A340096577E /* LaunchScreen.storyboard in Resources */,
 				8BE718811DB98A340096577E /* Assets.xcassets in Resources */,
 				8BE7187F1DB98A340096577E /* Main.storyboard in Resources */,
+				8B6119441DC8037B00A04CDE /* GreenThumb.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

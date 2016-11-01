@@ -11,7 +11,7 @@ import UIKit
 
 struct RecipeInfoView {
     
-    var ingredients:[String?]   //ingredients
+    var name:[String?]        //label 
     var nutrition:[String?]   //totalDaily
     
 }
