@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AsyncSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ProjectFour.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>469F624BDEAE5A1F7BFA209478BE994E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>91B8FCF9DF0E6A57EE478948D77A76F6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C1BA4A0F7BCFDCD5731430B63944D37D</key>
+		<key>D1DC35DB2C695031A72543555FB23729</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FF08802EEE47407F26F63410F3B32017</key>
+		<key>FF8B124B6E2C4EA8FA8668FFD7F96F28</key>
 		<dict>
 			<key>primary</key>
 			<true/>

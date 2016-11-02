@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Async
 
 class SearchTableViewController: UITableViewController {
     
@@ -36,12 +37,11 @@ class SearchTableViewController: UITableViewController {
     
     func reload () {
         
-        async.addOperation {
-            
+        
+        Async.main {
             self.myTableView.reloadData()
-            
-            
         }
+        
         
     }
     
@@ -53,47 +53,49 @@ class SearchTableViewController: UITableViewController {
     
     @IBAction func searchButton(_ sender: AnyObject) {
         
-        if let url = URL(string:"https://api.edamam.com/search?q="+searchBar.text!+"&app_id=e2513178&app_key=c5fe2bae8f394c5bc0e4ba35ad51aa12") {
-            
-            let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+        Async.background {
+            if let url = URL(string:"https://api.edamam.com/search?q="+self.searchBar.text!+"&app_id=e2513178&app_key=c5fe2bae8f394c5bc0e4ba35ad51aa12") {
                 
-                if error != nil {
+                let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
                     
-                    print (error)
-                    
-                } else {
-                    
-                    guard let data = try? Data(contentsOf: url) else {return}
-                    
-                    let jsonResult = try? JSONSerialization.jsonObject(with: data, options: []) as! NSDictionary
-                    
-                    let array = jsonResult?["hits"] as? NSArray
-                    
-                    for i in array! {
+                    if error != nil {
                         
+                        print (error)
                         
-                        guard let resultingDictionary = i as? NSDictionary,
-                            let recipeDictionary = resultingDictionary ["recipe"] as? NSDictionary,
-                            let result = RecipeChoices.resultingRecipeChoices(dict: recipeDictionary)
-                            else { return }
+                    } else {
                         
-                        self.calories.append(result.calories!) //guard
-                        self.images.append(result.image!)
-                        self.recipeChoices.append(result)
+                        guard let data = try? Data(contentsOf: url) else {return}
                         
-                        self.reload()
+                        let jsonResult = try? JSONSerialization.jsonObject(with: data, options: []) as! NSDictionary
+                        
+                        let array = jsonResult?["hits"] as? NSArray
+                        
+                        for i in array! {
+                            
+                            
+                            guard let resultingDictionary = i as? NSDictionary,
+                                let recipeDictionary = resultingDictionary ["recipe"] as? NSDictionary,
+                                let result = RecipeChoices.resultingRecipeChoices(dict: recipeDictionary)
+                                else { return }
+                            
+                            self.calories.append(result.calories!) //guard
+                            self.images.append(result.image!)
+                            self.recipeChoices.append(result)
+                            
+                            self.reload()
+                        }
+                        
+                        print (jsonResult)
+                        
                     }
-                    
-                    print (jsonResult)
                     
                 }
                 
+                task.resume()
+                
             }
-            
-            task.resume()
-            
-            self.reload() 
         }
+        
         
     }
     
@@ -114,11 +116,7 @@ class SearchTableViewController: UITableViewController {
         //                view.endEditing(true)
         
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-    }
+
     
     // MARK: - Table View Data Source
     
@@ -130,7 +128,7 @@ class SearchTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 10  //don't hard code it. limit
+        return recipeChoices.count
     }
     
     //Reusuable Table View Cell
@@ -156,6 +154,8 @@ class SearchTableViewController: UITableViewController {
             cell.recipeImage.image = imageObject
             cell.caloriesLabel.text = calorieObject
             
+            print("FIRST CELL: \(recipeChoices[0])")
+            
             
             return cell
             
@@ -177,6 +177,7 @@ extension SearchTableViewController {
         self.segueToReceipeInfo(row)
     }
 }
+
 
 //Prepare for Segue
 
