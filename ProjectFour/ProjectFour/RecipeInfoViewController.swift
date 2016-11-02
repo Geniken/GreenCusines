@@ -26,6 +26,9 @@ class RecipeInfoViewController:UIViewController {
     
     @IBOutlet weak var nutritionLabel: UILabel!
     
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    
     @IBAction func shareToFacebook(_ sender: UIButton) {
         let shareToFacebook:SLComposeViewController = SLComposeViewController(forServiceType:SLServiceTypeFacebook)
         
@@ -50,7 +53,7 @@ class RecipeInfoViewController:UIViewController {
         
         
         // Make Image circular
-        recipeImage.layer.borderWidth = 1
+        recipeImage.layer.borderWidth = 0
         recipeImage.layer.masksToBounds = false
         recipeImage.layer.cornerRadius = recipeImage.frame.height/2
         recipeImage.clipsToBounds = true
@@ -65,6 +68,8 @@ class RecipeInfoViewController:UIViewController {
         
         
         //Round the corners of the share/source buttons
+        
+        sourceButton.layer.cornerRadius = 10 
         
         shareToTwitterButton.layer.cornerRadius = 5
         

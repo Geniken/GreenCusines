@@ -12,7 +12,12 @@
 		8B1AEE571DBF4339008CFBF6 /* RecipeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1AEE561DBF4339008CFBF6 /* RecipeInfoViewController.swift */; };
 		8B1AEE5B1DBF50D2008CFBF6 /* RecipeChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1AEE5A1DBF50D2008CFBF6 /* RecipeChoices.swift */; };
 		8B1AEE5F1DBF5299008CFBF6 /* RecipeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1AEE5E1DBF5299008CFBF6 /* RecipeInfo.swift */; };
-		8B1AEE641DBFC2BC008CFBF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1AEE631DBFC2BC008CFBF6 /* ViewController.swift */; };
+		8B591BF31DC91F4B00095903 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B591BF21DC91F4B00095903 /* CameraViewController.swift */; };
+		8B591BF51DC91F5F00095903 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B591BF41DC91F5F00095903 /* ViewController.swift */; };
+		8B591BFC1DC93CDF00095903 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B591BFA1DC93CDF00095903 /* FBSDKCoreKit.framework */; };
+		8B591BFD1DC93CDF00095903 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B591BFB1DC93CDF00095903 /* FBSDKLoginKit.framework */; };
+		8B591BFF1DC93EA900095903 /* FBLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B591BFE1DC93EA900095903 /* FBLoginViewController.swift */; };
+		8B591C021DC9462500095903 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B591C011DC9462500095903 /* Bolts.framework */; };
 		8B6119441DC8037B00A04CDE /* GreenThumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B6119431DC8037B00A04CDE /* GreenThumb.png */; };
 		8BB6A7041DC2684600817591 /* ChoicesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB6A7031DC2684600817591 /* ChoicesCollectionViewController.swift */; };
 		8BB6A7361DC2B7FA00817591 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB6A7351DC2B7FA00817591 /* MapViewController.swift */; };
@@ -25,7 +30,6 @@
 		8BE7188F1DB98A340096577E /* ProjectFourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7188E1DB98A340096577E /* ProjectFourTests.swift */; };
 		8BEE116E1DC6AC6900865509 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEE116D1DC6AC6900865509 /* SearchTableViewController.swift */; };
 		8BEE11701DC6BE8100865509 /* RecipeChoicesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEE116F1DC6BE8100865509 /* RecipeChoicesTableViewCell.swift */; };
-		8BEE11731DC6F02F00865509 /* FavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEE11721DC6F02F00865509 /* FavoriteTableViewController.swift */; };
 		9E9C4D4E4E42EB99697B1A9B /* Pods_ProjectFour.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD00E79A38CB62EC060B4221 /* Pods_ProjectFour.framework */; };
 		AFDB4EA632C849487ECB29F2 /* Pods_ProjectFourTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD07F429E1ED179420DD7965 /* Pods_ProjectFourTests.framework */; };
 /* End PBXBuildFile section */
@@ -47,7 +51,13 @@
 		8B1AEE561DBF4339008CFBF6 /* RecipeInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeInfoViewController.swift; sourceTree = "<group>"; };
 		8B1AEE5A1DBF50D2008CFBF6 /* RecipeChoices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeChoices.swift; sourceTree = "<group>"; };
 		8B1AEE5E1DBF5299008CFBF6 /* RecipeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeInfo.swift; sourceTree = "<group>"; };
-		8B1AEE631DBFC2BC008CFBF6 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8B591BF21DC91F4B00095903 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		8B591BF41DC91F5F00095903 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8B591BFA1DC93CDF00095903 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		8B591BFB1DC93CDF00095903 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		8B591BFE1DC93EA900095903 /* FBLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBLoginViewController.swift; sourceTree = "<group>"; };
+		8B591C001DC9453300095903 /* ProjectFour.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProjectFour.entitlements; sourceTree = "<group>"; };
+		8B591C011DC9462500095903 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		8B6119431DC8037B00A04CDE /* GreenThumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenThumb.png; sourceTree = "<group>"; };
 		8BB6A7031DC2684600817591 /* ChoicesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoicesCollectionViewController.swift; sourceTree = "<group>"; };
 		8BB6A7351DC2B7FA00817591 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -64,7 +74,6 @@
 		8BE718901DB98A340096577E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BEE116D1DC6AC6900865509 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		8BEE116F1DC6BE8100865509 /* RecipeChoicesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeChoicesTableViewCell.swift; sourceTree = "<group>"; };
-		8BEE11721DC6F02F00865509 /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewController.swift; sourceTree = "<group>"; };
 		B7899B649AF12AF2AA1EECEA /* Pods-ProjectFour.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectFour.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectFour/Pods-ProjectFour.debug.xcconfig"; sourceTree = "<group>"; };
 		CD00E79A38CB62EC060B4221 /* Pods_ProjectFour.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectFour.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBFC14B9128BB2A9223AC3E5 /* Pods-ProjectFourTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectFourTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectFourTests/Pods-ProjectFourTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,7 +86,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B591C021DC9462500095903 /* Bolts.framework in Frameworks */,
 				8BB6A7381DC2BBE600817591 /* CoreLocation.framework in Frameworks */,
+				8B591BFC1DC93CDF00095903 /* FBSDKCoreKit.framework in Frameworks */,
+				8B591BFD1DC93CDF00095903 /* FBSDKLoginKit.framework in Frameworks */,
 				9E9C4D4E4E42EB99697B1A9B /* Pods_ProjectFour.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +108,9 @@
 		0973A8E181B85B34AE908135 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8B591C011DC9462500095903 /* Bolts.framework */,
+				8B591BFA1DC93CDF00095903 /* FBSDKCoreKit.framework */,
+				8B591BFB1DC93CDF00095903 /* FBSDKLoginKit.framework */,
 				8BB6A7371DC2BBE600817591 /* CoreLocation.framework */,
 				CD00E79A38CB62EC060B4221 /* Pods_ProjectFour.framework */,
 				FD07F429E1ED179420DD7965 /* Pods_ProjectFourTests.framework */,
@@ -107,7 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				8BE718791DB98A340096577E /* AppDelegate.swift */,
-				8B1AEE631DBFC2BC008CFBF6 /* ViewController.swift */,
+				8B591BF41DC91F5F00095903 /* ViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -118,7 +133,7 @@
 				8BEE116D1DC6AC6900865509 /* SearchTableViewController.swift */,
 				8B1AEE561DBF4339008CFBF6 /* RecipeInfoViewController.swift */,
 				8BB6A7351DC2B7FA00817591 /* MapViewController.swift */,
-				8BEE11721DC6F02F00865509 /* FavoriteTableViewController.swift */,
+				8B591BF21DC91F4B00095903 /* CameraViewController.swift */,
 				8B0EE6121DC7DE3400958B03 /* YoutubeViewController.swift */,
 			);
 			name = ViewControllers;
@@ -158,6 +173,7 @@
 		8BE718781DB98A340096577E /* ProjectFour */ = {
 			isa = PBXGroup;
 			children = (
+				8B591C001DC9453300095903 /* ProjectFour.entitlements */,
 				8BE718821DB98A340096577E /* LaunchScreen.storyboard */,
 				8BE7187D1DB98A340096577E /* Main.storyboard */,
 				8B1AEE5C1DBF50DB008CFBF6 /* Views */,
@@ -181,6 +197,7 @@
 		8BEE11711DC6D94E00865509 /* Old */ = {
 			isa = PBXGroup;
 			children = (
+				8B591BFE1DC93EA900095903 /* FBLoginViewController.swift */,
 				8B6119431DC8037B00A04CDE /* GreenThumb.png */,
 				8BB6A7031DC2684600817591 /* ChoicesCollectionViewController.swift */,
 				8BE7187B1DB98A340096577E /* SearchViewController.swift */,
@@ -258,6 +275,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = P257QVWC92;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					8BE718891DB98A340096577E = {
 						CreatedOnToolsVersion = 8.0;
@@ -409,15 +431,16 @@
 				8B1AEE5F1DBF5299008CFBF6 /* RecipeInfo.swift in Sources */,
 				8BE7187C1DB98A340096577E /* SearchViewController.swift in Sources */,
 				8BB6A7361DC2B7FA00817591 /* MapViewController.swift in Sources */,
+				8B591BF51DC91F5F00095903 /* ViewController.swift in Sources */,
 				8B0EE6111DC7AF6A00958B03 /* MapVariation.swift in Sources */,
 				8B0EE6131DC7DE3400958B03 /* YoutubeViewController.swift in Sources */,
 				8B1AEE5B1DBF50D2008CFBF6 /* RecipeChoices.swift in Sources */,
-				8BEE11731DC6F02F00865509 /* FavoriteTableViewController.swift in Sources */,
 				8BEE11701DC6BE8100865509 /* RecipeChoicesTableViewCell.swift in Sources */,
 				8BE7187A1DB98A340096577E /* AppDelegate.swift in Sources */,
 				8BEE116E1DC6AC6900865509 /* SearchTableViewController.swift in Sources */,
-				8B1AEE641DBFC2BC008CFBF6 /* ViewController.swift in Sources */,
+				8B591BF31DC91F4B00095903 /* CameraViewController.swift in Sources */,
 				8B1AEE571DBF4339008CFBF6 /* RecipeInfoViewController.swift in Sources */,
+				8B591BFF1DC93EA900095903 /* FBLoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,7 +580,12 @@
 			baseConfigurationReference = B7899B649AF12AF2AA1EECEA /* Pods-ProjectFour.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ProjectFour/ProjectFour.entitlements;
 				DEVELOPMENT_TEAM = P257QVWC92;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ProjectFour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.ProjectFour;
@@ -571,7 +599,12 @@
 			baseConfigurationReference = FA3CC0D2CA7C0AB83FDC808A /* Pods-ProjectFour.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ProjectFour/ProjectFour.entitlements;
 				DEVELOPMENT_TEAM = P257QVWC92;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ProjectFour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.ProjectFour;

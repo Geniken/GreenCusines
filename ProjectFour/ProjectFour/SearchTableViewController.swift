@@ -20,13 +20,36 @@ class SearchTableViewController: UITableViewController {
     
     var selectedIndex: Int?
     
-    let main = OperationQueue.main
+    private let main = OperationQueue.main
+    
+    private let async: OperationQueue = {
+        
+        let operationQueue = OperationQueue()
+        
+        operationQueue.maxConcurrentOperationCount = 5
+        
+        return operationQueue
+        
+    }()
+    
+    // Reload Data
+    
+    func reload () {
+        
+        async.addOperation {
+            
+            self.myTableView.reloadData()
+            
+            
+        }
+        
+    }
     
     @IBOutlet var myTableView: UITableView!
     
     @IBOutlet weak var searchBar: UISearchBar!
     
-    // Search based on keyword
+    // Search Based on Keyword
     
     @IBAction func searchButton(_ sender: AnyObject) {
         
@@ -48,52 +71,48 @@ class SearchTableViewController: UITableViewController {
                     
                     for i in array! {
                         
+                        
                         guard let resultingDictionary = i as? NSDictionary,
-                            
                             let recipeDictionary = resultingDictionary ["recipe"] as? NSDictionary,
                             let result = RecipeChoices.resultingRecipeChoices(dict: recipeDictionary)
-                            else {return}
+                            else { return }
                         
-                        self.calories.append(result.calories!)
+                        self.calories.append(result.calories!) //guard
                         self.images.append(result.image!)
                         self.recipeChoices.append(result)
                         
-                        
-                        // Reload Data
-                        
-                        DispatchQueue.main.async {
-                            self.searchBar.reloadInputViews()
-                            self.myTableView.reloadData()
-                            
-                        }
-                        
+                        self.reload()
                     }
                     
                     print (jsonResult)
                     
                 }
+                
             }
             
             task.resume()
+            
+            self.reload() 
         }
-        
         
     }
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         myTableView.delegate = self
         myTableView.dataSource = self
         
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SearchTableViewController.dismissKeyboard))
-//        view.addGestureRecognizer(tap)
-//        
-//    }
-//    
-//    func dismissKeyboard() {
-//        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-//        view.endEditing(true)
+        //                let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SearchTableViewController.dismissKeyboard))
+        //                view.addGestureRecognizer(tap)
+        //
+        //    }
+        //
+        //            func dismissKeyboard() {
+        //                //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        //                view.endEditing(true)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -101,7 +120,7 @@ class SearchTableViewController: UITableViewController {
         
     }
     
-    // MARK: - Table view data source
+    // MARK: - Table View Data Source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         
@@ -111,9 +130,8 @@ class SearchTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 10
+        return 10  //don't hard code it. limit
     }
-    
     
     //Reusuable Table View Cell
     
@@ -126,15 +144,13 @@ class SearchTableViewController: UITableViewController {
             
             let recipeforRow = recipeChoices[indexPath.row]
             
-            guard let newData = try? Data (contentsOf:recipeforRow.url!) else {return UITableViewCell () }
+            guard let newData = try? Data (contentsOf:recipeforRow.url!) else {return UITableViewCell () } //async
             
             guard let imageObject = UIImage(data:newData) else {return UITableViewCell () }
             
-            //            guard let nameObject = String(data:newData) else {return
-            //                UITableViewCell () }
-            
             let calorieObject:String = "\(recipeforRow.calories)"
             
+            //            let nameObject:String = "\(recipeforRow.name)"
             
             //            cell.nameLabel.text = nameObject
             cell.recipeImage.image = imageObject
@@ -146,36 +162,9 @@ class SearchTableViewController: UITableViewController {
         }
         
         return UITableViewCell()
+        
     }
 }
-
-    var valueToPass:UIImageView!
-
-//extension SearchTableViewController {
-//    
-//    
-//    func tableView(tableView:UITableView!, didSelectRowAtIndexPath indexPath:NSIndexPath!) {
-//        
-//        let indexPath = tableView.indexPathForSelectedRow
-//        
-//        let currentCell = tableView.cellForRow(at: indexPath!)! as UITableViewCell
-//        
-//        valueToPass = (currentCell.imageView?.image)!
-//        
-//        performSegue(withIdentifier: "toRecipeInfo", sender: self)
-//        
-//        
-//    }
-//    
-//     func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if (segue.identifier == "toRecipeInfo") {
-//            
-//            var viewController = segue.destination as! RecipeInfoViewController
-//            
-//            viewController.recipeImage = valueToPass
-//        }
-//    }
-//}
 
 extension SearchTableViewController {
     
@@ -189,7 +178,6 @@ extension SearchTableViewController {
     }
 }
 
-
 //Prepare for Segue
 
 extension SearchTableViewController {
@@ -197,31 +185,21 @@ extension SearchTableViewController {
     func segueToReceipeInfo(_ selectedIndex:Int) {
         
         self.selectedIndex = selectedIndex
-        self.performSegue(withIdentifier: "toRecipeInfo", sender: selectedIndex)
+        //        self.performSegue(withIdentifier: "toRecipeInfo", sender: selectedIndex)
     }
     
-    func prepareForSegue(segue:UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue:UIStoryboardSegue, sender: Any?) {
         
         let destination = segue.destination
         
-        if let recipeInfo = destination as? RecipeInfoViewController, let selectedIndex = sender as? Int {
+        if let recipeInfo = destination as? RecipeInfoViewController {
             
-            let recipe = recipeChoices[selectedIndex]
+            guard let selectedRow = myTableView.indexPathForSelectedRow?.row else { return }
+            
+            let recipe = recipeChoices[selectedRow]
             
             recipeInfo.recipe = recipe
         }
-    }
-}
-
-
-// Allow Edit/Delete
-
-func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-    if editingStyle == .delete {
-        
-        tableView.deleteRows(at: [indexPath], with: .fade)
-    } else if editingStyle == .insert {
-        
     }
 }
 

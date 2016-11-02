@@ -14,13 +14,12 @@ class RecipeChoicesTableViewCell: UITableViewCell {
     
     @IBOutlet weak var caloriesLabel: UILabel!
     
-//    @IBOutlet weak var nameLabel: UILabel!
-    
     @IBOutlet weak var borderViewOutlet: UIView!
     
     @IBOutlet weak var recipeImageOutlet: UIImageView!
     
     @IBOutlet weak var caloriesLabelOutlet: UILabel!
+    
     
     
     override func awakeFromNib() {
