@@ -9,7 +9,11 @@
 import UIKit
 
 class RecipeChoicesTableViewCell: UITableViewCell {
+    
+    
 
+    @IBOutlet weak var nameLabel: UILabel!
+    
     @IBOutlet weak var recipeImage: UIImageView!
     
     @IBOutlet weak var caloriesLabel: UILabel!
@@ -17,9 +21,6 @@ class RecipeChoicesTableViewCell: UITableViewCell {
     @IBOutlet weak var borderViewOutlet: UIView!
     
     @IBOutlet weak var recipeImageOutlet: UIImageView!
-    
-    @IBOutlet weak var caloriesLabelOutlet: UILabel!
-    
     
     
     override func awakeFromNib() {

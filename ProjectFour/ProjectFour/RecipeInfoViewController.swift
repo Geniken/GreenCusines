@@ -9,11 +9,15 @@
 import Foundation
 import UIKit
 import Social
+import Async
+
 
 class RecipeInfoViewController:UIViewController {
     
     var recipe:RecipeChoices?
     
+    var recipeChoices:[RecipeChoices] = []
+        
     @IBOutlet weak var recipeImage: UIImageView!
     
     @IBOutlet weak var sourceButton: UIButton!
@@ -24,7 +28,7 @@ class RecipeInfoViewController:UIViewController {
     
     @IBOutlet weak var imageBorder: UIView!
     
-    @IBOutlet weak var nutritionLabel: UILabel!
+    @IBOutlet weak var ingredientsLabel: UILabel!
     
     @IBOutlet weak var nameLabel: UILabel!
     
@@ -49,6 +53,9 @@ class RecipeInfoViewController:UIViewController {
     
     @IBAction func recipeSourceButton(_ sender: AnyObject) {
         
+        Async.background {
+            
+        }
     }
     
     override func viewDidLoad() {
@@ -64,7 +71,7 @@ class RecipeInfoViewController:UIViewController {
         
         
         // Make Image border circular
-        imageBorder.layer.borderWidth = 1
+        imageBorder.layer.borderWidth = 0
         imageBorder.layer.masksToBounds = false
         imageBorder.layer.cornerRadius = imageBorder.frame.height/2
         imageBorder.clipsToBounds = true
@@ -83,10 +90,42 @@ class RecipeInfoViewController:UIViewController {
         //Call Data
         
         guard let recipeView = recipe else {
+        
+            ingredientsLabel.text = nil
+            nameLabel.text = nil
             recipeImage.image = nil
+            
             return
         }
         
+//        ingredientsLabel.text = ", ".joined([recipeView.ingredients]) 
+        nameLabel.text = recipeView.recipeName
         recipeImage.image = recipeView.image
+
     }
 }
+
+//extension RecipeInfoViewController {
+//    
+//    func segueToReceipeInstruction(_ selectedIndex:Int) {
+//        
+//        self.selectedRecipe = selectedRecipe
+//        
+//    }
+//    
+//    override func prepare(for segue:UIStoryboardSegue, sender:Any?) {
+//        
+//        let destination = segue.destination
+//        
+//        if let recipeInstructions = destination as? RecipeInstructionsViewController {
+//            
+////            guard let selectedRow =  .indexPathForSelectedRow?.row else {return}
+//            
+//            let recipe = recipeChoices[selectedRecipe]
+//            
+//            recipeInstructions.recipe = recipe
+//            
+//        }
+//    }
+//}
+

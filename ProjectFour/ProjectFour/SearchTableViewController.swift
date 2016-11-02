@@ -14,8 +14,9 @@ class SearchTableViewController: UITableViewController {
     var refresher:UIRefreshControl!
     
     var images:[UIImage] = []
-    var calories:[Double] = []
-    var nutrition:[String] = []
+    var calories:[Int] = []
+    var recipeName:[String] = []
+//    var ingredients:[String] = String?
     
     var selectedImage:String?
     var selectedLabel:String?
@@ -45,6 +46,7 @@ class SearchTableViewController: UITableViewController {
         }
     }
     
+    
     @IBOutlet var myTableView: UITableView!
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -56,6 +58,7 @@ class SearchTableViewController: UITableViewController {
         // Load JSON data asynchronously
         
         Async.background {
+            
             if let url = URL(string:"https://api.edamam.com/search?q="+self.searchBar.text!+"&app_id=e2513178&app_key=c5fe2bae8f394c5bc0e4ba35ad51aa12") {
                 
                 let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
@@ -68,24 +71,48 @@ class SearchTableViewController: UITableViewController {
                         
                         guard let data = try? Data(contentsOf: url) else {return}
                         
+                        do {
+                            let jsonRaw = try JSONSerialization.jsonObject(with: data, options: [])
+                            guard let jsonDictionary = jsonRaw as? NSDictionary else {
+                                print("DICTIONARY CAST FAILED")
+                                return
+                            }
+                        } catch {
+                            print("JSON SERIALIZATION FAILED")
+                            return
+                        }
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         let jsonResult = try? JSONSerialization.jsonObject(with: data, options: []) as! NSDictionary
                         
                         let array = jsonResult?["hits"] as? NSArray
                         
-                        for i in array! {
+                        for recipeJSONEntry in array! {
+                            
+                            guard let resultingDictionary = recipeJSONEntry as? NSDictionary else { return }
+                            guard let recipeDictionary = resultingDictionary ["recipe"] as? NSDictionary else { return }
+                            guard let result = RecipeChoices.resultingRecipeChoices(dict: recipeDictionary) else { return }
                             
                             
-                            guard let resultingDictionary = i as? NSDictionary,
-                                let recipeDictionary = resultingDictionary ["recipe"] as? NSDictionary,
-                                let result = RecipeChoices.resultingRecipeChoices(dict: recipeDictionary)
-                                else { return }
+//                            guard let resultingDictionary = i as? NSDictionary,
+//                                let recipeDictionary = resultingDictionary ["recipe"] as? NSDictionary,
+//                                let result = RecipeChoices.resultingRecipeChoices(dict: recipeDictionary)
+//                                else { return }
                             
-                            //                                self.nutrition.append(result.nutrition!)
+//                            self.ingredients.append(result.ingredients!)
+                            self.recipeName.append(result.recipeName!)
                             self.calories.append(result.calories!) //guard
                             self.images.append(result.image!)
                             self.recipeChoices.append(result)
                             
                             self.reload()
+                            //                            self.recipeChoices.removeAll()
+                            
                         }
                         
                         print (jsonResult)
@@ -102,12 +129,14 @@ class SearchTableViewController: UITableViewController {
         
         super.viewDidLoad()
         
+        
+        
         myTableView.delegate = self
         myTableView.dataSource = self
         
         //Pull to Refresh
         
-        //        refresh()      JUST HAVE TO NAME RELOAD TABLE DATA PART RELOAD then use self.refresher.endRefreshing() to stop it
+        //        refresh()      JUST HAVE TO NAME TABLE DATA PART RELOAD then use self.refresher.endRefreshing() to stop it
         //
         //        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
         //
@@ -159,16 +188,16 @@ class SearchTableViewController: UITableViewController {
     // Slide in Animation for Images
     
     override func tableView(_ tableView:UITableView, willDisplay cell:UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -300, 10, 0)
+        
+        cell.layer.transform = rotationTransform
+        
+        UIView.animate(withDuration: 0.5, animations:{ () -> Void in
             
-            let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -300, 10, 0)
+            cell.layer.transform = CATransform3DIdentity
             
-            cell.layer.transform = rotationTransform
-            
-            UIView.animate(withDuration: 1.0, animations:{ () -> Void in
-            
-                cell.layer.transform = CATransform3DIdentity
-                
-            })
+        })
     }
     
     
@@ -176,39 +205,35 @@ class SearchTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        //                Async.background {
-        
         if let cell = tableView.dequeueReusableCell(withIdentifier: "choiceCell", for: indexPath) as? RecipeChoicesTableViewCell {
             
             guard !recipeChoices.isEmpty else { return UITableViewCell() }
             
             
             let recipeforRow = recipeChoices[indexPath.row]
+
             
-            guard let newData = try? Data (contentsOf:recipeforRow.url!) else {return UITableViewCell () } //async
-            
+            guard let newData = try? Data (contentsOf:recipeforRow.url!) else {return UITableViewCell () }
             guard let imageObject = UIImage(data:newData) else {return UITableViewCell () }
             
-            //            guard let nutritionObject = String(data: newData) else {return UITableViewCell}
+            Async.background {
             
-            let calorieObject:String = "\(recipeforRow.calories)"
-            
-            //            let nameObject:String = "\(recipeforRow.name)"
-            
-            //            cell.nameLabel.text = nameObject
-            
-            cell.recipeImage.image = imageObject
-            cell.caloriesLabel.text = calorieObject
+            let calorieObject:String = "Calories: \(recipeforRow.calories!)"
+            let nameObject:String = "Name: \(recipeforRow.recipeName!)"
+
+                
+                cell.nameLabel.text = nameObject
+                cell.recipeImage.image = imageObject
+                cell.caloriesLabel.text = calorieObject
+                
+            }
             
             return cell
         }
         
-        
         return UITableViewCell()
     }
-    
 }
-//}
 
 // Identify selected row
 
