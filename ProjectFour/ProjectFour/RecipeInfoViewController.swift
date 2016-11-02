@@ -28,12 +28,15 @@ class RecipeInfoViewController:UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     
+    //Share to Facebook
     
     @IBAction func shareToFacebook(_ sender: UIButton) {
         let shareToFacebook:SLComposeViewController = SLComposeViewController(forServiceType:SLServiceTypeFacebook)
         
         self.present(shareToFacebook, animated:true, completion:nil)
     }
+    
+    //Share to Twitter
     
     @IBAction func shareToTwitter(_ sender: AnyObject) {
         
@@ -69,7 +72,7 @@ class RecipeInfoViewController:UIViewController {
         
         //Round the corners of the share/source buttons
         
-        sourceButton.layer.cornerRadius = 10 
+        sourceButton.layer.cornerRadius = 10
         
         shareToTwitterButton.layer.cornerRadius = 5
         

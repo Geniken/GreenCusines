@@ -11,12 +11,11 @@ import UIKit
 
 struct RecipeChoices {
     
-    var name:String?             //label
-    var image:UIImage?           //image
-    var calories:Double?         //calories
-    var url:URL?
-    //    var yield:Int?               //yield
-    //    var site:URL?                //url
+    var name:String?               //label
+    var image:UIImage?             //image
+    var calories:Double?           //calories
+    var url:URL?                   //url
+
     
     
     
@@ -28,10 +27,10 @@ struct RecipeChoices {
             let image = UIImage(data: data),
             let name = dict["label"] as? String,
             let calories = dict["calories"] as? Double
+            
             else {return nil}
         
-        return RecipeChoices(name:name, image: image, calories:calories, url:url)
-        
+        return RecipeChoices(name:name, image:image, calories:calories, url:url)
         
     }
     

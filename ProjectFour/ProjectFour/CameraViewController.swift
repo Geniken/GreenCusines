@@ -12,6 +12,8 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
 
     @IBOutlet weak var pictureImage: UIImageView!
     
+    // Camera
+    
     @IBAction func takePictureButton(_ sender: AnyObject) {
         
         let picker = UIImagePickerController()

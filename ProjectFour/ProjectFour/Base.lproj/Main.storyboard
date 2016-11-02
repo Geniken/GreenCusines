@@ -15,22 +15,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="TGK-KN-1Qw">
-                            <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="4U0-Zd-erz">
+                            <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.7431308982" green="0.99215686270000003" blue="0.73917710950000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <color key="barTintColor" red="0.74313089821033484" green="0.99215686274509807" blue="0.7391771094731614" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                            <color key="barTintColor" red="0.7431308982" green="0.99215686270000003" blue="0.73917710950000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="choiceCell" rowHeight="210" id="udl-eB-55U" customClass="RecipeChoicesTableViewCell" customModule="ProjectFour" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="136" width="375" height="210"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="210"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="udl-eB-55U" id="e91-rm-t8X">
                                     <frame key="frameInset" width="375" height="209"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yET-hM-B7X">
+                                        <view alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yET-hM-B7X" customClass="SpringView" customModule="Spring">
                                             <frame key="frameInset" minX="19" minY="8" width="338" height="192"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
@@ -62,6 +61,9 @@
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.14901960780000001" green="0.66274509800000003" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideRight"/>
+                                            </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -82,7 +84,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="i2U-36-DjP">
-                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="search" id="KmS-5C-Y9i">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="KmS-5C-Y9i">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="searchButton:" destination="yjd-eg-tkb" id="wDl-IG-fkh"/>
                             </connections>
@@ -90,11 +93,28 @@
                     </navigationItem>
                     <connections>
                         <outlet property="myTableView" destination="Xqn-lk-bnE" id="8AZ-GZ-6yS"/>
-                        <outlet property="searchBar" destination="TGK-KN-1Qw" id="XCk-pN-tcx"/>
+                        <outlet property="searchBar" destination="4U0-Zd-erz" id="rzH-MC-o7u"/>
+                        <outlet property="searchDisplayController" destination="Ecf-I1-3WA" id="4Mb-k0-hqQ"/>
                         <outlet property="tableView" destination="Xqn-lk-bnE" id="H1F-du-8ep"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lI8-BE-SQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="UDx-lw-jQd">
+                    <connections>
+                        <outlet property="delegate" destination="yjd-eg-tkb" id="aFd-Xi-6a3"/>
+                        <outlet property="searchContentsController" destination="yjd-eg-tkb" id="JsY-AT-9V0"/>
+                        <outlet property="searchResultsDataSource" destination="yjd-eg-tkb" id="80n-oM-lGN"/>
+                        <outlet property="searchResultsDelegate" destination="yjd-eg-tkb" id="OkE-LQ-g8m"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="Ecf-I1-3WA">
+                    <connections>
+                        <outlet property="delegate" destination="yjd-eg-tkb" id="slR-EK-XA8"/>
+                        <outlet property="searchContentsController" destination="yjd-eg-tkb" id="XXQ-dG-OZ7"/>
+                        <outlet property="searchResultsDataSource" destination="yjd-eg-tkb" id="3oh-d5-Mn3"/>
+                        <outlet property="searchResultsDelegate" destination="yjd-eg-tkb" id="GfP-4w-DOa"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="2934" y="-528"/>
         </scene>
@@ -202,6 +222,7 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
                         <barButtonItem key="rightBarButtonItem" title="Options" id="BHd-BM-L0V">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="cN2-sx-t7t" kind="show" identifier="toSideMenu" id="aP0-lQ-CFb"/>
                             </connections>
@@ -232,7 +253,7 @@
                             <tableViewSection id="J5Z-zG-N9L">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="110" id="z3a-7u-ufO">
-                                        <rect key="frame" x="0.0" y="64" width="375" height="110"/>
+                                        <rect key="frame" x="0.0" y="44" width="375" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z3a-7u-ufO" id="u2I-IN-BbU">
                                             <frame key="frameInset" width="375" height="109"/>
@@ -264,7 +285,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="110" id="duu-ig-0Iz">
-                                        <rect key="frame" x="0.0" y="174" width="375" height="110"/>
+                                        <rect key="frame" x="0.0" y="154" width="375" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="duu-ig-0Iz" id="AwV-wI-R1c">
                                             <frame key="frameInset" width="375" height="109"/>
@@ -286,6 +307,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fIf-Zu-l2B">
+                                                    <frame key="frameInset" minX="32" minY="33" width="22" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Map" translatesAutoresizingMaskIntoConstraints="NO" id="AGu-un-JxW">
                                                     <frame key="frameInset" minX="14" minY="24" width="59" height="59"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -298,13 +324,13 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="110" id="dKr-Dh-V8W">
-                                        <rect key="frame" x="0.0" y="284" width="375" height="110"/>
+                                        <rect key="frame" x="0.0" y="264" width="375" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dKr-Dh-V8W" id="eNq-5B-7xa">
                                             <frame key="frameInset" width="375" height="109"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add a" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwC-3E-KID">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Show off" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwC-3E-KID">
                                                     <frame key="frameInset" minX="104" minY="28" width="266" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="14"/>
@@ -313,7 +339,7 @@
                                                     <color key="shadowColor" red="0.031372549020000001" green="0.77164465319999997" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Picture" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIV-R7-1L8">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Cuisine" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIV-R7-1L8">
                                                     <frame key="frameInset" minX="104" minY="44" width="266" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="14"/>
@@ -343,7 +369,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WIA-fh-fCC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2934" y="-1280"/>
+            <point key="canvasLocation" x="2933.5999999999999" y="-1280.5097451274364"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="9Eb-nu-5Ju">
@@ -407,11 +433,12 @@
             </objects>
             <point key="canvasLocation" x="2933.5999999999999" y="-2051.4242878560722"/>
         </scene>
-        <!--Side Menu Navigation Controller-->
+        <!--Other Options Side Menu-->
         <scene sceneID="knT-Rl-epN">
             <objects>
-                <navigationController id="cN2-sx-t7t" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OSa-E3-wwi">
+                <navigationController id="cN2-sx-t7t" userLabel="Other Options Side Menu" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OSa-E3-wwi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.14901960780000001" green="0.66274509800000003" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -440,6 +467,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="static" translatesAutoresizingMaskIntoConstraints="NO" id="TUN-7A-A3h" userLabel="StaticImage">
+                                <frame key="frameInset" minX="16" minY="90" width="343" height="344"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XSR-qE-eOT">
                                 <frame key="frameInset" minX="16" minY="90" width="343" height="344"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -458,6 +489,17 @@
                                     <action selector="takePictureButton:" destination="vpo-qA-DeA" eventType="touchUpInside" id="i2s-gv-2CG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUf-Fr-A0h">
+                                <frame key="frameInset" minX="99" minY="534" width="177" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.24884220360000001" green="0.75683852789999995" blue="0.22332068369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="16"/>
+                                <size key="titleShadowOffset" width="0.0" height="1.5"/>
+                                <state key="normal" title="Upload to Facebook">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.7431308982" green="0.99215686270000003" blue="0.73917710950000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -467,14 +509,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I3u-ej-6Wa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3865" y="-1281"/>
+            <point key="canvasLocation" x="3864.8000000000002" y="-1281.4092953523239"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Initial Navigation View Controller-->
         <scene sceneID="dl8-js-e20">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CvC-yX-wXM" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CvC-yX-wXM" customClass="InitialNavigationViewController" customModule="ProjectFour" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Wrf-lf-mA2">
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wrf-lf-mA2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.14901960784313725" green="0.66274509803921566" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -512,6 +555,7 @@
         <image name="Map" width="1024" height="1024"/>
         <image name="Video" width="512" height="512"/>
         <image name="fbbutton" width="224" height="55"/>
+        <image name="static" width="962" height="642"/>
         <image name="twitter button" width="227" height="54"/>
     </resources>
 </document>

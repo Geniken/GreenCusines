@@ -1,0 +1,3154 @@
+count = 68;
+    from = 0;
+    hits =     (
+                {
+            bookmarked = 0;
+            bought = 0;
+            recipe =             {
+                calories = "3012.760600000001";
+                cautions =                 (
+                );
+                dietLabels =                 (
+                    "High-Fiber"
+                );
+                digest =                 (
+                                        {
+                        daily = "295.4053006153846";
+                        hasRDI = 1;
+                        label = Fat;
+                        schemaOrgTag = fatContent;
+                        sub =                         (
+                                                        {
+                                daily = "309.398674";
+                                hasRDI = 1;
+                                label = Saturated;
+                                schemaOrgTag = saturatedFatContent;
+                                tag = FASAT;
+                                total = "61.8797348";
+                                unit = g;
+                            },
+                                                        {
+                                daily = 0;
+                                hasRDI = 0;
+                                label = Trans;
+                                schemaOrgTag = transFatContent;
+                                tag = FATRN;
+                                total = "0.52434";
+                                unit = g;
+                            },
+                                                        {
+                                daily = 0;
+                                hasRDI = 0;
+                                label = Monounsaturated;
+                                schemaOrgTag = "<null>";
+                                tag = FAMS;
+                                total = "77.55420539999999";
+                                unit = g;
+                            },
+                                                        {
+                                daily = 0;
+                                hasRDI = 0;
+                                label = Polyunsaturated;
+                                schemaOrgTag = "<null>";
+                                tag = FAPU;
+                                total = "40.5286516";
+                                unit = g;
+                            }
+                        );
+                        tag = FAT;
+                        total = "192.0134454";
+                        unit = g;
+                    },
+                                        {
+                        daily = "77.88520053333333";
+                        hasRDI = 1;
+                        label = Carbs;
+                        schemaOrgTag = carbohydrateContent;
+                        sub =                         (
+                                                        {
+                                daily = 0;
+                                hasRDI = 0;
+                                label = "Carbs (net)";
+                                schemaOrgTag = "<null>";
+                                tag = "CHOCDF.net";
+                                total = "211.7457016";
+                                unit = g;
+                            },
+                                                        {
+                                daily = "87.63960000000002";
+                                hasRDI = 1;
+                                label = Fiber;
+                                schemaOrgTag = fiberContent;
+                                tag = FIBTG;
+                                total = "21.9099";
+                                unit = g;
+                            },
+                                                        {
+                                daily = 0;
+                                hasRDI = 0;
+                                label = Sugars;
+                                schemaOrgTag = sugarContent;
+                                tag = SUGAR;
+                                total = "14.03524";
+                                unit = g;
+                            }
+                        );
+                        tag = CHOCDF;
+                        total = "233.6556016";
+                        unit = g;
+                    },
+                                        {
+                        daily = "173.15086";
+                        hasRDI = 1;
+                        label = Protein;
+                        schemaOrgTag = proteinContent;
+                        tag = PROCNT;
+                        total = "86.57543";
+                        unit = g;
+                    },
+                                        {
+                        daily = "319.30028";
+                        hasRDI = 1;
+                        label = Cholesterol;
+                        schemaOrgTag = cholesterolContent;
+                        tag = CHOLE;
+                        total = "957.90084";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "247.6672190206177";
+                        hasRDI = 1;
+                        label = Sodium;
+                        schemaOrgTag = sodiumContent;
+                        tag = NA;
+                        total = "5944.013256494824";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "105.3729331480362";
+                        hasRDI = 1;
+                        label = Calcium;
+                        schemaOrgTag = "<null>";
+                        tag = CA;
+                        total = "1053.729331480362";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "75.19124303625377";
+                        hasRDI = 1;
+                        label = Magnesium;
+                        schemaOrgTag = "<null>";
+                        tag = MG;
+                        total = "300.7649721450151";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "123.8360650617177";
+                        hasRDI = 1;
+                        label = Potassium;
+                        schemaOrgTag = "<null>";
+                        tag = K;
+                        total = "4334.262277160121";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "50.16173115474989";
+                        hasRDI = 1;
+                        label = Iron;
+                        schemaOrgTag = "<null>";
+                        tag = FE;
+                        total = "9.029111607854981";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "70.70392009667674";
+                        hasRDI = 1;
+                        label = Zinc;
+                        schemaOrgTag = "<null>";
+                        tag = ZN;
+                        total = "10.60558801450151";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "224.8133685714286";
+                        hasRDI = 1;
+                        label = Phosphorus;
+                        schemaOrgTag = "<null>";
+                        tag = P;
+                        total = "1573.69358";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "81.03230444444445";
+                        hasRDI = 1;
+                        label = "Vitamin A";
+                        schemaOrgTag = "<null>";
+                        tag = "VITA_RAE";
+                        total = "729.2907400000001";
+                        unit = "\U00b5g";
+                    },
+                                        {
+                        daily = "145.0666666666667";
+                        hasRDI = 1;
+                        label = "Vitamin C";
+                        schemaOrgTag = "<null>";
+                        tag = VITC;
+                        total = "87.04000000000001";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "94.24441333333334";
+                        hasRDI = 1;
+                        label = "Thiamin (B1)";
+                        schemaOrgTag = "<null>";
+                        tag = THIA;
+                        total = "1.4136662";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "96.43517647058825";
+                        hasRDI = 1;
+                        label = "Riboflavin (B2)";
+                        schemaOrgTag = "<null>";
+                        tag = RIBF;
+                        total = "1.639398";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "90.17700600000002";
+                        hasRDI = 1;
+                        label = "Niacin (B3)";
+                        schemaOrgTag = "<null>";
+                        tag = NIA;
+                        total = "18.0354012";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "181.78664";
+                        hasRDI = 1;
+                        label = "Vitamin B6";
+                        schemaOrgTag = "<null>";
+                        tag = VITB6A;
+                        total = "3.6357328";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "58.07124000000001";
+                        hasRDI = 1;
+                        label = "Folic Acid (B9)";
+                        schemaOrgTag = "<null>";
+                        tag = FOL;
+                        total = "232.28496";
+                        unit = "\U00b5g";
+                    },
+                                        {
+                        daily = "56.52414000000001";
+                        hasRDI = 1;
+                        label = "Vitamin B12";
+                        schemaOrgTag = "<null>";
+                        tag = VITB12;
+                        total = "3.3914484";
+                        unit = "\U00b5g";
+                    },
+                                        {
+                        daily = "1.5330945";
+                        hasRDI = 1;
+                        label = "Vitamin D";
+                        schemaOrgTag = "<null>";
+                        tag = VITD;
+                        total = "6.132378";
+                        unit = "\U00b5g";
+                    },
+                                        {
+                        daily = "24.70613700000001";
+                        hasRDI = 1;
+                        label = "Vitamin E";
+                        schemaOrgTag = "<null>";
+                        tag = TOCPHA;
+                        total = "4.941227400000001";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "50.03762500000001";
+                        hasRDI = 1;
+                        label = "Vitamin K";
+                        schemaOrgTag = "<null>";
+                        tag = VITK1;
+                        total = "40.03010000000001";
+                        unit = "\U00b5g";
+                    }
+                );
+                healthLabels =                 (
+                    "Gluten-Free",
+                    "Peanut-Free",
+                    "Tree-Nut-Free",
+                    "Soy-Free",
+                    "Fish-Free",
+                    "Shellfish-Free"
+                );
+                image = "https://www.edamam.com/web-img/a85/a85bb16217d64ebd37807ad8dbe16520.jpg";
+                ingredientLines =                 (
+                    "4 cups refrigerated hash browns, or make your own. if you make your own, be sure to squeeze all the water out with a twisted tea towel before cooking",
+                    "1 tablespoon olive oil",
+                    "1 tablespoon butter",
+                    "1/2 cup chopped onion",
+                    "1/4 pound breakfast sausage, browned and drained well",
+                    "4 eggs",
+                    "4 slices of your favorite cheese, i used american in the picture",
+                    "1/2 teaspoon each salt and pepper or to taste"
+                );
+                ingredients =                 (
+                                        {
+                        food = "hash browns";
+                        measure = cup;
+                        quantity = 4;
+                        text = "4 cups refrigerated hash browns, or make your own. if you make your own, be sure to squeeze all the water out with a twisted tea towel before cooking";
+                        weight = 624;
+                    },
+                                        {
+                        food = "olive oil";
+                        measure = tbsp;
+                        quantity = 1;
+                        text = "1 tablespoon olive oil";
+                        weight = "13.5";
+                    },
+                                        {
+                        food = butter;
+                        measure = tbsp;
+                        quantity = 1;
+                        text = "1 tablespoon butter";
+                        weight = "14.2";
+                    },
+                                        {
+                        food = onion;
+                        measure = cup;
+                        quantity = "0.5";
+                        text = "1/2 cup chopped onion";
+                        weight = 80;
+                    },
+                                        {
+                        food = sausage;
+                        measure = lb;
+                        quantity = "0.25";
+                        text = "1/4 pound breakfast sausage, browned and drained well";
+                        weight = "113.398";
+                    },
+                                        {
+                        food = eggs;
+                        measure = large;
+                        quantity = 4;
+                        text = "4 eggs";
+                        weight = 200;
+                    },
+                                        {
+                        food = cheese;
+                        measure = slice;
+                        quantity = 4;
+                        text = "4 slices of your favorite cheese, i used american in the picture";
+                        weight = 112;
+                    },
+                                        {
+                        food = salt;
+                        measure = tsp;
+                        quantity = "0.5";
+                        text = "1/2 teaspoon each salt and pepper or to taste";
+                        weight = 3;
+                    },
+                                        {
+                        food = pepper;
+                        measure = tsp;
+                        quantity = "0.5";
+                        text = "1/2 teaspoon each salt and pepper or to taste";
+                        weight = "1.15";
+                    },
+                                        {
+                        food = salt;
+                        measure = tsp;
+                        quantity = "0.5";
+                        text = "1/2 teaspoon each salt and pepper or to taste";
+                        weight = 3;
+                    },
+                                        {
+                        food = pepper;
+                        measure = tsp;
+                        quantity = "0.5";
+                        text = "1/2 teaspoon each salt and pepper or to taste";
+                        weight = "1.15";
+                    }
+                );
+                label = "Frog In A Hole";
+                shareAs = "http://www.edamam.com/recipe/frog-in-a-hole-fd54ffeae4589065c25c86d0ac792e08/frog";
+                source = Food52;
+                sourceIcon = "http://www.food52.com/favicon.ico";
+                totalDaily =                 {
+                    CA =                     {
+                        label = Calcium;
+                        quantity = "105.3729331480362";
+                        unit = "%";
+                    };
+                    CHOCDF =                     {
+                        label = Carbs;
+                        quantity = "77.88520053333333";
+                        unit = "%";
+                    };
+                    CHOLE =                     {
+                        label = Cholesterol;
+                        quantity = "319.30028";
+                        unit = "%";
+                    };
+                    "ENERC_KCAL" =                     {
+                        label = Energy;
+                        quantity = "150.63803";
+                        unit = "%";
+                    };
+                    FASAT =                     {
+                        label = Saturated;
+                        quantity = "309.398674";
+                        unit = "%";
+                    };
+                    FAT =                     {
+                        label = Fat;
+                        quantity = "295.4053006153846";
+                        unit = "%";
+                    };
+                    FE =                     {
+                        label = Iron;
+                        quantity = "50.16173115474989";
+                        unit = "%";
+                    };
+                    FIBTG =                     {
+                        label = Fiber;
+                        quantity = "87.63960000000002";
+                        unit = "%";
+                    };
+                    FOL =                     {
+                        label = "Folic Acid (B9)";
+                        quantity = "58.07124000000001";
+                        unit = "%";
+                    };
+                    K =                     {
+                        label = Potassium;
+                        quantity = "123.8360650617177";
+                        unit = "%";
+                    };
+                    MG =                     {
+                        label = Magnesium;
+                        quantity = "75.19124303625377";
+                        unit = "%";
+                    };
+                    NA =                     {
+                        label = Sodium;
+                        quantity = "247.6672190206177";
+                        unit = "%";
+                    };
+                    NIA =                     {
+                        label = "Niacin (B3)";
+                        quantity = "90.17700600000002";
+                        unit = "%";
+                    };
+                    P =                     {
+                        label = Phosphorus;
+                        quantity = "224.8133685714286";
+                        unit = "%";
+                    };
+                    PROCNT =                     {
+                        label = Protein;
+                        quantity = "173.15086";
+                        unit = "%";
+                    };
+                    RIBF =                     {
+                        label = "Riboflavin (B2)";
+                        quantity = "96.43517647058825";
+                        unit = "%";
+                    };
+                    THIA =                     {
+                        label = "Thiamin (B1)";
+                        quantity = "94.24441333333334";
+                        unit = "%";
+                    };
+                    TOCPHA =                     {
+                        label = "Vitamin E";
+                        quantity = "24.70613700000001";
+                        unit = "%";
+                    };
+                    "VITA_RAE" =                     {
+                        label = "Vitamin A";
+                        quantity = "81.03230444444445";
+                        unit = "%";
+                    };
+                    VITB12 =                     {
+                        label = "Vitamin B12";
+                        quantity = "56.52414000000001";
+                        unit = "%";
+                    };
+                    VITB6A =                     {
+                        label = "Vitamin B6";
+                        quantity = "181.78664";
+                        unit = "%";
+                    };
+                    VITC =                     {
+                        label = "Vitamin C";
+                        quantity = "145.0666666666667";
+                        unit = "%";
+                    };
+                    VITD =                     {
+                        label = "Vitamin D";
+                        quantity = "1.5330945";
+                        unit = "%";
+                    };
+                    VITK1 =                     {
+                        label = "Vitamin K";
+                        quantity = "50.03762500000001";
+                        unit = "%";
+                    };
+                    ZN =                     {
+                        label = Zinc;
+                        quantity = "70.70392009667674";
+                        unit = "%";
+                    };
+                };
+                totalNutrients =                 {
+                    CA =                     {
+                        label = Calcium;
+                        quantity = "1053.729331480362";
+                        unit = mg;
+                    };
+                    CHOCDF =                     {
+                        label = Carbs;
+                        quantity = "233.6556016";
+                        unit = g;
+                    };
+                    CHOLE =                     {
+                        label = Cholesterol;
+                        quantity = "957.90084";
+                        unit = mg;
+                    };
+                    "ENERC_KCAL" =                     {
+                        label = Energy;
+                        quantity = "3012.760600000001";
+                        unit = kcal;
+                    };
+                    FAMS =                     {
+                        label = Monounsaturated;
+                        quantity = "77.55420539999999";
+                        unit = g;
+                    };
+                    FAPU =                     {
+                        label = Polyunsaturated;
+                        quantity = "40.5286516";
+                        unit = g;
+                    };
+                    FASAT =                     {
+                        label = Saturated;
+                        quantity = "61.8797348";
+                        unit = g;
+                    };
+                    FAT =                     {
+                        label = Fat;
+                        quantity = "192.0134454";
+                        unit = g;
+                    };
+                    FATRN =                     {
+                        label = Trans;
+                        quantity = "0.52434";
+                        unit = g;
+                    };
+                    FE =                     {
+                        label = Iron;
+                        quantity = "9.029111607854981";
+                        unit = mg;
+                    };
+                    FIBTG =                     {
+                        label = Fiber;
+                        quantity = "21.9099";
+                        unit = g;
+                    };
+                    FOL =                     {
+                        label = "Folic Acid (B9)";
+                        quantity = "232.28496";
+                        unit = "\U00b5g";
+                    };
+                    K =                     {
+                        label = Potassium;
+                        quantity = "4334.262277160121";
+                        unit = mg;
+                    };
+                    MG =                     {
+                        label = Magnesium;
+                        quantity = "300.7649721450151";
+                        unit = mg;
+                    };
+                    NA =                     {
+                        label = Sodium;
+                        quantity = "5944.013256494824";
+                        unit = mg;
+                    };
+                    NIA =                     {
+                        label = "Niacin (B3)";
+                        quantity = "18.0354012";
+                        unit = mg;
+                    };
+                    P =                     {
+                        label = Phosphorus;
+                        quantity = "1573.69358";
+                        unit = mg;
+                    };
+                    PROCNT =                     {
+                        label = Protein;
+                        quantity = "86.57543";
+                        unit = g;
+                    };
+                    RIBF =                     {
+                        label = "Riboflavin (B2)";
+                        quantity = "1.639398";
+                        unit = mg;
+                    };
+                    SUGAR =                     {
+                        label = Sugars;
+                        quantity = "14.03524";
+                        unit = g;
+                    };
+                    THIA =                     {
+                        label = "Thiamin (B1)";
+                        quantity = "1.4136662";
+                        unit = mg;
+                    };
+                    TOCPHA =                     {
+                        label = "Vitamin E";
+                        quantity = "4.941227400000001";
+                        unit = mg;
+                    };
+                    "VITA_RAE" =                     {
+                        label = "Vitamin A";
+                        quantity = "729.2907400000001";
+                        unit = "\U00b5g_RAE";
+                    };
+                    VITB12 =                     {
+                        label = "Vitamin B12";
+                        quantity = "3.3914484";
+                        unit = "\U00b5g";
+                    };
+                    VITB6A =                     {
+                        label = "Vitamin B6";
+                        quantity = "3.6357328";
+                        unit = mg;
+                    };
+                    VITC =                     {
+                        label = "Vitamin C";
+                        quantity = "87.04000000000001";
+                        unit = mg;
+                    };
+                    VITD =                     {
+                        label = "Vitamin D";
+                        quantity = "6.132378";
+                        unit = "\U00b5g";
+                    };
+                    VITK1 =                     {
+                        label = "Vitamin K";
+                        quantity = "40.03010000000001";
+                        unit = "\U00b5g";
+                    };
+                    ZN =                     {
+                        label = Zinc;
+                        quantity = "10.60558801450151";
+                        unit = mg;
+                    };
+                };
+                totalWeight = "1164.021214501509";
+                uri = "http://www.edamam.com/ontologies/edamam.owl#recipe_fd54ffeae4589065c25c86d0ac792e08";
+                url = "http://www.food52.com/recipes/11819_frog_in_a_hole";
+                yield = 2;
+            };
+        },
+                {
+            bookmarked = 0;
+            bought = 0;
+            recipe =             {
+                calories = "1402.85324";
+                cautions =                 (
+                );
+                dietLabels =                 (
+                );
+                digest =                 (
+                                        {
+                        daily = "87.84094461538461";
+                        hasRDI = 1;
+                        label = Fat;
+                        schemaOrgTag = fatContent;
+                        sub =                         (
+                                                        {
+                                daily = "40.625733";
+                                hasRDI = 1;
+                                label = Saturated;
+                                schemaOrgTag = saturatedFatContent;
+                                tag = FASAT;
+                                total = "8.125146600000001";
+                                unit = g;
+                            },
+                                                        {
+                                daily = 0;
+                                hasRDI = 0;
+                                label = Trans;
+                                schemaOrgTag = transFatContent;
+                                tag = FATRN;
+                                total = 0;
+                                unit = g;
+                            },
+                                                        {
+                                daily = 0;
+                                hasRDI = 0;
+                                label = Monounsaturated;
+                                schemaOrgTag = "<null>";
+                                tag = FAMS;
+                                total = "39.86409400000001";
+                                unit = g;
+                            },
+                                                        {
+                                daily = 0;
+                                hasRDI = 0;
+                                label = Polyunsaturated;
+                                schemaOrgTag = "<null>";
+                                tag = FAPU;
+                                total = "6.746613";
+                                unit = g;
+                            }
+                        );
+                        tag = FAT;
+                        total = "57.096614";
+                        unit = g;
+                    },
+                                        {
+                        daily = "19.982725";
+                        hasRDI = 1;
+                        label = Carbs;
+                        schemaOrgTag = carbohydrateContent;
+                        sub =                         (
+                                                        {
+                                daily = 0;
+                                hasRDI = 0;
+                                label = "Carbs (net)";
+                                schemaOrgTag = "<null>";
+                                tag = "CHOCDF.net";
+                                total = "51.472425";
+                                unit = g;
+                            },
+                                                        {
+                                daily = "33.903";
+                                hasRDI = 1;
+                                label = Fiber;
+                                schemaOrgTag = fiberContent;
+                                tag = FIBTG;
+                                total = "8.47575";
+                                unit = g;
+                            },
+                                                        {
+                                daily = 0;
+                                hasRDI = 0;
+                                label = Sugars;
+                                schemaOrgTag = sugarContent;
+                                tag = SUGAR;
+                                total = "16.908575";
+                                unit = g;
+                            }
+                        );
+                        tag = CHOCDF;
+                        total = "59.948175";
+                        unit = g;
+                    },
+                                        {
+                        daily = "238.743914";
+                        hasRDI = 1;
+                        label = Protein;
+                        schemaOrgTag = proteinContent;
+                        tag = PROCNT;
+                        total = "119.371957";
+                        unit = g;
+                    },
+                                        {
+                        daily = "113.398";
+                        hasRDI = 1;
+                        label = Cholesterol;
+                        schemaOrgTag = cholesterolContent;
+                        tag = CHOLE;
+                        total = "340.194";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "35.43819448341667";
+                        hasRDI = 1;
+                        label = Sodium;
+                        schemaOrgTag = sodiumContent;
+                        tag = NA;
+                        total = "850.516667602";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "30.06197224516861";
+                        hasRDI = 1;
+                        label = Calcium;
+                        schemaOrgTag = "<null>";
+                        tag = CA;
+                        total = "300.6197224516861";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "55.32577898387174";
+                        hasRDI = 1;
+                        label = Magnesium;
+                        schemaOrgTag = "<null>";
+                        tag = MG;
+                        total = "221.3031159354869";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "88.75192649953985";
+                        hasRDI = 1;
+                        label = Potassium;
+                        schemaOrgTag = "<null>";
+                        tag = K;
+                        total = "3106.317427483895";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "81.27230699283713";
+                        hasRDI = 1;
+                        label = Iron;
+                        schemaOrgTag = "<null>";
+                        tag = FE;
+                        total = "14.62901525871068";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "53.84321062365795";
+                        hasRDI = 1;
+                        label = Zinc;
+                        schemaOrgTag = "<null>";
+                        tag = ZN;
+                        total = "8.076481593548692";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "170.3057657142857";
+                        hasRDI = 1;
+                        label = Phosphorus;
+                        schemaOrgTag = "<null>";
+                        tag = P;
+                        total = "1192.14036";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "70.60202222222222";
+                        hasRDI = 1;
+                        label = "Vitamin A";
+                        schemaOrgTag = "<null>";
+                        tag = "VITA_RAE";
+                        total = "635.4182";
+                        unit = "\U00b5g";
+                    },
+                                        {
+                        daily = "60.68166666666666";
+                        hasRDI = 1;
+                        label = "Vitamin C";
+                        schemaOrgTag = "<null>";
+                        tag = VITC;
+                        total = "36.409";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "79.66288000000003";
+                        hasRDI = 1;
+                        label = "Thiamin (B1)";
+                        schemaOrgTag = "<null>";
+                        tag = THIA;
+                        total = "1.1949432";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "113.9394117647059";
+                        hasRDI = 1;
+                        label = "Riboflavin (B2)";
+                        schemaOrgTag = "<null>";
+                        tag = RIBF;
+                        total = "1.93697";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "56.91390500000001";
+                        hasRDI = 1;
+                        label = "Niacin (B3)";
+                        schemaOrgTag = "<null>";
+                        tag = NIA;
+                        total = "11.382781";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "73.59828";
+                        hasRDI = 1;
+                        label = "Vitamin B6";
+                        schemaOrgTag = "<null>";
+                        tag = VITB6A;
+                        total = "1.4719656";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "45.4733";
+                        hasRDI = 1;
+                        label = "Folic Acid (B9)";
+                        schemaOrgTag = "<null>";
+                        tag = FOL;
+                        total = "181.8932";
+                        unit = "\U00b5g";
+                    },
+                                        {
+                        daily = "45.35920000000001";
+                        hasRDI = 1;
+                        label = "Vitamin B12";
+                        schemaOrgTag = "<null>";
+                        tag = VITB12;
+                        total = "2.721552";
+                        unit = "\U00b5g";
+                    },
+                                        {
+                        daily = "0.3401940000000001";
+                        hasRDI = 1;
+                        label = "Vitamin D";
+                        schemaOrgTag = "<null>";
+                        tag = VITD;
+                        total = "1.360776";
+                        unit = "\U00b5g";
+                    },
+                                        {
+                        daily = "83.85215000000002";
+                        hasRDI = 1;
+                        label = "Vitamin E";
+                        schemaOrgTag = "<null>";
+                        tag = TOCPHA;
+                        total = "16.77043";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "82.9114225";
+                        hasRDI = 1;
+                        label = "Vitamin K";
+                        schemaOrgTag = "<null>";
+                        tag = VITK1;
+                        total = "66.329138";
+                        unit = "\U00b5g";
+                    }
+                );
+                healthLabels =                 (
+                    "Dairy-Free",
+                    "Egg-Free",
+                    "Peanut-Free",
+                    "Tree-Nut-Free",
+                    "Soy-Free",
+                    "Fish-Free",
+                    "Shellfish-Free"
+                );
+                image = "https://www.edamam.com/web-img/97b/97baf5e200c4cca62de7c087fa03681b.jpg";
+                ingredientLines =                 (
+                    "2 tablespoons plus 2 tablespoons extra-virgin olive oil",
+                    "1 1/2 pounds frog legs, skinned and rinsed in several changes of cold water",
+                    "Salt and pepper",
+                    "1 onion, coarsely chopped",
+                    "1 carrot, coarsely chopped",
+                    "1 rib celery, coarsely chopped",
+                    "1/4 cup 00-grade flour",
+                    "1 cup dry white wine",
+                    "1 cup canned tomatoes, crushed by hand"
+                );
+                ingredients =                 (
+                                        {
+                        food = "extra virgin olive oil";
+                        measure = tbsp;
+                        quantity = 2;
+                        text = "2 tablespoons plus 2 tablespoons extra-virgin olive oil";
+                        weight = 27;
+                    },
+                                        {
+                        food = "extra virgin olive oil";
+                        measure = tbsp;
+                        quantity = 2;
+                        text = "2 tablespoons plus 2 tablespoons extra-virgin olive oil";
+                        weight = 27;
+                    },
+                                        {
+                        food = "frog legs";
+                        measure = lb;
+                        quantity = "1.5";
+                        text = "1 1/2 pounds frog legs, skinned and rinsed in several changes of cold water";
+                        weight = "680.388";
+                    },
+                                        {
+                        food = salt;
+                        measure = medium;
+                        quantity = 0;
+                        text = "Salt and pepper";
+                        weight = "0.05159354869188296";
+                    },
+                                        {
+                        food = pepper;
+                        measure = medium;
+                        quantity = 0;
+                        text = "Salt and pepper";
+                        weight = 3;
+                    },
+                                        {
+                        food = onion;
+                        measure = onion;
+                        quantity = 1;
+                        text = "1 onion, coarsely chopped";
+                        weight = 125;
+                    },
+                                        {
+                        food = carrot;
+                        measure = medium;
+                        quantity = 1;
+                        text = "1 carrot, coarsely chopped";
+                        weight = 61;
+                    },
+                                        {
+                        food = celery;
+                        measure = rib;
+                        quantity = 1;
+                        text = "1 rib celery, coarsely chopped";
+                        weight = 40;
+                    },
+                                        {
+                        food = flour;
+                        measure = cup;
+                        quantity = "0.25";
+                        text = "1/4 cup 00-grade flour";
+                        weight = "31.25";
+                    },
+                                        {
+                        food = "dry white wine";
+                        measure = cup;
+                        quantity = 1;
+                        text = "1 cup dry white wine";
+                        weight = 226;
+                    },
+                                        {
+                        food = "canned tomatoes";
+                        measure = cup;
+                        quantity = 1;
+                        text = "1 cup canned tomatoes, crushed by hand";
+                        weight = 240;
+                    }
+                );
+                label = "Guazetto di Rane (Frog Leg Stew)";
+                shareAs = "http://www.edamam.com/recipe/guazetto-di-rane-frog-leg-stew-395546382c2f53803dd7839fc1ec309c/frog";
+                source = "Cooking Channel";
+                sourceIcon = "http://www.cookingchanneltv.com/etc/designs/default/favicon.ico";
+                totalDaily =                 {
+                    CA =                     {
+                        label = Calcium;
+                        quantity = "30.06197224516861";
+                        unit = "%";
+                    };
+                    CHOCDF =                     {
+                        label = Carbs;
+                        quantity = "19.982725";
+                        unit = "%";
+                    };
+                    CHOLE =                     {
+                        label = Cholesterol;
+                        quantity = "113.398";
+                        unit = "%";
+                    };
+                    "ENERC_KCAL" =                     {
+                        label = Energy;
+                        quantity = "70.142662";
+                        unit = "%";
+                    };
+                    FASAT =                     {
+                        label = Saturated;
+                        quantity = "40.625733";
+                        unit = "%";
+                    };
+                    FAT =                     {
+                        label = Fat;
+                        quantity = "87.84094461538461";
+                        unit = "%";
+                    };
+                    FE =                     {
+                        label = Iron;
+                        quantity = "81.27230699283713";
+                        unit = "%";
+                    };
+                    FIBTG =                     {
+                        label = Fiber;
+                        quantity = "33.903";
+                        unit = "%";
+                    };
+                    FOL =                     {
+                        label = "Folic Acid (B9)";
+                        quantity = "45.4733";
+                        unit = "%";
+                    };
+                    K =                     {
+                        label = Potassium;
+                        quantity = "88.75192649953985";
+                        unit = "%";
+                    };
+                    MG =                     {
+                        label = Magnesium;
+                        quantity = "55.32577898387174";
+                        unit = "%";
+                    };
+                    NA =                     {
+                        label = Sodium;
+                        quantity = "35.43819448341667";
+                        unit = "%";
+                    };
+                    NIA =                     {
+                        label = "Niacin (B3)";
+                        quantity = "56.91390500000001";
+                        unit = "%";
+                    };
+                    P =                     {
+                        label = Phosphorus;
+                        quantity = "170.3057657142857";
+                        unit = "%";
+                    };
+                    PROCNT =                     {
+                        label = Protein;
+                        quantity = "238.743914";
+                        unit = "%";
+                    };
+                    RIBF =                     {
+                        label = "Riboflavin (B2)";
+                        quantity = "113.9394117647059";
+                        unit = "%";
+                    };
+                    THIA =                     {
+                        label = "Thiamin (B1)";
+                        quantity = "79.66288000000003";
+                        unit = "%";
+                    };
+                    TOCPHA =                     {
+                        label = "Vitamin E";
+                        quantity = "83.85215000000002";
+                        unit = "%";
+                    };
+                    "VITA_RAE" =                     {
+                        label = "Vitamin A";
+                        quantity = "70.60202222222222";
+                        unit = "%";
+                    };
+                    VITB12 =                     {
+                        label = "Vitamin B12";
+                        quantity = "45.35920000000001";
+                        unit = "%";
+                    };
+                    VITB6A =                     {
+                        label = "Vitamin B6";
+                        quantity = "73.59828";
+                        unit = "%";
+                    };
+                    VITC =                     {
+                        label = "Vitamin C";
+                        quantity = "60.68166666666666";
+                        unit = "%";
+                    };
+                    VITD =                     {
+                        label = "Vitamin D";
+                        quantity = "0.3401940000000001";
+                        unit = "%";
+                    };
+                    VITK1 =                     {
+                        label = "Vitamin K";
+                        quantity = "82.9114225";
+                        unit = "%";
+                    };
+                    ZN =                     {
+                        label = Zinc;
+                        quantity = "53.84321062365795";
+                        unit = "%";
+                    };
+                };
+                totalNutrients =                 {
+                    CA =                     {
+                        label = Calcium;
+                        quantity = "300.6197224516861";
+                        unit = mg;
+                    };
+                    CHOCDF =                     {
+                        label = Carbs;
+                        quantity = "59.948175";
+                        unit = g;
+                    };
+                    CHOLE =                     {
+                        label = Cholesterol;
+                        quantity = "340.194";
+                        unit = mg;
+                    };
+                    "ENERC_KCAL" =                     {
+                        label = Energy;
+                        quantity = "1402.85324";
+                        unit = kcal;
+                    };
+                    FAMS =                     {
+                        label = Monounsaturated;
+                        quantity = "39.86409400000001";
+                        unit = g;
+                    };
+                    FAPU =                     {
+                        label = Polyunsaturated;
+                        quantity = "6.746613";
+                        unit = g;
+                    };
+                    FASAT =                     {
+                        label = Saturated;
+                        quantity = "8.125146600000001";
+                        unit = g;
+                    };
+                    FAT =                     {
+                        label = Fat;
+                        quantity = "57.096614";
+                        unit = g;
+                    };
+                    FE =                     {
+                        label = Iron;
+                        quantity = "14.62901525871068";
+                        unit = mg;
+                    };
+                    FIBTG =                     {
+                        label = Fiber;
+                        quantity = "8.47575";
+                        unit = g;
+                    };
+                    FOL =                     {
+                        label = "Folic Acid (B9)";
+                        quantity = "181.8932";
+                        unit = "\U00b5g";
+                    };
+                    K =                     {
+                        label = Potassium;
+                        quantity = "3106.317427483895";
+                        unit = mg;
+                    };
+                    MG =                     {
+                        label = Magnesium;
+                        quantity = "221.3031159354869";
+                        unit = mg;
+                    };
+                    NA =                     {
+                        label = Sodium;
+                        quantity = "850.516667602";
+                        unit = mg;
+                    };
+                    NIA =                     {
+                        label = "Niacin (B3)";
+                        quantity = "11.382781";
+                        unit = mg;
+                    };
+                    P =                     {
+                        label = Phosphorus;
+                        quantity = "1192.14036";
+                        unit = mg;
+                    };
+                    PROCNT =                     {
+                        label = Protein;
+                        quantity = "119.371957";
+                        unit = g;
+                    };
+                    RIBF =                     {
+                        label = "Riboflavin (B2)";
+                        quantity = "1.93697";
+                        unit = mg;
+                    };
+                    SUGAR =                     {
+                        label = Sugars;
+                        quantity = "16.908575";
+                        unit = g;
+                    };
+                    THIA =                     {
+                        label = "Thiamin (B1)";
+                        quantity = "1.1949432";
+                        unit = mg;
+                    };
+                    TOCPHA =                     {
+                        label = "Vitamin E";
+                        quantity = "16.77043";
+                        unit = mg;
+                    };
+                    "VITA_RAE" =                     {
+                        label = "Vitamin A";
+                        quantity = "635.4182";
+                        unit = "\U00b5g_RAE";
+                    };
+                    VITB12 =                     {
+                        label = "Vitamin B12";
+                        quantity = "2.721552";
+                        unit = "\U00b5g";
+                    };
+                    VITB6A =                     {
+                        label = "Vitamin B6";
+                        quantity = "1.4719656";
+                        unit = mg;
+                    };
+                    VITC =                     {
+                        label = "Vitamin C";
+                        quantity = "36.409";
+                        unit = mg;
+                    };
+                    VITD =                     {
+                        label = "Vitamin D";
+                        quantity = "1.360776";
+                        unit = "\U00b5g";
+                    };
+                    VITK1 =                     {
+                        label = "Vitamin K";
+                        quantity = "66.329138";
+                        unit = "\U00b5g";
+                    };
+                    ZN =                     {
+                        label = Zinc;
+                        quantity = "8.076481593548692";
+                        unit = mg;
+                    };
+                };
+                totalWeight = "1460.689593548692";
+                uri = "http://www.edamam.com/ontologies/edamam.owl#recipe_395546382c2f53803dd7839fc1ec309c";
+                url = "http://www.cookingchanneltv.com/recipes/mario-batali/guazetto-di-rane-frog-leg-stew-recipe/index.html";
+                yield = 4;
+            };
+        },
+                {
+            bookmarked = 0;
+            bought = 0;
+            recipe =             {
+                calories = "3816.62927322";
+                cautions =                 (
+                );
+                dietLabels =                 (
+                );
+                digest =                 (
+                                        {
+                        daily = "380.4011977935385";
+                        hasRDI = 1;
+                        label = Fat;
+                        schemaOrgTag = fatContent;
+                        sub =                         (
+                                                        {
+                                daily = "105.0419780296";
+                                hasRDI = 1;
+                                label = Saturated;
+                                schemaOrgTag = saturatedFatContent;
+                                tag = FASAT;
+                                total = "21.00839560592";
+                                unit = g;
+                            },
+                                                        {
+                                daily = 0;
+                                hasRDI = 0;
+                                label = Trans;
+                                schemaOrgTag = transFatContent;
+                                tag = FATRN;
+                                total = "0.9365684550000001";
+                                unit = g;
+                            },
+                                                        {
+                                daily = 0;
+                                hasRDI = 0;
+                                label = Monounsaturated;
+                                schemaOrgTag = "<null>";
+                                tag = FAMS;
+                                total = "151.15102374132";
+                                unit = g;
+                            },
+                                                        {
+                                daily = 0;
+                                hasRDI = 0;
+                                label = Polyunsaturated;
+                                schemaOrgTag = "<null>";
+                                tag = FAPU;
+                                total = "69.69625683599998";
+                                unit = g;
+                            }
+                        );
+                        tag = FAT;
+                        total = "247.2607785658";
+                        unit = g;
+                    },
+                                        {
+                        daily = "99.13927219053333";
+                        hasRDI = 1;
+                        label = Carbs;
+                        schemaOrgTag = carbohydrateContent;
+                        sub =                         (
+                                                        {
+                                daily = 0;
+                                hasRDI = 0;
+                                label = "Carbs (net)";
+                                schemaOrgTag = "<null>";
+                                tag = "CHOCDF.net";
+                                total = "284.2379254076";
+                                unit = g;
+                            },
+                                                        {
+                                daily = "52.719564656";
+                                hasRDI = 1;
+                                label = Fiber;
+                                schemaOrgTag = fiberContent;
+                                tag = FIBTG;
+                                total = "13.179891164";
+                                unit = g;
+                            },
+                                                        {
+                                daily = 0;
+                                hasRDI = 0;
+                                label = Sugars;
+                                schemaOrgTag = sugarContent;
+                                tag = SUGAR;
+                                total = "12.6543249086";
+                                unit = g;
+                            }
+                        );
+                        tag = CHOCDF;
+                        total = "297.4178165716";
+                        unit = g;
+                    },
+                                        {
+                        daily = "113.1378854712";
+                        hasRDI = 1;
+                        label = Protein;
+                        schemaOrgTag = proteinContent;
+                        tag = PROCNT;
+                        total = "56.56894273560001";
+                        unit = g;
+                    },
+                                        {
+                        daily = 124;
+                        hasRDI = 1;
+                        label = Cholesterol;
+                        schemaOrgTag = cholesterolContent;
+                        tag = CHOLE;
+                        total = 372;
+                        unit = mg;
+                    },
+                                        {
+                        daily = "693.1353525266668";
+                        hasRDI = 1;
+                        label = Sodium;
+                        schemaOrgTag = sodiumContent;
+                        tag = NA;
+                        total = "16635.24846064";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "129.310612584";
+                        hasRDI = 1;
+                        label = Calcium;
+                        schemaOrgTag = "<null>";
+                        tag = CA;
+                        total = "1293.10612584";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "46.30220512999999";
+                        hasRDI = 1;
+                        label = Magnesium;
+                        schemaOrgTag = "<null>";
+                        tag = MG;
+                        total = "185.20882052";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "49.97859189314286";
+                        hasRDI = 1;
+                        label = Potassium;
+                        schemaOrgTag = "<null>";
+                        tag = K;
+                        total = "1749.25071626";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "69.55675844777778";
+                        hasRDI = 1;
+                        label = Iron;
+                        schemaOrgTag = "<null>";
+                        tag = FE;
+                        total = "12.5202165206";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "35.3828192";
+                        hasRDI = 1;
+                        label = Zinc;
+                        schemaOrgTag = "<null>";
+                        tag = ZN;
+                        total = "5.30742288";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "309.9899882857144";
+                        hasRDI = 1;
+                        label = Phosphorus;
+                        schemaOrgTag = "<null>";
+                        tag = P;
+                        total = "2169.929918000001";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "34.04915932";
+                        hasRDI = 1;
+                        label = "Vitamin A";
+                        schemaOrgTag = "<null>";
+                        tag = "VITA_RAE";
+                        total = "306.44243388";
+                        unit = "\U00b5g";
+                    },
+                                        {
+                        daily = "626.8332215600001";
+                        hasRDI = 1;
+                        label = "Vitamin C";
+                        schemaOrgTag = "<null>";
+                        tag = VITC;
+                        total = "376.099932936";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "46.56898631999999";
+                        hasRDI = 1;
+                        label = "Thiamin (B1)";
+                        schemaOrgTag = "<null>";
+                        tag = THIA;
+                        total = "0.6985347947999999";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "67.14182942352944";
+                        hasRDI = 1;
+                        label = "Riboflavin (B2)";
+                        schemaOrgTag = "<null>";
+                        tag = RIBF;
+                        total = "1.1414111002";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "37.617283038";
+                        hasRDI = 1;
+                        label = "Niacin (B3)";
+                        schemaOrgTag = "<null>";
+                        tag = NIA;
+                        total = "7.523456607599999";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "77.92503563000001";
+                        hasRDI = 1;
+                        label = "Vitamin B6";
+                        schemaOrgTag = "<null>";
+                        tag = VITB6A;
+                        total = "1.5585007126";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "52.54220105999999";
+                        hasRDI = 1;
+                        label = "Folic Acid (B9)";
+                        schemaOrgTag = "<null>";
+                        tag = FOL;
+                        total = "210.16880424";
+                        unit = "\U00b5g";
+                    },
+                                        {
+                        daily = "14.83333333333333";
+                        hasRDI = 1;
+                        label = "Vitamin B12";
+                        schemaOrgTag = "<null>";
+                        tag = VITB12;
+                        total = "0.89";
+                        unit = "\U00b5g";
+                    },
+                                        {
+                        daily = "0.5";
+                        hasRDI = 1;
+                        label = "Vitamin D";
+                        schemaOrgTag = "<null>";
+                        tag = VITD;
+                        total = 2;
+                        unit = "\U00b5g";
+                    },
+                                        {
+                        daily = "214.233798196";
+                        hasRDI = 1;
+                        label = "Vitamin E";
+                        schemaOrgTag = "<null>";
+                        tag = TOCPHA;
+                        total = "42.84675963919999";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "355.2810083625001";
+                        hasRDI = 1;
+                        label = "Vitamin K";
+                        schemaOrgTag = "<null>";
+                        tag = VITK1;
+                        total = "284.22480669";
+                        unit = "\U00b5g";
+                    }
+                );
+                healthLabels =                 (
+                    "Dairy-Free",
+                    "Peanut-Free",
+                    "Tree-Nut-Free",
+                    "Fish-Free",
+                    "Shellfish-Free"
+                );
+                image = "https://www.edamam.com/web-img/fc5/fc5a6f4a7f3dade1e5f1ce15e18b58d3.JPG";
+                ingredientLines =                 (
+                    "1 quart fry oil",
+                    "2 eggs, beaten",
+                    "1 cup prosecco",
+                    "12 ounces flour (by weight)",
+                    "1 tablespoon baking powder",
+                    "20 pieces separated small frog legs",
+                    "1 cup seasoned rice wine vinegar",
+                    "2 tablespoons freshly-squeezed lime juice",
+                    "2 ounces soy sauce",
+                    "1 cup sweet chili sauce",
+                    "3 tablespoons minced garlic",
+                    "1/2 cup thinly-sliced scallions",
+                    "1 tablespoon sriracha sauce"
+                );
+                ingredients =                 (
+                                        {
+                        food = oil;
+                        measure = quart;
+                        quantity = 1;
+                        text = "1 quart fry oil";
+                        weight = "232.45345";
+                    },
+                                        {
+                        food = eggs;
+                        measure = large;
+                        quantity = 2;
+                        text = "2 eggs, beaten";
+                        weight = 100;
+                    },
+                                        {
+                        food = prosecco;
+                        measure = cup;
+                        quantity = 1;
+                        text = "1 cup prosecco";
+                        weight = 226;
+                    },
+                                        {
+                        food = flour;
+                        measure = oz;
+                        quantity = 12;
+                        text = "12 ounces flour (by weight)";
+                        weight = "340.2";
+                    },
+                                        {
+                        food = "baking powder";
+                        measure = tbsp;
+                        quantity = 1;
+                        text = "1 tablespoon baking powder";
+                        weight = "13.8";
+                    },
+                                        {
+                        food = "frog legs";
+                        measure = piece;
+                        quantity = 20;
+                        text = "20 pieces separated small frog legs";
+                        weight = 0;
+                    },
+                                        {
+                        food = "rice wine vinegar";
+                        measure = cup;
+                        quantity = 1;
+                        text = "1 cup seasoned rice wine vinegar";
+                        weight = 238;
+                    },
+                                        {
+                        food = "lime juice";
+                        measure = tbsp;
+                        quantity = 2;
+                        text = "2 tablespoons freshly-squeezed lime juice";
+                        weight = "30.687294";
+                    },
+                                        {
+                        food = "soy sauce";
+                        measure = oz;
+                        quantity = 2;
+                        text = "2 ounces soy sauce";
+                        weight = "56.7";
+                    },
+                                        {
+                        food = "chili sauce";
+                        measure = cup;
+                        quantity = 1;
+                        text = "1 cup sweet chili sauce";
+                        weight = "454.2336";
+                    },
+                                        {
+                        food = garlic;
+                        measure = tbsp;
+                        quantity = 3;
+                        text = "3 tablespoons minced garlic";
+                        weight = "25.868628";
+                    },
+                                        {
+                        food = scallions;
+                        measure = cup;
+                        quantity = "0.5";
+                        text = "1/2 cup thinly-sliced scallions";
+                        weight = 50;
+                    },
+                                        {
+                        food = sriracha;
+                        measure = tbsp;
+                        quantity = 1;
+                        text = "1 tablespoon sriracha sauce";
+                        weight = "14.2";
+                    }
+                );
+                label = "Prosecco-Batter-Fried Frog Legs with Tangy Sweet Garlic-Chili Sauce";
+                shareAs = "http://www.edamam.com/recipe/prosecco-batter-fried-frog-legs-with-tangy-sweet-garlic-chili-sauce-99792d47d3383698a76c5cab1ecf11cd/frog";
+                source = Food52;
+                sourceIcon = "http://www.food52.com/favicon.ico";
+                totalDaily =                 {
+                    CA =                     {
+                        label = Calcium;
+                        quantity = "129.310612584";
+                        unit = "%";
+                    };
+                    CHOCDF =                     {
+                        label = Carbs;
+                        quantity = "99.13927219053333";
+                        unit = "%";
+                    };
+                    CHOLE =                     {
+                        label = Cholesterol;
+                        quantity = 124;
+                        unit = "%";
+                    };
+                    "ENERC_KCAL" =                     {
+                        label = Energy;
+                        quantity = "190.831463661";
+                        unit = "%";
+                    };
+                    FASAT =                     {
+                        label = Saturated;
+                        quantity = "105.0419780296";
+                        unit = "%";
+                    };
+                    FAT =                     {
+                        label = Fat;
+                        quantity = "380.4011977935385";
+                        unit = "%";
+                    };
+                    FE =                     {
+                        label = Iron;
+                        quantity = "69.55675844777778";
+                        unit = "%";
+                    };
+                    FIBTG =                     {
+                        label = Fiber;
+                        quantity = "52.719564656";
+                        unit = "%";
+                    };
+                    FOL =                     {
+                        label = "Folic Acid (B9)";
+                        quantity = "52.54220105999999";
+                        unit = "%";
+                    };
+                    K =                     {
+                        label = Potassium;
+                        quantity = "49.97859189314286";
+                        unit = "%";
+                    };
+                    MG =                     {
+                        label = Magnesium;
+                        quantity = "46.30220512999999";
+                        unit = "%";
+                    };
+                    NA =                     {
+                        label = Sodium;
+                        quantity = "693.1353525266668";
+                        unit = "%";
+                    };
+                    NIA =                     {
+                        label = "Niacin (B3)";
+                        quantity = "37.617283038";
+                        unit = "%";
+                    };
+                    P =                     {
+                        label = Phosphorus;
+                        quantity = "309.9899882857144";
+                        unit = "%";
+                    };
+                    PROCNT =                     {
+                        label = Protein;
+                        quantity = "113.1378854712";
+                        unit = "%";
+                    };
+                    RIBF =                     {
+                        label = "Riboflavin (B2)";
+                        quantity = "67.14182942352944";
+                        unit = "%";
+                    };
+                    THIA =                     {
+                        label = "Thiamin (B1)";
+                        quantity = "46.56898631999999";
+                        unit = "%";
+                    };
+                    TOCPHA =                     {
+                        label = "Vitamin E";
+                        quantity = "214.233798196";
+                        unit = "%";
+                    };
+                    "VITA_RAE" =                     {
+                        label = "Vitamin A";
+                        quantity = "34.04915932";
+                        unit = "%";
+                    };
+                    VITB12 =                     {
+                        label = "Vitamin B12";
+                        quantity = "14.83333333333333";
+                        unit = "%";
+                    };
+                    VITB6A =                     {
+                        label = "Vitamin B6";
+                        quantity = "77.92503563000001";
+                        unit = "%";
+                    };
+                    VITC =                     {
+                        label = "Vitamin C";
+                        quantity = "626.8332215600001";
+                        unit = "%";
+                    };
+                    VITD =                     {
+                        label = "Vitamin D";
+                        quantity = "0.5";
+                        unit = "%";
+                    };
+                    VITK1 =                     {
+                        label = "Vitamin K";
+                        quantity = "355.2810083625001";
+                        unit = "%";
+                    };
+                    ZN =                     {
+                        label = Zinc;
+                        quantity = "35.3828192";
+                        unit = "%";
+                    };
+                };
+                totalNutrients =                 {
+                    CA =                     {
+                        label = Calcium;
+                        quantity = "1293.10612584";
+                        unit = mg;
+                    };
+                    CHOCDF =                     {
+                        label = Carbs;
+                        quantity = "297.4178165716";
+                        unit = g;
+                    };
+                    CHOLE =                     {
+                        label = Cholesterol;
+                        quantity = 372;
+                        unit = mg;
+                    };
+                    "ENERC_KCAL" =                     {
+                        label = Energy;
+                        quantity = "3816.62927322";
+                        unit = kcal;
+                    };
+                    FAMS =                     {
+                        label = Monounsaturated;
+                        quantity = "151.15102374132";
+                        unit = g;
+                    };
+                    FAPU =                     {
+                        label = Polyunsaturated;
+                        quantity = "69.69625683599998";
+                        unit = g;
+                    };
+                    FASAT =                     {
+                        label = Saturated;
+                        quantity = "21.00839560592";
+                        unit = g;
+                    };
+                    FAT =                     {
+                        label = Fat;
+                        quantity = "247.2607785658";
+                        unit = g;
+                    };
+                    FATRN =                     {
+                        label = Trans;
+                        quantity = "0.9365684550000001";
+                        unit = g;
+                    };
+                    FE =                     {
+                        label = Iron;
+                        quantity = "12.5202165206";
+                        unit = mg;
+                    };
+                    FIBTG =                     {
+                        label = Fiber;
+                        quantity = "13.179891164";
+                        unit = g;
+                    };
+                    FOL =                     {
+                        label = "Folic Acid (B9)";
+                        quantity = "210.16880424";
+                        unit = "\U00b5g";
+                    };
+                    K =                     {
+                        label = Potassium;
+                        quantity = "1749.25071626";
+                        unit = mg;
+                    };
+                    MG =                     {
+                        label = Magnesium;
+                        quantity = "185.20882052";
+                        unit = mg;
+                    };
+                    NA =                     {
+                        label = Sodium;
+                        quantity = "16635.24846064";
+                        unit = mg;
+                    };
+                    NIA =                     {
+                        label = "Niacin (B3)";
+                        quantity = "7.523456607599999";
+                        unit = mg;
+                    };
+                    P =                     {
+                        label = Phosphorus;
+                        quantity = "2169.929918000001";
+                        unit = mg;
+                    };
+                    PROCNT =                     {
+                        label = Protein;
+                        quantity = "56.56894273560001";
+                        unit = g;
+                    };
+                    RIBF =                     {
+                        label = "Riboflavin (B2)";
+                        quantity = "1.1414111002";
+                        unit = mg;
+                    };
+                    SUGAR =                     {
+                        label = Sugars;
+                        quantity = "12.6543249086";
+                        unit = g;
+                    };
+                    THIA =                     {
+                        label = "Thiamin (B1)";
+                        quantity = "0.6985347947999999";
+                        unit = mg;
+                    };
+                    TOCPHA =                     {
+                        label = "Vitamin E";
+                        quantity = "42.84675963919999";
+                        unit = mg;
+                    };
+                    "VITA_RAE" =                     {
+                        label = "Vitamin A";
+                        quantity = "306.44243388";
+                        unit = "\U00b5g_RAE";
+                    };
+                    VITB12 =                     {
+                        label = "Vitamin B12";
+                        quantity = "0.89";
+                        unit = "\U00b5g";
+                    };
+                    VITB6A =                     {
+                        label = "Vitamin B6";
+                        quantity = "1.5585007126";
+                        unit = mg;
+                    };
+                    VITC =                     {
+                        label = "Vitamin C";
+                        quantity = "376.099932936";
+                        unit = mg;
+                    };
+                    VITD =                     {
+                        label = "Vitamin D";
+                        quantity = 2;
+                        unit = "\U00b5g";
+                    };
+                    VITK1 =                     {
+                        label = "Vitamin K";
+                        quantity = "284.22480669";
+                        unit = "\U00b5g";
+                    };
+                    ZN =                     {
+                        label = Zinc;
+                        quantity = "5.30742288";
+                        unit = mg;
+                    };
+                };
+                totalWeight = "1782.142972";
+                uri = "http://www.edamam.com/ontologies/edamam.owl#recipe_99792d47d3383698a76c5cab1ecf11cd";
+                url = "http://www.food52.com/recipes/15330_proseccobatterfried_frog_legs_with_tangy_sweet_garlicchili_sauce";
+                yield = 20;
+            };
+        },
+                {
+            bookmarked = 0;
+            bought = 0;
+            recipe =             {
+                calories = "79.405";
+                cautions =                 (
+                );
+                dietLabels =                 (
+                    "Low-Carb"
+                );
+                digest =                 (
+                                        {
+                        daily = "10.98738461538462";
+                        hasRDI = 1;
+                        label = Fat;
+                        schemaOrgTag = fatContent;
+                        sub =                         (
+                                                        {
+                                daily = "15.47675";
+                                hasRDI = 1;
+                                label = Saturated;
+                                schemaOrgTag = saturatedFatContent;
+                                tag = FASAT;
+                                total = "3.095349999999999";
+                                unit = g;
+                            },
+                                                        {
+                                daily = 0;
+                                hasRDI = 0;
+                                label = Trans;
+                                schemaOrgTag = transFatContent;
+                                tag = FATRN;
+                                total = 0;
+                                unit = g;
+                            },
+                                                        {
+                                daily = 0;
+                                hasRDI = 0;
+                                label = Monounsaturated;
+                                schemaOrgTag = "<null>";
+                                tag = FAMS;
+                                total = "2.79595";
+                                unit = g;
+                            },
+                                                        {
+                                daily = 0;
+                                hasRDI = 0;
+                                label = Polyunsaturated;
+                                schemaOrgTag = "<null>";
+                                tag = FAPU;
+                                total = "0.42765";
+                                unit = g;
+                            }
+                        );
+                        tag = FAT;
+                        total = "7.141800000000001";
+                        unit = g;
+                    },
+                                        {
+                        daily = "1.003116666666667";
+                        hasRDI = 1;
+                        label = Carbs;
+                        schemaOrgTag = carbohydrateContent;
+                        sub =                         (
+                                                        {
+                                daily = 0;
+                                hasRDI = 0;
+                                label = "Carbs (net)";
+                                schemaOrgTag = "<null>";
+                                tag = "CHOCDF.net";
+                                total = "1.53985";
+                                unit = g;
+                            },
+                                                        {
+                                daily = "5.877999999999999";
+                                hasRDI = 1;
+                                label = Fiber;
+                                schemaOrgTag = fiberContent;
+                                tag = FIBTG;
+                                total = "1.4695";
+                                unit = g;
+                            },
+                                                        {
+                                daily = 0;
+                                hasRDI = 0;
+                                label = Sugars;
+                                schemaOrgTag = sugarContent;
+                                tag = SUGAR;
+                                total = "1.70955";
+                                unit = g;
+                            }
+                        );
+                        tag = CHOCDF;
+                        total = "3.00935";
+                        unit = g;
+                    },
+                                        {
+                        daily = "2.881";
+                        hasRDI = 1;
+                        label = Protein;
+                        schemaOrgTag = proteinContent;
+                        tag = PROCNT;
+                        total = "1.4405";
+                        unit = g;
+                    },
+                                        {
+                        daily = "5.316666666666666";
+                        hasRDI = 1;
+                        label = Cholesterol;
+                        schemaOrgTag = cholesterolContent;
+                        tag = CHOLE;
+                        total = "15.95";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "12.82520833333333";
+                        hasRDI = 1;
+                        label = Sodium;
+                        schemaOrgTag = sodiumContent;
+                        tag = NA;
+                        total = "307.805";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "4.683000000000001";
+                        hasRDI = 1;
+                        label = Calcium;
+                        schemaOrgTag = "<null>";
+                        tag = CA;
+                        total = "46.83000000000001";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "2.4575";
+                        hasRDI = 1;
+                        label = Magnesium;
+                        schemaOrgTag = "<null>";
+                        tag = MG;
+                        total = "9.83";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "5.488";
+                        hasRDI = 1;
+                        label = Potassium;
+                        schemaOrgTag = "<null>";
+                        tag = K;
+                        total = "192.08";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "1.384722222222222";
+                        hasRDI = 1;
+                        label = Iron;
+                        schemaOrgTag = "<null>";
+                        tag = FE;
+                        total = "0.24925";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "1.083666666666667";
+                        hasRDI = 1;
+                        label = Zinc;
+                        schemaOrgTag = "<null>";
+                        tag = ZN;
+                        total = "0.16255";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "4.467142857142856";
+                        hasRDI = 1;
+                        label = Phosphorus;
+                        schemaOrgTag = "<null>";
+                        tag = P;
+                        total = "31.27";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "7.76111111111111";
+                        hasRDI = 1;
+                        label = "Vitamin A";
+                        schemaOrgTag = "<null>";
+                        tag = "VITA_RAE";
+                        total = "69.84999999999999";
+                        unit = "\U00b5g";
+                    },
+                                        {
+                        daily = "3.306666666666667";
+                        hasRDI = 1;
+                        label = "Vitamin C";
+                        schemaOrgTag = "<null>";
+                        tag = VITC;
+                        total = "1.984";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "1.226666666666667";
+                        hasRDI = 1;
+                        label = "Thiamin (B1)";
+                        schemaOrgTag = "<null>";
+                        tag = THIA;
+                        total = "0.0184";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "2.961470588235295";
+                        hasRDI = 1;
+                        label = "Riboflavin (B2)";
+                        schemaOrgTag = "<null>";
+                        tag = RIBF;
+                        total = "0.050345";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "1.28075";
+                        hasRDI = 1;
+                        label = "Niacin (B3)";
+                        schemaOrgTag = "<null>";
+                        tag = NIA;
+                        total = "0.25615";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "2.66";
+                        hasRDI = 1;
+                        label = "Vitamin B6";
+                        schemaOrgTag = "<null>";
+                        tag = VITB6A;
+                        total = "0.0532";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "6.26";
+                        hasRDI = 1;
+                        label = "Folic Acid (B9)";
+                        schemaOrgTag = "<null>";
+                        tag = FOL;
+                        total = "25.04";
+                        unit = "\U00b5g";
+                    },
+                                        {
+                        daily = "0.6041666666666666";
+                        hasRDI = 1;
+                        label = "Vitamin B12";
+                        schemaOrgTag = "<null>";
+                        tag = VITB12;
+                        total = "0.03625";
+                        unit = "\U00b5g";
+                    },
+                                        {
+                        daily = "0.02175";
+                        hasRDI = 1;
+                        label = "Vitamin D";
+                        schemaOrgTag = "<null>";
+                        tag = VITD;
+                        total = "0.08699999999999999";
+                        unit = "\U00b5g";
+                    },
+                                        {
+                        daily = "3.646";
+                        hasRDI = 1;
+                        label = "Vitamin E";
+                        schemaOrgTag = "<null>";
+                        tag = TOCPHA;
+                        total = "0.7292000000000001";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "24.201875";
+                        hasRDI = 1;
+                        label = "Vitamin K";
+                        schemaOrgTag = "<null>";
+                        tag = VITK1;
+                        total = "19.3615";
+                        unit = "\U00b5g";
+                    }
+                );
+                healthLabels =                 (
+                    Vegetarian,
+                    "Gluten-Free",
+                    "Egg-Free",
+                    "Peanut-Free",
+                    "Tree-Nut-Free",
+                    "Soy-Free",
+                    "Fish-Free",
+                    "Shellfish-Free"
+                );
+                image = "https://www.edamam.com/web-img/291/291291a2e46b0cae757b2a90d3e1ca88.jpg";
+                ingredientLines =                 (
+                    "1 stalk celery",
+                    "1 tablespoon reduced-fat cream cheese (neufch\U00e3\U00a2tel)",
+                    "5 pimiento-stuffed green olives, sliced"
+                );
+                ingredients =                 (
+                                        {
+                        food = celery;
+                        measure = stalk;
+                        quantity = 1;
+                        text = "1 stalk celery";
+                        weight = 64;
+                    },
+                                        {
+                        food = "cream cheese";
+                        measure = tbsp;
+                        quantity = 1;
+                        text = "1 tablespoon reduced-fat cream cheese (neufch\U00e3\U00a2tel)";
+                        weight = "14.5";
+                    },
+                                        {
+                        food = "pimiento stuffed green olive";
+                        measure = olive;
+                        quantity = 5;
+                        text = "5 pimiento-stuffed green olives, sliced";
+                        weight = "13.5";
+                    }
+                );
+                label = "Frogs on a Log";
+                shareAs = "http://www.edamam.com/recipe/frogs-on-a-log-1ee9cc8642c426c1f07477eaf2e8251a/frog";
+                source = "Kitchen Daily";
+                sourceIcon = "http://www.huffingtonpost.com/favicon.ico";
+                totalDaily =                 {
+                    CA =                     {
+                        label = Calcium;
+                        quantity = "4.683000000000001";
+                        unit = "%";
+                    };
+                    CHOCDF =                     {
+                        label = Carbs;
+                        quantity = "1.003116666666667";
+                        unit = "%";
+                    };
+                    CHOLE =                     {
+                        label = Cholesterol;
+                        quantity = "5.316666666666666";
+                        unit = "%";
+                    };
+                    "ENERC_KCAL" =                     {
+                        label = Energy;
+                        quantity = "3.97025";
+                        unit = "%";
+                    };
+                    FASAT =                     {
+                        label = Saturated;
+                        quantity = "15.47675";
+                        unit = "%";
+                    };
+                    FAT =                     {
+                        label = Fat;
+                        quantity = "10.98738461538462";
+                        unit = "%";
+                    };
+                    FE =                     {
+                        label = Iron;
+                        quantity = "1.384722222222222";
+                        unit = "%";
+                    };
+                    FIBTG =                     {
+                        label = Fiber;
+                        quantity = "5.877999999999999";
+                        unit = "%";
+                    };
+                    FOL =                     {
+                        label = "Folic Acid (B9)";
+                        quantity = "6.26";
+                        unit = "%";
+                    };
+                    K =                     {
+                        label = Potassium;
+                        quantity = "5.488";
+                        unit = "%";
+                    };
+                    MG =                     {
+                        label = Magnesium;
+                        quantity = "2.4575";
+                        unit = "%";
+                    };
+                    NA =                     {
+                        label = Sodium;
+                        quantity = "12.82520833333333";
+                        unit = "%";
+                    };
+                    NIA =                     {
+                        label = "Niacin (B3)";
+                        quantity = "1.28075";
+                        unit = "%";
+                    };
+                    P =                     {
+                        label = Phosphorus;
+                        quantity = "4.467142857142856";
+                        unit = "%";
+                    };
+                    PROCNT =                     {
+                        label = Protein;
+                        quantity = "2.881";
+                        unit = "%";
+                    };
+                    RIBF =                     {
+                        label = "Riboflavin (B2)";
+                        quantity = "2.961470588235295";
+                        unit = "%";
+                    };
+                    THIA =                     {
+                        label = "Thiamin (B1)";
+                        quantity = "1.226666666666667";
+                        unit = "%";
+                    };
+                    TOCPHA =                     {
+                        label = "Vitamin E";
+                        quantity = "3.646";
+                        unit = "%";
+                    };
+                    "VITA_RAE" =                     {
+                        label = "Vitamin A";
+                        quantity = "7.76111111111111";
+                        unit = "%";
+                    };
+                    VITB12 =                     {
+                        label = "Vitamin B12";
+                        quantity = "0.6041666666666666";
+                        unit = "%";
+                    };
+                    VITB6A =                     {
+                        label = "Vitamin B6";
+                        quantity = "2.66";
+                        unit = "%";
+                    };
+                    VITC =                     {
+                        label = "Vitamin C";
+                        quantity = "3.306666666666667";
+                        unit = "%";
+                    };
+                    VITD =                     {
+                        label = "Vitamin D";
+                        quantity = "0.02175";
+                        unit = "%";
+                    };
+                    VITK1 =                     {
+                        label = "Vitamin K";
+                        quantity = "24.201875";
+                        unit = "%";
+                    };
+                    ZN =                     {
+                        label = Zinc;
+                        quantity = "1.083666666666667";
+                        unit = "%";
+                    };
+                };
+                totalNutrients =                 {
+                    CA =                     {
+                        label = Calcium;
+                        quantity = "46.83000000000001";
+                        unit = mg;
+                    };
+                    CHOCDF =                     {
+                        label = Carbs;
+                        quantity = "3.00935";
+                        unit = g;
+                    };
+                    CHOLE =                     {
+                        label = Cholesterol;
+                        quantity = "15.95";
+                        unit = mg;
+                    };
+                    "ENERC_KCAL" =                     {
+                        label = Energy;
+                        quantity = "79.405";
+                        unit = kcal;
+                    };
+                    FAMS =                     {
+                        label = Monounsaturated;
+                        quantity = "2.79595";
+                        unit = g;
+                    };
+                    FAPU =                     {
+                        label = Polyunsaturated;
+                        quantity = "0.42765";
+                        unit = g;
+                    };
+                    FASAT =                     {
+                        label = Saturated;
+                        quantity = "3.095349999999999";
+                        unit = g;
+                    };
+                    FAT =                     {
+                        label = Fat;
+                        quantity = "7.141800000000001";
+                        unit = g;
+                    };
+                    FE =                     {
+                        label = Iron;
+                        quantity = "0.24925";
+                        unit = mg;
+                    };
+                    FIBTG =                     {
+                        label = Fiber;
+                        quantity = "1.4695";
+                        unit = g;
+                    };
+                    FOL =                     {
+                        label = "Folic Acid (B9)";
+                        quantity = "25.04";
+                        unit = "\U00b5g";
+                    };
+                    K =                     {
+                        label = Potassium;
+                        quantity = "192.08";
+                        unit = mg;
+                    };
+                    MG =                     {
+                        label = Magnesium;
+                        quantity = "9.83";
+                        unit = mg;
+                    };
+                    NA =                     {
+                        label = Sodium;
+                        quantity = "307.805";
+                        unit = mg;
+                    };
+                    NIA =                     {
+                        label = "Niacin (B3)";
+                        quantity = "0.25615";
+                        unit = mg;
+                    };
+                    P =                     {
+                        label = Phosphorus;
+                        quantity = "31.27";
+                        unit = mg;
+                    };
+                    PROCNT =                     {
+                        label = Protein;
+                        quantity = "1.4405";
+                        unit = g;
+                    };
+                    RIBF =                     {
+                        label = "Riboflavin (B2)";
+                        quantity = "0.050345";
+                        unit = mg;
+                    };
+                    SUGAR =                     {
+                        label = Sugars;
+                        quantity = "1.70955";
+                        unit = g;
+                    };
+                    THIA =                     {
+                        label = "Thiamin (B1)";
+                        quantity = "0.0184";
+                        unit = mg;
+                    };
+                    TOCPHA =                     {
+                        label = "Vitamin E";
+                        quantity = "0.7292000000000001";
+                        unit = mg;
+                    };
+                    "VITA_RAE" =                     {
+                        label = "Vitamin A";
+                        quantity = "69.84999999999999";
+                        unit = "\U00b5g_RAE";
+                    };
+                    VITB12 =                     {
+                        label = "Vitamin B12";
+                        quantity = "0.03625";
+                        unit = "\U00b5g";
+                    };
+                    VITB6A =                     {
+                        label = "Vitamin B6";
+                        quantity = "0.0532";
+                        unit = mg;
+                    };
+                    VITC =                     {
+                        label = "Vitamin C";
+                        quantity = "1.984";
+                        unit = mg;
+                    };
+                    VITD =                     {
+                        label = "Vitamin D";
+                        quantity = "0.08699999999999999";
+                        unit = "\U00b5g";
+                    };
+                    VITK1 =                     {
+                        label = "Vitamin K";
+                        quantity = "19.3615";
+                        unit = "\U00b5g";
+                    };
+                    ZN =                     {
+                        label = Zinc;
+                        quantity = "0.16255";
+                        unit = mg;
+                    };
+                };
+                totalWeight = 92;
+                uri = "http://www.edamam.com/ontologies/edamam.owl#recipe_1ee9cc8642c426c1f07477eaf2e8251a";
+                url = "http://www.huffingtonpost.com/2011/10/27/frogs-on-a-log_n_1062337.html";
+                yield = 1;
+            };
+        },
+                {
+            bookmarked = 0;
+            bought = 0;
+            recipe =             {
+                calories = "8023.58668";
+                cautions =                 (
+                    Gluten,
+                    Wheat
+                );
+                dietLabels =                 (
+                    "High-Fiber",
+                    "Low-Sodium"
+                );
+                digest =                 (
+                                        {
+                        daily = "618.1316936923076";
+                        hasRDI = 1;
+                        label = Fat;
+                        schemaOrgTag = fatContent;
+                        sub =                         (
+                                                        {
+                                daily = "180.4118685";
+                                hasRDI = 1;
+                                label = Saturated;
+                                schemaOrgTag = saturatedFatContent;
+                                tag = FASAT;
+                                total = "36.0823737";
+                                unit = g;
+                            },
+                                                        {
+                                daily = 0;
+                                hasRDI = 0;
+                                label = Trans;
+                                schemaOrgTag = transFatContent;
+                                tag = FATRN;
+                                total = "0.0127575";
+                                unit = g;
+                            },
+                                                        {
+                                daily = 0;
+                                hasRDI = 0;
+                                label = Monounsaturated;
+                                schemaOrgTag = "<null>";
+                                tag = FAMS;
+                                total = "102.2526216";
+                                unit = g;
+                            },
+                                                        {
+                                daily = 0;
+                                hasRDI = 0;
+                                label = Polyunsaturated;
+                                schemaOrgTag = "<null>";
+                                tag = FAPU;
+                                total = "239.537471";
+                                unit = g;
+                            }
+                        );
+                        tag = FAT;
+                        total = "401.7856009";
+                        unit = g;
+                    },
+                                        {
+                        daily = "348.8019471666668";
+                        hasRDI = 1;
+                        label = Carbs;
+                        schemaOrgTag = carbohydrateContent;
+                        sub =                         (
+                                                        {
+                                daily = 0;
+                                hasRDI = 0;
+                                label = "Carbs (net)";
+                                schemaOrgTag = "<null>";
+                                tag = "CHOCDF.net";
+                                total = "932.0994495000002";
+                                unit = g;
+                            },
+                                                        {
+                                daily = "457.225568";
+                                hasRDI = 1;
+                                label = Fiber;
+                                schemaOrgTag = fiberContent;
+                                tag = FIBTG;
+                                total = "114.306392";
+                                unit = g;
+                            },
+                                                        {
+                                daily = 0;
+                                hasRDI = 0;
+                                label = Sugars;
+                                schemaOrgTag = sugarContent;
+                                tag = SUGAR;
+                                total = "513.1746108";
+                                unit = g;
+                            }
+                        );
+                        tag = CHOCDF;
+                        total = "1046.4058415";
+                        unit = g;
+                    },
+                                        {
+                        daily = "309.857726";
+                        hasRDI = 1;
+                        label = Protein;
+                        schemaOrgTag = proteinContent;
+                        tag = PROCNT;
+                        total = "154.928863";
+                        unit = g;
+                    },
+                                        {
+                        daily = "2.835";
+                        hasRDI = 1;
+                        label = Cholesterol;
+                        schemaOrgTag = cholesterolContent;
+                        tag = CHOLE;
+                        total = "8.504999999999999";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "6.025182034083334";
+                        hasRDI = 1;
+                        label = Sodium;
+                        schemaOrgTag = sodiumContent;
+                        tag = NA;
+                        total = "144.604368818";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "146.8965936338089";
+                        hasRDI = 1;
+                        label = Calcium;
+                        schemaOrgTag = "<null>";
+                        tag = CA;
+                        total = "1468.965936338089";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "422.6604571493551";
+                        hasRDI = 1;
+                        label = Magnesium;
+                        schemaOrgTag = "<null>";
+                        tag = MG;
+                        total = "1690.64182859742";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "177.8267139651246";
+                        hasRDI = 1;
+                        label = Potassium;
+                        schemaOrgTag = "<null>";
+                        tag = K;
+                        total = "6223.934988779363";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "280.4673702063818";
+                        hasRDI = 1;
+                        label = Iron;
+                        schemaOrgTag = "<null>";
+                        tag = FE;
+                        total = "50.48412663714872";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "294.233671064947";
+                        hasRDI = 1;
+                        label = Zinc;
+                        schemaOrgTag = "<null>";
+                        tag = ZN;
+                        total = "44.13505065974204";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "763.6228142857143";
+                        hasRDI = 1;
+                        label = Phosphorus;
+                        schemaOrgTag = "<null>";
+                        tag = P;
+                        total = "5345.3597";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "4.347";
+                        hasRDI = 1;
+                        label = "Vitamin A";
+                        schemaOrgTag = "<null>";
+                        tag = "VITA_RAE";
+                        total = "39.123";
+                        unit = "\U00b5g";
+                    },
+                                        {
+                        daily = "11.788875";
+                        hasRDI = 1;
+                        label = "Vitamin C";
+                        schemaOrgTag = "<null>";
+                        tag = VITC;
+                        total = "7.073325";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "306.3665466666667";
+                        hasRDI = 1;
+                        label = "Thiamin (B1)";
+                        schemaOrgTag = "<null>";
+                        tag = THIA;
+                        total = "4.595498200000001";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "198.6994411764706";
+                        hasRDI = 1;
+                        label = "Riboflavin (B2)";
+                        schemaOrgTag = "<null>";
+                        tag = RIBF;
+                        total = "3.3778905";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "168.852152";
+                        hasRDI = 1;
+                        label = "Niacin (B3)";
+                        schemaOrgTag = "<null>";
+                        tag = NIA;
+                        total = "33.7704304";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "168.25685";
+                        hasRDI = 1;
+                        label = "Vitamin B6";
+                        schemaOrgTag = "<null>";
+                        tag = VITB6A;
+                        total = "3.365137";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "189.1292975";
+                        hasRDI = 1;
+                        label = "Folic Acid (B9)";
+                        schemaOrgTag = "<null>";
+                        tag = FOL;
+                        total = "756.51719";
+                        unit = "\U00b5g";
+                    },
+                                        {
+                        daily = "6.37875";
+                        hasRDI = 1;
+                        label = "Vitamin B12";
+                        schemaOrgTag = "<null>";
+                        tag = VITB12;
+                        total = "0.382725";
+                        unit = "\U00b5g";
+                    },
+                                        {
+                        daily = "0.2764125";
+                        hasRDI = 1;
+                        label = "Vitamin D";
+                        schemaOrgTag = "<null>";
+                        tag = VITD;
+                        total = "1.10565";
+                        unit = "\U00b5g";
+                    },
+                                        {
+                        daily = "693.1927695000001";
+                        hasRDI = 1;
+                        label = "Vitamin E";
+                        schemaOrgTag = "<null>";
+                        tag = TOCPHA;
+                        total = "138.6385539";
+                        unit = mg;
+                    },
+                                        {
+                        daily = "43.64108125";
+                        hasRDI = 1;
+                        label = "Vitamin K";
+                        schemaOrgTag = "<null>";
+                        tag = VITK1;
+                        total = "34.912865";
+                        unit = "\U00b5g";
+                    }
+                );
+                healthLabels =                 (
+                    "Egg-Free",
+                    "Peanut-Free",
+                    "Soy-Free",
+                    "Fish-Free",
+                    "Shellfish-Free"
+                );
+                image = "https://www.edamam.com/web-img/7a0/7a0050e94b01f6a4869cfe4d23eb36cf.jpg";
+                ingredientLines =                 (
+                    "1 lb rolled oats (about 4 1/2 cups)",
+                    "4 1/2 ozs sliced almonds (about 1 1/4 cups)",
+                    "2 ozs sesame seeds (scant 1/2 cup)",
+                    "2 ozs wheat germ (about 2/3 cup)",
+                    "3 ozs nonfat dried milk (scant 2/3 cup; see note)",
+                    "5 1/2 ozs whole-wheat pastry flour (about 11/3 cups)",
+                    "4 ozs sunflower seeds (about 2/3 cup)",
+                    "1/2 tsp kosher salt",
+                    "18 ozs honey",
+                    "7 1/2 ozs safflower or canola oil",
+                    "4 to 5 ozs raisins or dried fruit of choice (about 1 cup)"
+                );
+                ingredients =                 (
+                                        {
+                        food = "rolled oats";
+                        measure = lb;
+                        quantity = 1;
+                        text = "1 lb rolled oats (about 4 1/2 cups)";
+                        weight = "453.592";
+                    },
+                                        {
+                        food = almonds;
+                        measure = oz;
+                        quantity = "4.5";
+                        text = "4 1/2 ozs sliced almonds (about 1 1/4 cups)";
+                        weight = "127.575";
+                    },
+                                        {
+                        food = "sesame seeds";
+                        measure = oz;
+                        quantity = 2;
+                        text = "2 ozs sesame seeds (scant 1/2 cup)";
+                        weight = "56.7";
+                    },
+                                        {
+                        food = "wheat germ";
+                        measure = oz;
+                        quantity = 2;
+                        text = "2 ozs wheat germ (about 2/3 cup)";
+                        weight = "56.7";
+                    },
+                                        {
+                        food = milk;
+                        measure = oz;
+                        quantity = 3;
+                        text = "3 ozs nonfat dried milk (scant 2/3 cup; see note)";
+                        weight = "85.05";
+                    },
+                                        {
+                        food = "whole wheat pastry flour";
+                        measure = oz;
+                        quantity = "5.5";
+                        text = "5 1/2 ozs whole-wheat pastry flour (about 11/3 cups)";
+                        weight = "155.925";
+                    },
+                                        {
+                        food = "sunflower seeds";
+                        measure = oz;
+                        quantity = 4;
+                        text = "4 ozs sunflower seeds (about 2/3 cup)";
+                        weight = "113.4";
+                    },
+                                        {
+                        food = "kosher salt";
+                        measure = tsp;
+                        quantity = "0.5";
+                        text = "1/2 tsp kosher salt";
+                        weight = "0.06185974203519274";
+                    },
+                                        {
+                        food = honey;
+                        measure = oz;
+                        quantity = 18;
+                        text = "18 ozs honey";
+                        weight = "510.3";
+                    },
+                                        {
+                        food = "safflower oil";
+                        measure = oz;
+                        quantity = "7.5";
+                        text = "7 1/2 ozs safflower or canola oil";
+                        weight = "212.625";
+                    },
+                                        {
+                        food = raisins;
+                        measure = oz;
+                        quantity = "4.5";
+                        text = "4 to 5 ozs raisins or dried fruit of choice (about 1 cup)";
+                        weight = "127.575";
+                    }
+                );
+                label = "Frog Hollow Farm Granola";
+                shareAs = "http://www.edamam.com/recipe/frog-hollow-farm-granola-a87e7004d93d7454cdcd33e326c05911/frog";
+                source = "San Francisco Gate";
+                sourceIcon = "http://www.sfgate.com/favicon.ico";
+                totalDaily =                 {
+                    CA =                     {
+                        label = Calcium;
+                        quantity = "146.8965936338089";
+                        unit = "%";
+                    };
+                    CHOCDF =                     {
+                        label = Carbs;
+                        quantity = "348.8019471666668";
+                        unit = "%";
+                    };
+                    CHOLE =                     {
+                        label = Cholesterol;
+                        quantity = "2.835";
+                        unit = "%";
+                    };
+                    "ENERC_KCAL" =                     {
+                        label = Energy;
+                        quantity = "401.179334";
+                        unit = "%";
+                    };
+                    FASAT =                     {
+                        label = Saturated;
+                        quantity = "180.4118685";
+                        unit = "%";
+                    };
+                    FAT =                     {
+                        label = Fat;
+                        quantity = "618.1316936923076";
+                        unit = "%";
+                    };
+                    FE =                     {
+                        label = Iron;
+                        quantity = "280.4673702063818";
+                        unit = "%";
+                    };
+                    FIBTG =                     {
+                        label = Fiber;
+                        quantity = "457.225568";
+                        unit = "%";
+                    };
+                    FOL =                     {
+                        label = "Folic Acid (B9)";
+                        quantity = "189.1292975";
+                        unit = "%";
+                    };
+                    K =                     {
+                        label = Potassium;
+                        quantity = "177.8267139651246";
+                        unit = "%";
+                    };
+                    MG =                     {
+                        label = Magnesium;
+                        quantity = "422.6604571493551";
+                        unit = "%";
+                    };
+                    NA =                     {
+                        label = Sodium;
+                        quantity = "6.025182034083334";
+                        unit = "%";
+                    };
+                    NIA =                     {
+                        label = "Niacin (B3)";
+                        quantity = "168.852152";
+                        unit = "%";
+                    };
+                    P =                     {
+                        label = Phosphorus;
+                        quantity = "763.6228142857143";
+                        unit = "%";
+                    };
+                    PROCNT =                     {
+                        label = Protein;
+                        quantity = "309.857726";
+                        unit = "%";
+                    };
+                    RIBF =                     {
+                        label = "Riboflavin (B2)";
+                        quantity = "198.6994411764706";
+                        unit = "%";
+                    };
+                    THIA =                     {
+                        label = "Thiamin (B1)";
+                        quantity = "306.3665466666667";
+                        unit = "%";
+                    };
+                    TOCPHA =                     {
+                        label = "Vitamin E";
+                        quantity = "693.1927695000001";
+                        unit = "%";
+                    };
+                    "VITA_RAE" =                     {
+                        label = "Vitamin A";
+                        quantity = "4.347";
+                        unit = "%";
+                    };
+                    VITB12 =                     {
+                        label = "Vitamin B12";
+                        quantity = "6.37875";
+                        unit = "%";
+                    };
+                    VITB6A =                     {
+                        label = "Vitamin B6";
+                        quantity = "168.25685";
+                        unit = "%";
+                    };
+                    VITC =                     {
+                        label = "Vitamin C";
+                        quantity = "11.788875";
+                        unit = "%";
+                    };
+                    VITD =                     {
+                        label = "Vitamin D";
+                        quantity = "0.2764125";
+                        unit = "%";
+                    };
+                    VITK1 =                     {
+                        label = "Vitamin K";
+                        quantity = "43.64108125";
+                        unit = "%";
+                    };
+                    ZN =                     {
+                        label = Zinc;
+                        quantity = "294.233671064947";
+                        unit = "%";
+                    };
+                };
+                totalNutrients =                 {
+                    CA =                     {
+                        label = Calcium;
+                        quantity = "1468.965936338089";
+                        unit = mg;
+                    };
+                    CHOCDF =                     {
+                        label = Carbs;
+                        quantity = "1046.4058415";
+                        unit = g;
+                    };
+                    CHOLE =                     {
+                        label = Cholesterol;
+                        quantity = "8.504999999999999";
+                        unit = mg;
+                    };
+                    "ENERC_KCAL" =                     {
+                        label = Energy;
+                        quantity = "8023.58668";
+                        unit = kcal;
+                    };
+                    FAMS =                     {
+                        label = Monounsaturated;
+                        quantity = "102.2526216";
+                        unit = g;
+                    };
+                    FAPU =                     {
+                        label = Polyunsaturated;
+                        quantity = "239.537471";
+                        unit = g;
+                    };
+                    FASAT =                     {
+                        label = Saturated;
+                        quantity = "36.0823737";
+                        unit = g;
+                    };
+                    FAT =                     {
+                        label = Fat;
+                        quantity = "401.7856009";
+                        unit = g;
+                    };
+                    FATRN =                     {
+                        label = Trans;
+                        quantity = "0.0127575";
+                        unit = g;
+                    };
+                    FE =                     {
+                        label = Iron;
+                        quantity = "50.48412663714872";
+                        unit = mg;
+                    };
+                    FIBTG =                     {
+                        label = Fiber;
+                        quantity = "114.306392";
+                        unit = g;

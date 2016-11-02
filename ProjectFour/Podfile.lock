@@ -1,6 +1,6 @@
 PODS:
   - AsyncSwift (2.0.0)
-  - SideMenu (2.0.3)
+  - SideMenu (2.0.5)
 
 DEPENDENCIES:
   - AsyncSwift
@@ -8,8 +8,8 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AsyncSwift: 6ba6ed9ecb51344458063f7c86fe447ab824e313
-  SideMenu: f179260f85c68ed9b283b4a505600f2e6cbdfb10
+  SideMenu: 0ecfd407b24e7d36c57fc50ca7f5d7cedb7c8841
 
-PODFILE CHECKSUM: 1708bcfdacdc30bdc414b4192bb16201769755bb
+PODFILE CHECKSUM: 55cf5c32b6db373f7154e93e041c2ab5693a4018
 
 COCOAPODS: 1.1.0.rc.2

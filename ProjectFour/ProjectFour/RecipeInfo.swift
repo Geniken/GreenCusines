@@ -9,9 +9,20 @@
 import Foundation
 import UIKit
 
-struct RecipeInfoView {
+struct RecipeInfo {
     
-    var name:[String?]        //label 
-    var nutrition:[String?]   //totalDaily
+    var name2:[String?]              //label
+    var nutrition:[String?]         //totalDaily
+    var ingredients:[String?]       //ingredientLines
     
+//    static func resultingRecipeInfo (dict:NSDictionary) -> RecipeChoices? {
+//        
+//        guard let nutrition = dict["totalDaily"] as? [String],
+//            let name2 = dict["label"] as? [String],
+//            let ingredients = dict["ingredientLines"] as? [String]
+//            
+//            else { return nil }
+//        
+//        return RecipeInfo(name2:name2, nutrition:nutrition, ingredients:ingredients)
+//    }
 }

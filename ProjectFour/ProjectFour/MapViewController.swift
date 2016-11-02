@@ -36,6 +36,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     @IBOutlet weak var mapView: MKMapView!
     
+    //User Location
+    
     var locationManager = CLLocationManager()
     
     func checkLocationAuthorizationStatus () {
@@ -54,6 +56,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Calling previous function. Setting properties of location manager
+        
         checkLocationAuthorizationStatus()
         
         locationManager = CLLocationManager()
@@ -63,6 +67,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         locationManager.startUpdatingLocation()
         
     }
+    
+    // Cases for location manager 
     
     private func locationManager(manager:CLLocationManager, didChangeAuthorizationStatus status:CLAuthorizationStatus) {
         
@@ -82,6 +88,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         }
     }
     
+    // Centering map around user 
     
     func locationManager(_ manager:CLLocationManager, didUpdateLocations locations:[CLLocation]) {
         
