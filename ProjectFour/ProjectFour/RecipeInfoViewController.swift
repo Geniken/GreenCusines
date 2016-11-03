@@ -17,6 +17,7 @@ class RecipeInfoViewController:UIViewController {
     var recipe:RecipeChoices?
     
     var recipeChoices:[RecipeChoices] = []
+    
         
     @IBOutlet weak var recipeImage: UIImageView!
     
@@ -28,7 +29,7 @@ class RecipeInfoViewController:UIViewController {
     
     @IBOutlet weak var imageBorder: UIView!
     
-    @IBOutlet weak var ingredientsLabel: UILabel!
+    @IBOutlet weak var ingredientsLabel: UITextView!
     
     @IBOutlet weak var nameLabel: UILabel!
     
@@ -95,10 +96,17 @@ class RecipeInfoViewController:UIViewController {
             nameLabel.text = nil
             recipeImage.image = nil
             
-            return
+            return 
         }
         
-//        ingredientsLabel.text = ", ".joined([recipeView.ingredients]) 
+        
+        // ?? means [] if the thing on the left is nil, use the thing on the right
+        
+        let ingredientsArray = recipe?.ingredients ?? []
+        
+        let compiledIngredientString = ingredientsArray.joined(separator: ", ")
+        
+        ingredientsLabel.text = "Ingredients:  \(compiledIngredientString)"
         nameLabel.text = recipeView.recipeName
         recipeImage.image = recipeView.image
 

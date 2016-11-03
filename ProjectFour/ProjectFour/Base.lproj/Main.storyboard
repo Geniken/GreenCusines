@@ -141,15 +141,6 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.14901960780000001" green="0.66274509800000003" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingredients" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmP-sh-Rzs">
-                                <frame key="frameInset" minX="27" minY="531" width="320" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <color key="highlightedColor" red="0.98125384940000004" green="0.98056286039999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <size key="shadowOffset" width="0.0" height="1"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="twitter button" translatesAutoresizingMaskIntoConstraints="NO" id="ZEO-Zf-diH">
                                 <frame key="frameInset" minX="27" minY="442" width="150" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -212,6 +203,13 @@
                                 <color key="shadowColor" red="0.031372549020000001" green="0.7725490196" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <size key="shadowOffset" width="0.0" height="2"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Ingredients" translatesAutoresizingMaskIntoConstraints="NO" id="715-al-nSp" userLabel="Ingredients Text View">
+                                <frame key="frameInset" minX="27" minY="529" width="320" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -231,7 +229,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageBorder" destination="Jof-dC-38S" id="Bnz-i5-eTs"/>
-                        <outlet property="ingredientsLabel" destination="tmP-sh-Rzs" id="aQE-yi-d5Z"/>
+                        <outlet property="ingredientsLabel" destination="715-al-nSp" id="DfZ-Vs-8g8"/>
                         <outlet property="nameLabel" destination="IkI-PI-n9A" id="bfM-Aa-WIh"/>
                         <outlet property="recipeImage" destination="y04-46-e0e" id="mH5-Me-u9N"/>
                         <outlet property="shareToFacebookButton" destination="m2h-yS-yse" id="qaH-FW-EJt"/>
@@ -241,7 +239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WL2-xr-BVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3865" y="-528"/>
+            <point key="canvasLocation" x="3864.8000000000002" y="-528.48575712143929"/>
         </scene>
         <!--Recipe Instructions View Controller-->
         <scene sceneID="9N4-1T-6jJ">

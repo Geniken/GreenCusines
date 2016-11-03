@@ -17,7 +17,7 @@ class RecipeInstructionsViewController: UIViewController {
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
 //
-//        let url:NSURL = (urlforthisfuckingthing)
+//        let url:NSURL = ("url")
 //        
 //        recipeInstructionsWebView.loadRequest(url:URL! as URL)
 //        

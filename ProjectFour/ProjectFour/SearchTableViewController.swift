@@ -187,18 +187,18 @@ class SearchTableViewController: UITableViewController {
     
     // Slide in Animation for Images
     
-    override func tableView(_ tableView:UITableView, willDisplay cell:UITableViewCell, forRowAt indexPath: IndexPath) {
-        
-        let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -300, 10, 0)
-        
-        cell.layer.transform = rotationTransform
-        
-        UIView.animate(withDuration: 0.5, animations:{ () -> Void in
-            
-            cell.layer.transform = CATransform3DIdentity
-            
-        })
-    }
+//    override func tableView(_ tableView:UITableView, willDisplay cell:UITableViewCell, forRowAt indexPath: IndexPath) {
+//        
+//        let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -300, 10, 0)
+//        
+//        cell.layer.transform = rotationTransform
+//        
+//        UIView.animate(withDuration: 0.5, animations:{ () -> Void in
+//            
+//            cell.layer.transform = CATransform3DIdentity
+//            
+//        })
+//    }
     
     
     //Reusuable Table View Cell
