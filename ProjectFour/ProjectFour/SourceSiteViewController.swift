@@ -7,20 +7,30 @@
 //
 
 import UIKit
+import Async
 
 class SourceSiteViewController: UIViewController {
     
     var selectedRecipe:Int?
+    
+    var recipe:RecipeChoices?
+    
+    var recipeChoice:[RecipeChoices] = []
     
     @IBOutlet weak var recipeInstructionsWebView: UIWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //        let url:NSURL = ("url")
-        //
-        //        recipeInstructionsWebView.loadRequest(url:URL! as URL)
-        
+//        Async.background {
+//            
+//            var recipeSourceUrl = recipeChoice.
+//            
+//            let url:NSURL = (string: "recipeSourceUrl")
+//            
+//            recipeInstructionsWebView.loadRequest(url:URL! as URL)
+//            
+//        }
     }
     
 }

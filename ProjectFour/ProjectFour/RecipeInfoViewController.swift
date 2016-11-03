@@ -74,21 +74,19 @@ class RecipeInfoViewController:UIViewController {
         imageBorder.layer.cornerRadius = imageBorder.frame.height/2
         imageBorder.clipsToBounds = true
         
+        //Adjust Name of Recipe to fit the Label regardless of size
+        nameLabel.adjustsFontSizeToFitWidth = true
+        
         
         //Round the corners of the share/source buttons
-        
         sourceButton.layer.cornerRadius = 10
-        
         shareToTwitterButton.layer.cornerRadius = 5
-        
         shareToFacebookButton.layer.cornerRadius = 5
-        
         sourceButton.layer.cornerRadius = 5
         
         //Call Data
         
         guard let recipeView = recipe else {
-            
             ingredientsLabel.text = nil
             nameLabel.text = nil
             recipeImage.image = nil
@@ -100,7 +98,6 @@ class RecipeInfoViewController:UIViewController {
         // ?? means [] if the thing on the left is nil, use the thing on the right
         
         let ingredientsArray = recipe?.ingredients ?? []
-        
         let compiledIngredientString = ingredientsArray.joined(separator: ", ")
         
         ingredientsLabel.text = "Ingredients:  \(compiledIngredientString)"
@@ -110,28 +107,4 @@ class RecipeInfoViewController:UIViewController {
         
     }
 }
-
-//extension RecipeInfoViewController {
-//
-//    func segueToReceipeInstruction(_ selectedIndex:Int) {
-//
-//        self.selectedRecipe = selectedRecipe
-//
-//    }
-//
-//    override func prepare(for segue:UIStoryboardSegue, sender:Any?) {
-//
-//        let destination = segue.destination
-//
-//        if let recipeInstructions = destination as? RecipeInstructionsViewController {
-//
-////            guard let selectedRow =  .indexPathForSelectedRow?.row else {return}
-//
-//            let recipe = recipeChoices[selectedRecipe]
-//
-//            recipeInstructions.recipe = recipe
-//
-//        }
-//    }
-//}
 

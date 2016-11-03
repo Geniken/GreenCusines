@@ -10,7 +10,7 @@ import UIKit
 import Async
 
 class SearchTableViewController: UITableViewController {
-    
+        
     var refresher:UIRefreshControl!
     
     var images:[UIImage] = []
@@ -41,6 +41,7 @@ class SearchTableViewController: UITableViewController {
     func reload () {
         
         Async.main {
+            
             self.myTableView.reloadData()
         }
     }
@@ -72,7 +73,7 @@ class SearchTableViewController: UITableViewController {
                         
                         do {
                             let jsonRaw = try JSONSerialization.jsonObject(with: data, options: [])
-                            guard let jsonDictionary = jsonRaw as? NSDictionary else {
+                            guard jsonRaw is NSDictionary else {
                                 print("DICTIONARY CAST FAILED")
                                 return
                             }
@@ -113,25 +114,18 @@ class SearchTableViewController: UITableViewController {
         }
     }
     
-    func refresh() {
-        
-        Async.background {
-            
-            let refreshTable = self.myTableView
-            
-            Async.main {
-                self.myTableView.reloadData()
-                self.refreshControl?.endRefreshing()
-            }
-        }
-        
-    }
+    //    func refresh() {
+    //
+    //        Async.main {
+    //            self.myTableView.reloadData()
+    //            self.refreshControl?.endRefreshing()
+    //
+    //        }
+    //    }
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        
         
         myTableView.delegate = self
         myTableView.dataSource = self

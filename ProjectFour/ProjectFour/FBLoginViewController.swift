@@ -82,3 +82,31 @@ class FBLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
 }
+
+
+//Prepare for Segue to RecipeInstructions Web View
+
+//extension RecipeInfoViewController {
+//
+//    func segueToReceipeInstruction(_ selectedIndex:Int) {
+//
+//        self.selectedRecipe = selectedRecipe
+//
+//    }
+//
+//    override func prepare(for segue:UIStoryboardSegue, sender:Any?) {
+//
+//        let destination = segue.destination
+//
+//        if let recipeInstructions = destination as? RecipeInstructionsViewController {
+//
+////            guard let selectedRow =  .indexPathForSelectedRow?.row else {return}
+//
+//            let recipe = recipeChoices[selectedRecipe]
+//
+//            recipeInstructions.recipe = recipe
+//
+//        }
+//    }
+//}
+

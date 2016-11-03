@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import MapKit
+import Async
 
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
@@ -42,13 +43,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     func checkLocationAuthorizationStatus () {
         
-        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+        Async.background {
             
-            mapView.showsUserLocation = true
-            
-        } else {
-            
-            locationManager.requestWhenInUseAuthorization()
+            if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+                
+                self.mapView.showsUserLocation = true
+                
+            } else {
+                
+                self.locationManager.requestWhenInUseAuthorization()
+            }
         }
     }
     
@@ -91,24 +95,25 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     // Centering map around user
     
     func locationManager(_ manager:CLLocationManager, didUpdateLocations locations:[CLLocation]) {
-        
-        let userLocation:CLLocation = locations[0]
-        
-        let latitude = userLocation.coordinate.latitude
-        
-        let longitude = userLocation.coordinate.longitude
-        
-        let latDelta: CLLocationDegrees = 0.05
-        
-        let longDelta: CLLocationDegrees = 0.05
-        
-        let span = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: longDelta)
-        
-        let location = CLLocationCoordinate2D(latitude:latitude, longitude:longitude)
-        
-        let region = MKCoordinateRegion(center: location, span: span)
-        
-        self.mapView.setRegion(region, animated:true)
+            
+            let userLocation:CLLocation = locations[0]
+            
+            let latitude = userLocation.coordinate.latitude
+            
+            let longitude = userLocation.coordinate.longitude
+            
+            let latDelta: CLLocationDegrees = 0.05
+            
+            let longDelta: CLLocationDegrees = 0.05
+            
+            let span = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: longDelta)
+            
+            let location = CLLocationCoordinate2D(latitude:latitude, longitude:longitude)
+            
+            let region = MKCoordinateRegion(center: location, span: span)
+            
+            self.mapView.setRegion(region, animated:true)
+        }
     }
-}
+
 

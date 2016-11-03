@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Async
 
 class YoutubeViewController: UIViewController {
     
@@ -17,9 +18,12 @@ class YoutubeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let URL = NSURL(string: "https://www.youtube.com/user/danispies")
-        
-        webView.loadRequest(URLRequest(url:URL! as URL))
-        
+        Async.background {
+            
+            let URL = NSURL(string: "https://www.youtube.com/user/danispies")
+            
+            self.webView.loadRequest(URLRequest(url:URL! as URL))
+            
+        }
     }
 }
