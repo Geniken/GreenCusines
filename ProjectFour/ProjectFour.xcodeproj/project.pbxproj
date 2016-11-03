@@ -140,7 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				8B1AEE5A1DBF50D2008CFBF6 /* RecipeChoices.swift */,
-				8B1AEE5E1DBF5299008CFBF6 /* RecipeInfo.swift */,
 				8BEE116F1DC6BE8100865509 /* RecipeChoicesTableViewCell.swift */,
 			);
 			name = Model;
@@ -194,6 +193,7 @@
 		8BEE11711DC6D94E00865509 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				8B1AEE5E1DBF5299008CFBF6 /* RecipeInfo.swift */,
 				8B591BFE1DC93EA900095903 /* FBLoginViewController.swift */,
 				8B6119431DC8037B00A04CDE /* GreenThumb.png */,
 			);

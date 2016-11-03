@@ -14,10 +14,9 @@ import Async
 
 class RecipeInfoViewController:UIViewController {
     
+     var selectedIndex: Int?
+    
     var recipe:RecipeChoices?
-    
-    var recipeChoices:[RecipeChoices] = []
-    
     
     @IBOutlet weak var recipeImage: UIImageView!
     
@@ -103,8 +102,30 @@ class RecipeInfoViewController:UIViewController {
         ingredientsLabel.text = "Ingredients:  \(compiledIngredientString)"
         nameLabel.text = recipeView.recipeName
         recipeImage.image = recipeView.image
-        //        recipeView.url = "\(url)"
         
     }
 }
 
+//Prepare for Segue to RecipeInstructions Web View
+
+extension RecipeInfoViewController {
+
+    func segueToReceipeInstruction(_ selectedIndex:Int) {
+
+        self.selectedIndex = selectedIndex
+
+    }
+
+    override func prepare(for segue:UIStoryboardSegue, sender:Any?) {
+
+        let destination = segue.destination
+
+        if let recipeInstructions = destination as? SourceSiteViewController {
+
+            guard let selectedRecipe =  recipe else {return}
+
+            recipeInstructions.recipeInfo = selectedRecipe
+            
+        }
+    }
+}
