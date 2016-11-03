@@ -241,10 +241,10 @@
             </objects>
             <point key="canvasLocation" x="3864.8000000000002" y="-528.48575712143929"/>
         </scene>
-        <!--Recipe Instructions View Controller-->
+        <!--Source Site View Controller-->
         <scene sceneID="9N4-1T-6jJ">
             <objects>
-                <viewController id="cCI-4E-9eE" customClass="RecipeInstructionsViewController" customModule="ProjectFour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cCI-4E-9eE" customClass="SourceSiteViewController" customModule="ProjectFour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wEc-ZG-QlM"/>
                         <viewControllerLayoutGuide type="bottom" id="C8Z-FO-nc1"/>

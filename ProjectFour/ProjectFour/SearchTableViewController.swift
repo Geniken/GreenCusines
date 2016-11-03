@@ -16,7 +16,6 @@ class SearchTableViewController: UITableViewController {
     var images:[UIImage] = []
     var calories:[Int] = []
     var recipeName:[String] = []
-//    var ingredients:[String] = String?
     
     var selectedImage:String?
     var selectedLabel:String?
@@ -82,12 +81,6 @@ class SearchTableViewController: UITableViewController {
                             return
                         }
                         
-                        
-                        
-                        
-                        
-                        
-                        
                         let jsonResult = try? JSONSerialization.jsonObject(with: data, options: []) as! NSDictionary
                         
                         let array = jsonResult?["hits"] as? NSArray
@@ -99,19 +92,14 @@ class SearchTableViewController: UITableViewController {
                             guard let result = RecipeChoices.resultingRecipeChoices(dict: recipeDictionary) else { return }
                             
                             
-//                            guard let resultingDictionary = i as? NSDictionary,
-//                                let recipeDictionary = resultingDictionary ["recipe"] as? NSDictionary,
-//                                let result = RecipeChoices.resultingRecipeChoices(dict: recipeDictionary)
-//                                else { return }
-                            
-//                            self.ingredients.append(result.ingredients!)
                             self.recipeName.append(result.recipeName!)
                             self.calories.append(result.calories!) //guard
                             self.images.append(result.image!)
                             self.recipeChoices.append(result)
                             
                             self.reload()
-                            //                            self.recipeChoices.removeAll()
+                            
+                            //                     self.recipeChoices.removeAll()
                             
                         }
                         
@@ -125,6 +113,20 @@ class SearchTableViewController: UITableViewController {
         }
     }
     
+    func refresh() {
+        
+        Async.background {
+            
+            let refreshTable = self.myTableView
+            
+            Async.main {
+                self.myTableView.reloadData()
+                self.refreshControl?.endRefreshing()
+            }
+        }
+        
+    }
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -136,14 +138,17 @@ class SearchTableViewController: UITableViewController {
         
         //Pull to Refresh
         
-        //        refresh()      JUST HAVE TO NAME TABLE DATA PART RELOAD then use self.refresher.endRefreshing() to stop it
+        //        self.refresh()
         //
-        //        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        //        refreshControl?.tintColor = UIColor.white
         //
-        //        refresher.addTarget(self, action:#selector(SearchTableViewController.refresh), for:UIControlEvents.valueChanged)
+        //        refreshControl = UIRefreshControl()
         //
-        //        tableView.addSubview(refresher)
-        
+        //        refreshControl?.attributedTitle = NSAttributedString(string:"")
+        //
+        //        refreshControl?.addTarget(self, action: #selector(self.refresh), for: UIControlEvents.valueChanged)
+        //
+        //        tableView.addSubview(refreshControl!)
         
         
         //Dismiss Keyboard
@@ -187,18 +192,18 @@ class SearchTableViewController: UITableViewController {
     
     // Slide in Animation for Images
     
-//    override func tableView(_ tableView:UITableView, willDisplay cell:UITableViewCell, forRowAt indexPath: IndexPath) {
-//        
-//        let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -300, 10, 0)
-//        
-//        cell.layer.transform = rotationTransform
-//        
-//        UIView.animate(withDuration: 0.5, animations:{ () -> Void in
-//            
-//            cell.layer.transform = CATransform3DIdentity
-//            
-//        })
-//    }
+    //    override func tableView(_ tableView:UITableView, willDisplay cell:UITableViewCell, forRowAt indexPath: IndexPath) {
+    //
+    //        let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -300, 10, 0)
+    //
+    //        cell.layer.transform = rotationTransform
+    //
+    //        UIView.animate(withDuration: 0.5, animations:{ () -> Void in
+    //
+    //            cell.layer.transform = CATransform3DIdentity
+    //
+    //        })
+    //    }
     
     
     //Reusuable Table View Cell
@@ -211,16 +216,16 @@ class SearchTableViewController: UITableViewController {
             
             
             let recipeforRow = recipeChoices[indexPath.row]
-
+            
             
             guard let newData = try? Data (contentsOf:recipeforRow.url!) else {return UITableViewCell () }
             guard let imageObject = UIImage(data:newData) else {return UITableViewCell () }
             
             Async.background {
-            
-            let calorieObject:String = "Calories: \(recipeforRow.calories!)"
-            let nameObject:String = "Name: \(recipeforRow.recipeName!)"
-
+                
+                let calorieObject:String = "Calories: \(recipeforRow.calories!)"
+                let nameObject:String = "Name: \(recipeforRow.recipeName!)"
+                
                 
                 cell.nameLabel.text = nameObject
                 cell.recipeImage.image = imageObject

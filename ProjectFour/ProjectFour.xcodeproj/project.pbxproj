@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8B0EE6111DC7AF6A00958B03 /* MapVariation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0EE6101DC7AF6A00958B03 /* MapVariation.swift */; };
 		8B0EE6131DC7DE3400958B03 /* YoutubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0EE6121DC7DE3400958B03 /* YoutubeViewController.swift */; };
-		8B13BFF91DCA768300AA36A1 /* RecipeInstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B13BFF81DCA768300AA36A1 /* RecipeInstructionsViewController.swift */; };
+		8B13BFF91DCA768300AA36A1 /* SourceSiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B13BFF81DCA768300AA36A1 /* SourceSiteViewController.swift */; };
 		8B1AEE571DBF4339008CFBF6 /* RecipeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1AEE561DBF4339008CFBF6 /* RecipeInfoViewController.swift */; };
 		8B1AEE5B1DBF50D2008CFBF6 /* RecipeChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1AEE5A1DBF50D2008CFBF6 /* RecipeChoices.swift */; };
 		8B1AEE5F1DBF5299008CFBF6 /* RecipeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1AEE5E1DBF5299008CFBF6 /* RecipeInfo.swift */; };
@@ -45,9 +44,8 @@
 
 /* Begin PBXFileReference section */
 		27D88346E7E1F5E52BEF8999 /* Pods-ProjectFourTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectFourTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectFourTests/Pods-ProjectFourTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8B0EE6101DC7AF6A00958B03 /* MapVariation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVariation.swift; sourceTree = "<group>"; };
 		8B0EE6121DC7DE3400958B03 /* YoutubeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeViewController.swift; sourceTree = "<group>"; };
-		8B13BFF81DCA768300AA36A1 /* RecipeInstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeInstructionsViewController.swift; sourceTree = "<group>"; };
+		8B13BFF81DCA768300AA36A1 /* SourceSiteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceSiteViewController.swift; sourceTree = "<group>"; };
 		8B1AEE561DBF4339008CFBF6 /* RecipeInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeInfoViewController.swift; sourceTree = "<group>"; };
 		8B1AEE5A1DBF50D2008CFBF6 /* RecipeChoices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeChoices.swift; sourceTree = "<group>"; };
 		8B1AEE5E1DBF5299008CFBF6 /* RecipeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeInfo.swift; sourceTree = "<group>"; };
@@ -130,7 +128,7 @@
 			children = (
 				8BEE116D1DC6AC6900865509 /* SearchTableViewController.swift */,
 				8B1AEE561DBF4339008CFBF6 /* RecipeInfoViewController.swift */,
-				8B13BFF81DCA768300AA36A1 /* RecipeInstructionsViewController.swift */,
+				8B13BFF81DCA768300AA36A1 /* SourceSiteViewController.swift */,
 				8BB6A7351DC2B7FA00817591 /* MapViewController.swift */,
 				8B591BF21DC91F4B00095903 /* CameraViewController.swift */,
 				8B0EE6121DC7DE3400958B03 /* YoutubeViewController.swift */,
@@ -178,7 +176,7 @@
 				8B1AEE5C1DBF50DB008CFBF6 /* Views */,
 				8B1AEE621DBFC28A008CFBF6 /* Model */,
 				8B1AEE5D1DBF50E4008CFBF6 /* ViewControllers */,
-				8BEE11711DC6D94E00865509 /* Old */,
+				8BEE11711DC6D94E00865509 /* Misc */,
 				8BE718801DB98A340096577E /* Assets.xcassets */,
 			);
 			path = ProjectFour;
@@ -193,14 +191,13 @@
 			path = ProjectFourTests;
 			sourceTree = "<group>";
 		};
-		8BEE11711DC6D94E00865509 /* Old */ = {
+		8BEE11711DC6D94E00865509 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
 				8B591BFE1DC93EA900095903 /* FBLoginViewController.swift */,
-				8B0EE6101DC7AF6A00958B03 /* MapVariation.swift */,
 				8B6119431DC8037B00A04CDE /* GreenThumb.png */,
 			);
-			name = Old;
+			name = Misc;
 			sourceTree = "<group>";
 		};
 		96D6C1A6B250E773E672A4EC /* Pods */ = {
@@ -427,11 +424,10 @@
 				8B1AEE5F1DBF5299008CFBF6 /* RecipeInfo.swift in Sources */,
 				8BB6A7361DC2B7FA00817591 /* MapViewController.swift in Sources */,
 				8B591BF51DC91F5F00095903 /* ViewController.swift in Sources */,
-				8B0EE6111DC7AF6A00958B03 /* MapVariation.swift in Sources */,
 				8B0EE6131DC7DE3400958B03 /* YoutubeViewController.swift in Sources */,
 				8B1AEE5B1DBF50D2008CFBF6 /* RecipeChoices.swift in Sources */,
 				8BEE11701DC6BE8100865509 /* RecipeChoicesTableViewCell.swift in Sources */,
-				8B13BFF91DCA768300AA36A1 /* RecipeInstructionsViewController.swift in Sources */,
+				8B13BFF91DCA768300AA36A1 /* SourceSiteViewController.swift in Sources */,
 				8BE7187A1DB98A340096577E /* AppDelegate.swift in Sources */,
 				8BEE116E1DC6AC6900865509 /* SearchTableViewController.swift in Sources */,
 				8B591BF31DC91F4B00095903 /* CameraViewController.swift in Sources */,

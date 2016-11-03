@@ -18,7 +18,7 @@ class RecipeInfoViewController:UIViewController {
     
     var recipeChoices:[RecipeChoices] = []
     
-        
+    
     @IBOutlet weak var recipeImage: UIImageView!
     
     @IBOutlet weak var sourceButton: UIButton!
@@ -54,9 +54,6 @@ class RecipeInfoViewController:UIViewController {
     
     @IBAction func recipeSourceButton(_ sender: AnyObject) {
         
-        Async.background {
-            
-        }
     }
     
     override func viewDidLoad() {
@@ -91,12 +88,12 @@ class RecipeInfoViewController:UIViewController {
         //Call Data
         
         guard let recipeView = recipe else {
-        
+            
             ingredientsLabel.text = nil
             nameLabel.text = nil
             recipeImage.image = nil
             
-            return 
+            return
         }
         
         
@@ -109,30 +106,31 @@ class RecipeInfoViewController:UIViewController {
         ingredientsLabel.text = "Ingredients:  \(compiledIngredientString)"
         nameLabel.text = recipeView.recipeName
         recipeImage.image = recipeView.image
-
+        //        recipeView.url = "\(url)"
+        
     }
 }
 
 //extension RecipeInfoViewController {
-//    
+//
 //    func segueToReceipeInstruction(_ selectedIndex:Int) {
-//        
+//
 //        self.selectedRecipe = selectedRecipe
-//        
+//
 //    }
-//    
+//
 //    override func prepare(for segue:UIStoryboardSegue, sender:Any?) {
-//        
+//
 //        let destination = segue.destination
-//        
+//
 //        if let recipeInstructions = destination as? RecipeInstructionsViewController {
-//            
+//
 ////            guard let selectedRow =  .indexPathForSelectedRow?.row else {return}
-//            
+//
 //            let recipe = recipeChoices[selectedRecipe]
-//            
+//
 //            recipeInstructions.recipe = recipe
-//            
+//
 //        }
 //    }
 //}

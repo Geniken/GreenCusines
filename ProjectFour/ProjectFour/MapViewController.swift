@@ -13,26 +13,26 @@ import MapKit
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
-//    class farmerMarket:NSObject, MKAnnotation {
-//        
-//        let title:String?
-//        let locationName:String
-//        let discipline: String
-//        let coordinate:CLLocationCoordinate2D
-//        
-//        init(title:String, locationName:String, discipline:String, coordinate:CLLocationCoordinate2D) {
-//            
-//            self.title = title
-//            self.locationName = locationName
-//            self.discipline = discipline
-//            self.coordinate = coordinate
-//        }
-//        
-//        var subtitle:String? {
-//            
-//            return locationName
-//        }
-//    }
+    //    class farmerMarket:NSObject, MKAnnotation {
+    //
+    //        let title:String?
+    //        let locationName:String
+    //        let discipline: String
+    //        let coordinate:CLLocationCoordinate2D
+    //
+    //        init(title:String, locationName:String, discipline:String, coordinate:CLLocationCoordinate2D) {
+    //
+    //            self.title = title
+    //            self.locationName = locationName
+    //            self.discipline = discipline
+    //            self.coordinate = coordinate
+    //        }
+    //
+    //        var subtitle:String? {
+    //
+    //            return locationName
+    //        }
+    //    }
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -68,7 +68,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
     }
     
-    // Cases for location manager 
+    // Cases for location manager
     
     private func locationManager(manager:CLLocationManager, didChangeAuthorizationStatus status:CLAuthorizationStatus) {
         
@@ -88,7 +88,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         }
     }
     
-    // Centering map around user 
+    // Centering map around user
     
     func locationManager(_ manager:CLLocationManager, didUpdateLocations locations:[CLLocation]) {
         
