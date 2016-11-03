@@ -10,7 +10,7 @@ import UIKit
 import Async
 
 class SearchTableViewController: UITableViewController {
-        
+    
     var refresher:UIRefreshControl!
     
     var images:[UIImage] = []
@@ -54,6 +54,8 @@ class SearchTableViewController: UITableViewController {
     // Search Based on Keyword
     
     @IBAction func searchButton(_ sender: AnyObject) {
+        
+        //        self.recipeChoices.removeAll()
         
         // Load JSON data asynchronously
         
@@ -99,8 +101,6 @@ class SearchTableViewController: UITableViewController {
                             self.recipeChoices.append(result)
                             
                             self.reload()
-                            
-                            //                     self.recipeChoices.removeAll()
                             
                         }
                         
@@ -186,18 +186,19 @@ class SearchTableViewController: UITableViewController {
     
     // Slide in Animation for Images
     
-    //    override func tableView(_ tableView:UITableView, willDisplay cell:UITableViewCell, forRowAt indexPath: IndexPath) {
-    //
-    //        let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -300, 10, 0)
-    //
-    //        cell.layer.transform = rotationTransform
-    //
-    //        UIView.animate(withDuration: 0.5, animations:{ () -> Void in
-    //
-    //            cell.layer.transform = CATransform3DIdentity
-    //
-    //        })
-    //    }
+    override func tableView(_ tableView:UITableView, willDisplay cell:UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -300, 10, 0)
+        
+        cell.layer.transform = rotationTransform
+        
+        UIView.animate(withDuration: 0.5, animations:{ () -> Void in
+            
+            cell.layer.transform = CATransform3DIdentity
+            
+        })
+    }
+    
     
     
     //Reusuable Table View Cell

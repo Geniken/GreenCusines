@@ -13,7 +13,7 @@ class SourceSiteViewController: UIViewController {
     
     var selectedRecipe:Int?
     
-    var recipe:RecipeChoices?
+    var recipeInfo:RecipeChoices?
     
     var recipeChoice:[RecipeChoices] = []
     
@@ -22,17 +22,19 @@ class SourceSiteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        Async.background {
-//            
-//            var recipeSourceUrl = recipeChoice.
-//            
-//            let url:NSURL = (string: "recipeSourceUrl")
-//            
-//            recipeInstructionsWebView.loadRequest(url:URL! as URL)
-//            
-//        }
+        Async.background {
+
+            guard let recipeSourceUrl = self.recipeInfo?.sourceUrl else {return}
+            
+            print("the recipe is: \(recipeSourceUrl)")
+            
+            let sourceURL = URL(string: recipeSourceUrl)
+            let request = URLRequest(url: sourceURL!)
+            
+            self.recipeInstructionsWebView.loadRequest(request)
+
+        }
     }
-    
 }
 
 
