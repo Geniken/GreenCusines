@@ -9,7 +9,6 @@ target 'ProjectFour' do
 
 	pod 'SideMenu'
     	pod 'AsyncSwift'
-	pod ‘SwiftSpinner’
 
 
   target 'ProjectFourTests' do

@@ -14,7 +14,7 @@ struct RecipeChoices {
     var recipeName:String?          //label
     var image:UIImage?              //image
     var calories:Int?            //calories
-    var pic:URL?                    //url
+    var url:URL?                    //url
     var ingredients:[String]?       //ingredientLines
     var sourceUrl: String?
     
@@ -22,8 +22,8 @@ struct RecipeChoices {
     static func resultingRecipeChoices (dict:NSDictionary) -> RecipeChoices? {
         
         guard let type = dict["image"] as? String,
-            let pic = URL(string: type),
-            let data = try? Data(contentsOf: pic),
+            let url = URL(string: type),
+            let data = try? Data(contentsOf: url),
             let image = UIImage(data: data),
             
             let sourceUrl = dict["url"] as? String,
@@ -33,7 +33,7 @@ struct RecipeChoices {
             
             else {return nil}
         
-        return RecipeChoices(recipeName:recipeName, image:image, calories:calories, pic:pic, ingredients:ingredients, sourceUrl:sourceUrl)
+        return RecipeChoices(recipeName:recipeName, image:image, calories:calories, url:url, ingredients:ingredients, sourceUrl:sourceUrl)
         
     }
     
