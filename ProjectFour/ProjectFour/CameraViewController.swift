@@ -12,6 +12,13 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
     
     @IBOutlet weak var pictureImage: UIImageView!
     
+    @IBOutlet weak var picBorder: UIView!
+    
+    @IBOutlet weak var takePicButton: UIButton!
+    
+    @IBOutlet weak var uploadButtonOutlet: UIButton!
+
+    
     // Camera
     
     @IBAction func takePictureButton(_ sender: AnyObject) {
@@ -27,6 +34,7 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
         
     }
     
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         pictureImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage; dismiss(animated: true, completion: nil)
@@ -37,7 +45,13 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        pictureImage.layer.cornerRadius = 10
+        
+        picBorder.layer.cornerRadius = 10
+        
+        uploadButtonOutlet.layer.cornerRadius = 5
+        
+        takePicButton.layer.cornerRadius = 5
     }
     
     override func didReceiveMemoryWarning() {

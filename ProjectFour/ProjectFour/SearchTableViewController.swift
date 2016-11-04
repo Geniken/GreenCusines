@@ -8,6 +8,7 @@
 
 import UIKit
 import Async
+import SwiftSpinner
 
 class SearchTableViewController: UITableViewController {
     
@@ -54,6 +55,8 @@ class SearchTableViewController: UITableViewController {
     // Search Based on Keyword
     
     @IBAction func searchButton(_ sender: AnyObject) {
+        
+        SwiftSpinner.show("Loading..")
         
         // Load JSON data asynchronously
         
@@ -102,8 +105,9 @@ class SearchTableViewController: UITableViewController {
                             self.images.append(result.image!)
                             self.recipeChoices.append(result)
                             
+                       
                             self.reload()
-                            
+                            SwiftSpinner.hide()
                         }
                         
                         print (jsonResult)
@@ -184,23 +188,6 @@ class SearchTableViewController: UITableViewController {
         
         return recipeChoices.count
     }
-    
-    
-    // Slide in Animation for Images
-//    
-//    override func tableView(_ tableView:UITableView, willDisplay cell:UITableViewCell, forRowAt indexPath: IndexPath) {
-//        
-//        let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -300, 10, 0)
-//        
-//        cell.layer.transform = rotationTransform
-//        
-//        UIView.animate(withDuration: 0.5, animations:{ () -> Void in
-//            
-//            cell.layer.transform = CATransform3DIdentity
-//            
-//        })
-//    }
-//    
     
     
     //Reusuable Table View Cell

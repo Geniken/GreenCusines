@@ -11,12 +11,10 @@
 		8B13BFF91DCA768300AA36A1 /* SourceSiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B13BFF81DCA768300AA36A1 /* SourceSiteViewController.swift */; };
 		8B1AEE571DBF4339008CFBF6 /* RecipeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1AEE561DBF4339008CFBF6 /* RecipeInfoViewController.swift */; };
 		8B1AEE5B1DBF50D2008CFBF6 /* RecipeChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1AEE5A1DBF50D2008CFBF6 /* RecipeChoices.swift */; };
-		8B1AEE5F1DBF5299008CFBF6 /* RecipeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1AEE5E1DBF5299008CFBF6 /* RecipeInfo.swift */; };
 		8B591BF31DC91F4B00095903 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B591BF21DC91F4B00095903 /* CameraViewController.swift */; };
 		8B591BF51DC91F5F00095903 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B591BF41DC91F5F00095903 /* ViewController.swift */; };
 		8B591BFC1DC93CDF00095903 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B591BFA1DC93CDF00095903 /* FBSDKCoreKit.framework */; };
 		8B591BFD1DC93CDF00095903 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B591BFB1DC93CDF00095903 /* FBSDKLoginKit.framework */; };
-		8B591BFF1DC93EA900095903 /* FBLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B591BFE1DC93EA900095903 /* FBLoginViewController.swift */; };
 		8B591C021DC9462500095903 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B591C011DC9462500095903 /* Bolts.framework */; };
 		8B6119441DC8037B00A04CDE /* GreenThumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B6119431DC8037B00A04CDE /* GreenThumb.png */; };
 		8BB6A7361DC2B7FA00817591 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB6A7351DC2B7FA00817591 /* MapViewController.swift */; };
@@ -48,12 +46,10 @@
 		8B13BFF81DCA768300AA36A1 /* SourceSiteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceSiteViewController.swift; sourceTree = "<group>"; };
 		8B1AEE561DBF4339008CFBF6 /* RecipeInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeInfoViewController.swift; sourceTree = "<group>"; };
 		8B1AEE5A1DBF50D2008CFBF6 /* RecipeChoices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeChoices.swift; sourceTree = "<group>"; };
-		8B1AEE5E1DBF5299008CFBF6 /* RecipeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeInfo.swift; sourceTree = "<group>"; };
 		8B591BF21DC91F4B00095903 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		8B591BF41DC91F5F00095903 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8B591BFA1DC93CDF00095903 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		8B591BFB1DC93CDF00095903 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		8B591BFE1DC93EA900095903 /* FBLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBLoginViewController.swift; sourceTree = "<group>"; };
 		8B591C001DC9453300095903 /* ProjectFour.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProjectFour.entitlements; sourceTree = "<group>"; };
 		8B591C011DC9462500095903 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		8B6119431DC8037B00A04CDE /* GreenThumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenThumb.png; sourceTree = "<group>"; };
@@ -193,8 +189,6 @@
 		8BEE11711DC6D94E00865509 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
-				8B1AEE5E1DBF5299008CFBF6 /* RecipeInfo.swift */,
-				8B591BFE1DC93EA900095903 /* FBLoginViewController.swift */,
 				8B6119431DC8037B00A04CDE /* GreenThumb.png */,
 			);
 			name = Misc;
@@ -421,7 +415,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B1AEE5F1DBF5299008CFBF6 /* RecipeInfo.swift in Sources */,
 				8BB6A7361DC2B7FA00817591 /* MapViewController.swift in Sources */,
 				8B591BF51DC91F5F00095903 /* ViewController.swift in Sources */,
 				8B0EE6131DC7DE3400958B03 /* YoutubeViewController.swift in Sources */,
@@ -432,7 +425,6 @@
 				8BEE116E1DC6AC6900865509 /* SearchTableViewController.swift in Sources */,
 				8B591BF31DC91F4B00095903 /* CameraViewController.swift in Sources */,
 				8B1AEE571DBF4339008CFBF6 /* RecipeInfoViewController.swift in Sources */,
-				8B591BFF1DC93EA900095903 /* FBLoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
