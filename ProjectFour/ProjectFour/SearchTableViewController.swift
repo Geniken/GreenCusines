@@ -55,8 +55,6 @@ class SearchTableViewController: UITableViewController {
     
     @IBAction func searchButton(_ sender: AnyObject) {
         
-        //        self.recipeChoices.removeAll()
-        
         // Load JSON data asynchronously
         
         Async.background {
@@ -87,6 +85,10 @@ class SearchTableViewController: UITableViewController {
                         let jsonResult = try? JSONSerialization.jsonObject(with: data, options: []) as! NSDictionary
                         
                         let array = jsonResult?["hits"] as? NSArray
+                        
+                        self.recipeChoices.removeAll()
+                        self.recipeName.removeAll()
+                        self.calories.removeAll()
                         
                         for recipeJSONEntry in array! {
                             
@@ -185,20 +187,20 @@ class SearchTableViewController: UITableViewController {
     
     
     // Slide in Animation for Images
-    
-    override func tableView(_ tableView:UITableView, willDisplay cell:UITableViewCell, forRowAt indexPath: IndexPath) {
-        
-        let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -300, 10, 0)
-        
-        cell.layer.transform = rotationTransform
-        
-        UIView.animate(withDuration: 0.5, animations:{ () -> Void in
-            
-            cell.layer.transform = CATransform3DIdentity
-            
-        })
-    }
-    
+//    
+//    override func tableView(_ tableView:UITableView, willDisplay cell:UITableViewCell, forRowAt indexPath: IndexPath) {
+//        
+//        let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -300, 10, 0)
+//        
+//        cell.layer.transform = rotationTransform
+//        
+//        UIView.animate(withDuration: 0.5, animations:{ () -> Void in
+//            
+//            cell.layer.transform = CATransform3DIdentity
+//            
+//        })
+//    }
+//    
     
     
     //Reusuable Table View Cell
@@ -209,11 +211,10 @@ class SearchTableViewController: UITableViewController {
             
             guard !recipeChoices.isEmpty else { return UITableViewCell() }
             
-            
             let recipeforRow = recipeChoices[indexPath.row]
             
             
-            guard let newData = try? Data (contentsOf:recipeforRow.url!) else {return UITableViewCell () }
+            guard let newData = try? Data (contentsOf:recipeforRow.pic!) else {return UITableViewCell () }
             guard let imageObject = UIImage(data:newData) else {return UITableViewCell () }
             
             Async.background {
