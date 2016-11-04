@@ -21,6 +21,8 @@ class SearchTableViewController: UITableViewController {
     var selectedImage:String?
     var selectedLabel:String?
     
+    let randomizedImages = ["salad","parfait","cereal","background"]
+    
     var recipeChoices:[RecipeChoices] = []
     
     var selectedIndex: Int?
@@ -70,6 +72,13 @@ class SearchTableViewController: UITableViewController {
                         
                         print (error)
                         
+                    }else if (self.searchBar.text?.isEmpty)!{
+                        
+                        self.recipeChoices.removeAll()
+                        SwiftSpinner.hide()
+                        self.tableView.reloadData()
+                        
+                        
                     } else {
                         
                         guard let data = try? Data(contentsOf: url) else {return}
@@ -105,8 +114,9 @@ class SearchTableViewController: UITableViewController {
                             self.images.append(result.image!)
                             self.recipeChoices.append(result)
                             
-                       
+                            
                             self.reload()
+                            
                             SwiftSpinner.hide()
                         }
                         
@@ -136,40 +146,53 @@ class SearchTableViewController: UITableViewController {
         myTableView.delegate = self
         myTableView.dataSource = self
         
-        //Pull to Refresh
+    }
+    
+    //Pull to Refresh
+    
+    //        self.refresh()
+    //
+    //        refreshControl?.tintColor = UIColor.white
+    //
+    //        refreshControl = UIRefreshControl()
+    //
+    //        refreshControl?.attributedTitle = NSAttributedString(string:"")
+    //
+    //        refreshControl?.addTarget(self, action: #selector(self.refresh), for: UIControlEvents.valueChanged)
+    //
+    //        tableView.addSubview(refreshControl!)
+    
+    
+    
+    
+    //Dismiss Keyboard
+    
+    
+    //                let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SearchTableViewController.dismissKeyboard))
+    //                view.addGestureRecognizer(tap)
+    //
+    //            }
+    //
+    //            func dismissKeyboard() {
+    //                //Causes the view (or one of its embedded text fields) to resign the first responder status.
+    //                view.endEditing(true)
+    //
+    
+    
+    
+    // Setting TableView background as Random Images
+    
+    private func randomImage() -> UIImage {
+        let randomBackground = Int(arc4random_uniform(UInt32(randomizedImages.count)))
         
-        //        self.refresh()
-        //
-        //        refreshControl?.tintColor = UIColor.white
-        //
-        //        refreshControl = UIRefreshControl()
-        //
-        //        refreshControl?.attributedTitle = NSAttributedString(string:"")
-        //
-        //        refreshControl?.addTarget(self, action: #selector(self.refresh), for: UIControlEvents.valueChanged)
-        //
-        //        tableView.addSubview(refreshControl!)
+        let randomImageBackground = UIImage(named:randomizedImages[randomBackground])
         
-        
-        //Dismiss Keyboard
-        
-        //        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SearchTableViewController.dismissKeyboard))
-        //        view.addGestureRecognizer(tap)
-        //
-        //    }
-        //
-        //    func dismissKeyboard() {
-        //        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        //        view.endEditing(true)
-        
+        return randomImageBackground!
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
-        // Setting TableView background as Image
-        
-        let backgroundImage = UIImage(named: "background")
-        let imageView = UIImageView(image: backgroundImage)
+        let imageView = UIImageView(image: randomImage())
         self.tableView.backgroundView = imageView
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFill
@@ -188,6 +211,7 @@ class SearchTableViewController: UITableViewController {
         
         return recipeChoices.count
     }
+    
     
     
     //Reusuable Table View Cell

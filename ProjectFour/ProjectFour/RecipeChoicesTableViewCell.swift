@@ -24,8 +24,12 @@ class RecipeChoicesTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        recipeImage.layer.cornerRadius = 5
+        borderViewOutlet.layer.cornerRadius = 5
+        
     }
     
+        
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
