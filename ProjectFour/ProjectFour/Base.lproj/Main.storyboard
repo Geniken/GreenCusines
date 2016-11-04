@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="116" width="375" height="210"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="udl-eB-55U" id="e91-rm-t8X">
-                                    <frame key="frameInset" width="375" height="209"/>
+                                    <frame key="frameInset" width="375" height="210"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yET-hM-B7X" customClass="SpringView" customModule="Spring">
@@ -216,7 +216,7 @@
                     <navigationItem key="navigationItem" id="2MQ-k6-Vn0">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="WTN-EV-CpX">
-                            <rect key="frame" x="113" y="6" width="150" height="33"/>
+                            <rect key="frame" x="112.5" y="5.5" width="150" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
@@ -284,7 +284,7 @@
                                         <rect key="frame" x="0.0" y="44" width="375" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z3a-7u-ufO" id="u2I-IN-BbU">
-                                            <frame key="frameInset" width="375" height="109"/>
+                                            <frame key="frameInset" width="375" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Healthy Cooking" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEf-Kk-b3O" userLabel="Youtube">
@@ -316,7 +316,7 @@
                                         <rect key="frame" x="0.0" y="154" width="375" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="duu-ig-0Iz" id="AwV-wI-R1c">
-                                            <frame key="frameInset" width="375" height="109"/>
+                                            <frame key="frameInset" width="375" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Find Fresh" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpi-hL-UNw">
@@ -355,7 +355,7 @@
                                         <rect key="frame" x="0.0" y="264" width="375" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dKr-Dh-V8W" id="eNq-5B-7xa">
-                                            <frame key="frameInset" width="375" height="109"/>
+                                            <frame key="frameInset" width="375" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Show off" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwC-3E-KID">
@@ -461,10 +461,10 @@
             </objects>
             <point key="canvasLocation" x="2933.5999999999999" y="-2051.4242878560722"/>
         </scene>
-        <!--Options Side Menu-->
+        <!--Other Options Side Menu-->
         <scene sceneID="knT-Rl-epN">
             <objects>
-                <navigationController id="cN2-sx-t7t" userLabel="Options Side Menu" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                <navigationController id="cN2-sx-t7t" userLabel="Other Options Side Menu" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OSa-E3-wwi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -495,17 +495,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j6f-4I-Iia" userLabel="Border">
-                                <frame key="frameInset" minX="16" minY="90" width="343" height="344"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.28627450980000002" green="0.59999999999999998" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="static" translatesAutoresizingMaskIntoConstraints="NO" id="TUN-7A-A3h" userLabel="StaticImage">
-                                <frame key="frameInset" minX="29" minY="107" width="316" height="311"/>
+                                <frame key="frameInset" minX="16" minY="90" width="343" height="344"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XSR-qE-eOT">
-                                <frame key="frameInset" minX="29" minY="107" width="316" height="311"/>
+                                <frame key="frameInset" minX="16" minY="90" width="343" height="344"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOF-q5-yKo">
@@ -523,12 +518,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUf-Fr-A0h">
-                                <frame key="frameInset" minX="124" minY="540" width="127" height="31"/>
+                                <frame key="frameInset" minX="99" minY="534" width="177" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.28627450980000002" green="0.59999999999999998" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="16"/>
                                 <size key="titleShadowOffset" width="0.0" height="1.5"/>
-                                <state key="normal" title="Upload">
+                                <state key="normal" title="Upload to Facebook">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -537,10 +532,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="picBorder" destination="j6f-4I-Iia" id="VIf-y0-Wxo"/>
                         <outlet property="pictureImage" destination="XSR-qE-eOT" id="an7-kW-upU"/>
-                        <outlet property="takePicButton" destination="HOF-q5-yKo" id="Tq7-el-zVq"/>
-                        <outlet property="uploadButtonOutlet" destination="gUf-Fr-A0h" id="jM3-yU-rlm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I3u-ej-6Wa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -566,6 +558,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F7B-7U-3IN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2166" y="-528"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="ROc-Yy-cmF">
+            <objects>
+                <viewController id="Jlb-7V-DJD" customClass="FBLoginViewController" customModule="ProjectFour" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tZR-qG-8wo"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Bz-mD-EsV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="809-2v-Rmm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jEv-G2-qnw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2166" y="152"/>
         </scene>
     </scenes>
     <resources>
