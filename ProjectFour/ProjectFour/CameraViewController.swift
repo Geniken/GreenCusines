@@ -45,6 +45,8 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Aesthetics of Images and Buttons
+        
         pictureImage.layer.cornerRadius = 10
         
         picBorder.layer.cornerRadius = 10
