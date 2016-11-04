@@ -32,6 +32,7 @@ class SourceSiteViewController: UIViewController {
             let request = URLRequest(url: sourceURL!)
             
             self.recipeInstructionsWebView.loadRequest(request)
+
         }
     }
 }
