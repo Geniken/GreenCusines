@@ -21,7 +21,7 @@ class SearchTableViewController: UITableViewController {
     var selectedImage:String?
     var selectedLabel:String?
     
-    let randomizedImages = ["salad","parfait","cereal","background"]
+    let randomizedImages = ["health","parfait","cereal","background"]
     
     var recipeChoices:[RecipeChoices] = []
     
@@ -70,7 +70,7 @@ class SearchTableViewController: UITableViewController {
                     
                     if error != nil {
                         
-                        print (error)
+                        print ("error")
                         
                     }else if (self.searchBar.text?.isEmpty)!{
                         
@@ -114,13 +114,14 @@ class SearchTableViewController: UITableViewController {
                             self.images.append(result.image!)
                             self.recipeChoices.append(result)
                             
-                            
-                            self.reload()
+                            Async.main{
+                                
+            
+                                self.reload()
+                            }
                             
                             SwiftSpinner.hide()
                         }
-                        
-                        print (jsonResult)
                     }
                 }
                 
@@ -194,6 +195,7 @@ class SearchTableViewController: UITableViewController {
         
         let imageView = UIImageView(image: randomImage())
         self.tableView.backgroundView = imageView
+        imageView.alpha = 0.8
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFill
         
