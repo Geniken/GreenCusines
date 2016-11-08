@@ -1,5 +1,6 @@
 # GreenThumb-Cuisines
 
+![mas-green](https://cloud.githubusercontent.com/assets/20975504/20115201/37d995d8-a5ac-11e6-895f-c881847baf05.png)
 
 GreenThumb Cuisines is an iOS app that uses the Edamam API to promote users to make healthier dietary choices. It is written in Swift 3. 
 
