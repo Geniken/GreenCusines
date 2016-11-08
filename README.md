@@ -17,15 +17,34 @@ I started out by designing the UI for my application:
 
 # Code Example
 
+    private func randomImage() -> UIImage {
+        let randomBackground = Int(arc4random_uniform(UInt32(randomizedImages.count)))
+        
+        let randomImageBackground = UIImage(named:randomizedImages[randomBackground])
+        
+        return randomImageBackground!
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        let imageView = UIImageView(image: randomImage())
+        self.tableView.backgroundView = imageView
+        imageView.alpha = 0.8
+        imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFill
+        
+    }
+
+
 # Features
 
-# Search
-allows user to search based on any food group or ingredient and have a comprehensive list of recipes populate. 
+## Search/Filter
+Allows user to search based on any food group or ingredient and have a comprehensive list of recipes populate and allows user to filter their search based on their dietary restrictions ensuring a more fluid and dynamic approach to the search. Coming soon in beta 2.1
 
-# Filters
-allows user to filter their search based on their dietary restrictions ensuring a more fluid and dynamic approach to the search. Coming soon in beta 2.1
+## Instructions
+Allows user to navigate to a page where they can see the full list of ingredients and also navigate to the source site for the recipe instructions. 
 
-# Instructions
-allows user to navigate to a page where they can see the full list of ingredients and also navigate to the source site for the recipe instructions. 
+## Aesthetics
+Added a loading animation for the searchbar, created a random background generator for the initial tableview controller.
 
 
