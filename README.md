@@ -15,9 +15,7 @@ I started out by designing the UI for my application:
 
 # High Fidelity Sketches
 
-![screen shot 2016-11-03 at 4 30 41 pm](https://cloud.githubusercontent.com/assets/20975504/20114871/edcdc4d8-a5aa-11e6-8fe2-6ebc016c9e2c.png)
-![screen shot 2016-11-03 at 4 30 28 pm](https://cloud.githubusercontent.com/assets/20975504/20114876/f15b9b02-a5aa-11e6-844f-440bb66cbe6f.png)
-![screen shot 2016-11-03 at 4 31 13 pm](https://cloud.githubusercontent.com/assets/20975504/20114878/f329a9ce-a5aa-11e6-981b-1b9233e701ca.png)
+![screen shot 2016-11-03 at 4 30 41 pm](https://cloud.githubusercontent.com/assets/20975504/20114871/edcdc4d8-a5aa-11e6-8fe2-6ebc016c9e2c.png) ![screen shot 2016-11-03 at 4 30 28 pm](https://cloud.githubusercontent.com/assets/20975504/20114876/f15b9b02-a5aa-11e6-844f-440bb66cbe6f.png) ![screen shot 2016-11-03 at 4 31 13 pm](https://cloud.githubusercontent.com/assets/20975504/20114878/f329a9ce-a5aa-11e6-981b-1b9233e701ca.png)
 
 # Code Example
 
