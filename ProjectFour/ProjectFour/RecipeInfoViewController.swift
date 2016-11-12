@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Social
 import Async
-
+import SwiftSpinner
 
 class RecipeInfoViewController:UIViewController {
     
@@ -52,6 +52,9 @@ class RecipeInfoViewController:UIViewController {
     
     
     @IBAction func recipeSourceButton(_ sender: AnyObject) {
+        
+        SwiftSpinner.show(duration: 3.5, title: "Loading...")
+        
         
     }
     

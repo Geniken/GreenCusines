@@ -60,13 +60,12 @@ class SearchTableViewController: UITableViewController {
                         
                         print ("error")
                         
-                    }else if (self.searchBar.text?.isEmpty)!{
+                    } else if (self.searchBar.text?.isEmpty)!{
                         
                         self.recipeChoices.removeAll()
                         SwiftSpinner.hide()
                         self.tableView.reloadData()
-                        
-                        
+                    
                     } else {
                         
                         guard let data = try? Data(contentsOf: url) else {return}
@@ -87,22 +86,17 @@ class SearchTableViewController: UITableViewController {
                         let array = jsonResult?["hits"] as? NSArray
                         
                         self.recipeChoices.removeAll()
-                        self.recipeName.removeAll()
                         
                         for recipeJSONEntry in array! {
                             
                             guard let resultingDictionary = recipeJSONEntry as? NSDictionary else { return }
                             guard let recipeDictionary = resultingDictionary ["recipe"] as? NSDictionary else { return }
                             guard let result = RecipeChoices.resultingRecipeChoices(dict: recipeDictionary) else { return }
-                            
-                            
-                            self.recipeName.append(result.recipeName!)
-                            self.images.append(result.image!)
-                            self.recipeChoices.append(result)
+                        
                             
                             Async.main{
                                 
-                                
+                                self.recipeChoices.append(result)
                                 self.reload()
                             }
                             
@@ -123,7 +117,6 @@ class SearchTableViewController: UITableViewController {
         
         myTableView.delegate = self
         myTableView.dataSource = self
-        
         
         
         //Dismiss Keyboard
@@ -154,7 +147,7 @@ class SearchTableViewController: UITableViewController {
         
         let imageView = UIImageView(image: randomImage())
         self.tableView.backgroundView = imageView
-        imageView.alpha = 0.7
+        imageView.alpha = 0.57
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFill
         
@@ -188,7 +181,7 @@ class SearchTableViewController: UITableViewController {
             
             guard let newData = try? Data (contentsOf:recipeforRow.pic!) else {return UITableViewCell () }
             
-            Async.background {
+            Async.main {
 
                 let imageObject = UIImage(data:newData)
                             
