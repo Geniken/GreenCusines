@@ -13,9 +13,7 @@ class RecipeChoicesTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var recipeImage: UIImageView!
-    
-    @IBOutlet weak var caloriesLabel: UILabel!
-    
+        
     @IBOutlet weak var borderViewOutlet: UIView!
     
     @IBOutlet weak var recipeImageOutlet: UIImageView!

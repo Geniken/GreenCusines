@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" clipsSubviews="YES" contentMode="redraw" id="4U0-Zd-erz">
+                        <searchBar key="tableHeaderView" clipsSubviews="YES" contentMode="redraw" placeholder="Search for Recipe or Ingredient" id="4U0-Zd-erz">
                             <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <color key="barTintColor" red="0.7431308982" green="0.99215686270000003" blue="0.73917710950000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -41,30 +41,19 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IhL-7y-IwF">
-                                                    <rect key="frame" x="10" y="10" width="318" height="172"/>
+                                                    <rect key="frame" x="10" y="10" width="318" height="160"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.98125384940000004" green="0.98056286039999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qPW-Ec-SQE">
-                                                    <rect key="frame" x="16" y="151" width="223" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="15"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <size key="shadowOffset" width="0.0" height="2.5"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xcc-0i-E5d">
-                                                    <rect key="frame" x="16" y="128" width="304" height="21"/>
+                                                    <rect key="frame" x="10" y="169" width="304" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
-                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <size key="shadowOffset" width="0.0" height="2.5"/>
                                                 </label>
                                             </subviews>
@@ -78,7 +67,6 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="borderViewOutlet" destination="yET-hM-B7X" id="utk-1Y-6hD"/>
-                                    <outlet property="caloriesLabel" destination="qPW-Ec-SQE" id="pEM-Jv-siL"/>
                                     <outlet property="nameLabel" destination="xcc-0i-E5d" id="OzZ-r2-YpS"/>
                                     <outlet property="recipeImage" destination="IhL-7y-IwF" id="mXa-cP-pnf"/>
                                     <outlet property="recipeImageOutlet" destination="IhL-7y-IwF" id="kwQ-vI-5Ih"/>
@@ -92,6 +80,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="i2U-36-DjP">
+                        <barButtonItem key="leftBarButtonItem" title="Options" id="BHd-BM-L0V">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="cN2-sx-t7t" kind="show" identifier="toSideMenu" id="aP0-lQ-CFb"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="KmS-5C-Y9i">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -208,10 +202,10 @@
                                 <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.031372549020000001" green="0.7725490196" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="shadowOffset" width="0.0" height="2"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Ingredients" translatesAutoresizingMaskIntoConstraints="NO" id="715-al-nSp" userLabel="Ingredients Text View">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Ingredients" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="715-al-nSp" userLabel="Ingredients Text View">
                                 <rect key="frame" x="27" y="529" width="320" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -228,12 +222,6 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
-                        <barButtonItem key="rightBarButtonItem" title="Options" id="BHd-BM-L0V">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <segue destination="cN2-sx-t7t" kind="show" identifier="toSideMenu" id="aP0-lQ-CFb"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="imageBorder" destination="Jof-dC-38S" id="Bnz-i5-eTs"/>
@@ -247,7 +235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WL2-xr-BVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3864.8000000000002" y="-528.48575712143929"/>
+            <point key="canvasLocation" x="3697" y="-528"/>
         </scene>
         <!--Source Site View Controller-->
         <scene sceneID="9N4-1T-6jJ">
@@ -275,7 +263,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SNf-Wk-pb6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4776.8000000000002" y="-528.48575712143929"/>
+            <point key="canvasLocation" x="4473" y="-528"/>
         </scene>
         <!--OptionsTableViewController-->
         <scene sceneID="q25-xC-AOm">
@@ -483,7 +471,7 @@
                         <color key="barTintColor" red="0.14901960780000001" green="0.66274509800000003" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="NO"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="1go-Tw-YLH" kind="relationship" relationship="rootViewController" id="t6f-JV-ZOh"/>
@@ -496,6 +484,7 @@
         <!--Camera View Controller-->
         <scene sceneID="Sdl-4C-aax">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I3u-ej-6Wa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="vpo-qA-DeA" customClass="CameraViewController" customModule="ProjectFour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0d1-4i-ABl"/>
@@ -553,7 +542,6 @@
                         <outlet property="uploadButtonOutlet" destination="gUf-Fr-A0h" id="jM3-yU-rlm"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="I3u-ej-6Wa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3864.8000000000002" y="-1281.4092953523239"/>
         </scene>

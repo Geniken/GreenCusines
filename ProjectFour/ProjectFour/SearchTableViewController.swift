@@ -15,29 +15,16 @@ class SearchTableViewController: UITableViewController {
     var refresher:UIRefreshControl!
     
     var images:[UIImage] = []
-    var calories:[Int] = []
     var recipeName:[String] = []
     
     var selectedImage:String?
     var selectedLabel:String?
     
-    let randomizedImages = ["health","parfait","cereal","background"]
+    let randomizedImages = ["health","cereal","background"]
     
     var recipeChoices:[RecipeChoices] = []
     
     var selectedIndex: Int?
-    
-    private let main = OperationQueue.main
-    
-    private let async: OperationQueue = {
-        
-        let operationQueue = OperationQueue()
-        
-        operationQueue.maxConcurrentOperationCount = 5
-        
-        return operationQueue
-        
-    }()
     
     // Reload Data
     
@@ -58,13 +45,14 @@ class SearchTableViewController: UITableViewController {
     
     @IBAction func searchButton(_ sender: AnyObject) {
         
+        
         SwiftSpinner.show("Loading..")
         
         // Load JSON data asynchronously
         
         Async.background {
             
-            if let url = URL(string:"https://api.edamam.com/search?q="+self.searchBar.text!+"&app_id=e2513178&app_key=c5fe2bae8f394c5bc0e4ba35ad51aa12") {
+            if let url = URL(string:"https://api.edamam.com/search?q="+self.searchBar.text!.replacingOccurrences(of: " ", with: "+")+"&app_id=e2513178&app_key=c5fe2bae8f394c5bc0e4ba35ad51aa12") {
                 
                 let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
                     
@@ -100,7 +88,6 @@ class SearchTableViewController: UITableViewController {
                         
                         self.recipeChoices.removeAll()
                         self.recipeName.removeAll()
-                        self.calories.removeAll()
                         
                         for recipeJSONEntry in array! {
                             
@@ -110,13 +97,12 @@ class SearchTableViewController: UITableViewController {
                             
                             
                             self.recipeName.append(result.recipeName!)
-                            self.calories.append(result.calories!) //guard
                             self.images.append(result.image!)
                             self.recipeChoices.append(result)
                             
                             Async.main{
                                 
-            
+                                
                                 self.reload()
                             }
                             
@@ -131,15 +117,6 @@ class SearchTableViewController: UITableViewController {
         }
     }
     
-    //    func refresh() {
-    //
-    //        Async.main {
-    //            self.myTableView.reloadData()
-    //            self.refreshControl?.endRefreshing()
-    //
-    //        }
-    //    }
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -147,39 +124,21 @@ class SearchTableViewController: UITableViewController {
         myTableView.delegate = self
         myTableView.dataSource = self
         
+        
+        
+        //Dismiss Keyboard
+        
+        let swipe: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(SearchTableViewController.dismissKeyboard))
+        view.addGestureRecognizer(swipe)
+        
     }
     
-    //Pull to Refresh
-    
-    //        self.refresh()
-    //
-    //        refreshControl?.tintColor = UIColor.white
-    //
-    //        refreshControl = UIRefreshControl()
-    //
-    //        refreshControl?.attributedTitle = NSAttributedString(string:"")
-    //
-    //        refreshControl?.addTarget(self, action: #selector(self.refresh), for: UIControlEvents.valueChanged)
-    //
-    //        tableView.addSubview(refreshControl!)
-    
-    
-    
-    
-    //Dismiss Keyboard
-    
-    
-    //                let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SearchTableViewController.dismissKeyboard))
-    //                view.addGestureRecognizer(tap)
-    //
-    //            }
-    //
-    //            func dismissKeyboard() {
-    //                //Causes the view (or one of its embedded text fields) to resign the first responder status.
-    //                view.endEditing(true)
-    //
-    
-    
+    func dismissKeyboard() {
+        
+        view.endEditing(true)
+        
+        
+    }
     
     // Setting TableView background as Random Images
     
@@ -195,7 +154,7 @@ class SearchTableViewController: UITableViewController {
         
         let imageView = UIImageView(image: randomImage())
         self.tableView.backgroundView = imageView
-        imageView.alpha = 0.8
+        imageView.alpha = 0.7
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFill
         
@@ -228,17 +187,15 @@ class SearchTableViewController: UITableViewController {
             
             
             guard let newData = try? Data (contentsOf:recipeforRow.pic!) else {return UITableViewCell () }
-            guard let imageObject = UIImage(data:newData) else {return UITableViewCell () }
             
             Async.background {
-                
-                let calorieObject:String = "Calories: \(recipeforRow.calories!)"
+
+                let imageObject = UIImage(data:newData)
+                            
                 let nameObject:String = "Name: \(recipeforRow.recipeName!)"
-                
                 
                 cell.nameLabel.text = nameObject
                 cell.recipeImage.image = imageObject
-                cell.caloriesLabel.text = calorieObject
                 
             }
             
