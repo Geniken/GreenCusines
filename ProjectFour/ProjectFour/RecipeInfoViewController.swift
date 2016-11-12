@@ -53,8 +53,7 @@ class RecipeInfoViewController:UIViewController {
     
     @IBAction func recipeSourceButton(_ sender: AnyObject) {
         
-        SwiftSpinner.show(duration: 3.5, title: "Loading...")
-        
+        SwiftSpinner.show(duration: 2, title: "Loading...")
         
     }
     

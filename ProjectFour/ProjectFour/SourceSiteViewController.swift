@@ -22,7 +22,7 @@ class SourceSiteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Async.background {
+        Async.main {
 
             guard let recipeSourceUrl = self.recipeInfo?.sourceUrl else {return}
             
