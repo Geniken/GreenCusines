@@ -68,6 +68,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         case .authorizedWhenInUse: print ("Authorized When in Use")
         
         locationManager.startUpdatingLocation()
+            
         }
     }
     
