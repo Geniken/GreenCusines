@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,26 +24,21 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fancy" translatesAutoresizingMaskIntoConstraints="NO" id="CSa-jh-h8x">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GreenThumb.png" translatesAutoresizingMaskIntoConstraints="NO" id="lol-4b-SLd">
-                                <rect key="frame" x="25" y="46" width="58" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Green Thumb Cuisines" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zh6-UD-Gfv">
-                                <rect key="frame" x="86" y="28" width="275" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="26"/>
-                                <color key="textColor" red="0.28627450980000002" green="0.59999999999999998" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.99129910259999998" green="1" blue="0.65688263020000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <size key="shadowOffset" width="0.0" height="3"/>
-                            </label>
+                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmj-py-i9O">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="CSa-jh-h8x" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Tew-V2-9oq"/>
-                            <constraint firstItem="CSa-jh-h8x" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="XSk-7y-Hq6"/>
-                            <constraint firstAttribute="trailing" secondItem="CSa-jh-h8x" secondAttribute="trailing" id="Xeb-d6-Mxo"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="CSa-jh-h8x" secondAttribute="bottom" id="wPR-Jt-NGq"/>
+                            <constraint firstItem="bmj-py-i9O" firstAttribute="trailing" secondItem="CSa-jh-h8x" secondAttribute="trailing" id="EhY-6C-7Dq"/>
+                            <constraint firstItem="bmj-py-i9O" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="ONI-wO-nfd"/>
+                            <constraint firstItem="bmj-py-i9O" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Xb3-uK-fN3"/>
+                            <constraint firstItem="CSa-jh-h8x" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="acw-x0-A98"/>
+                            <constraint firstItem="bmj-py-i9O" firstAttribute="leading" secondItem="CSa-jh-h8x" secondAttribute="leading" id="gex-mT-CFO"/>
+                            <constraint firstAttribute="trailing" secondItem="bmj-py-i9O" secondAttribute="trailing" id="jrI-nD-krD"/>
+                            <constraint firstItem="bmj-py-i9O" firstAttribute="top" secondItem="CSa-jh-h8x" secondAttribute="top" id="pxw-zx-2lU"/>
+                            <constraint firstItem="CSa-jh-h8x" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="wD8-TJ-2vF"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -54,6 +49,5 @@
     </scenes>
     <resources>
         <image name="Fancy" width="1280" height="853"/>
-        <image name="GreenThumb.png" width="298" height="298"/>
     </resources>
 </document>

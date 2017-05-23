@@ -17,8 +17,8 @@ class SearchTableViewController: UITableViewController {
     var images:[UIImage] = []
     var recipeName:[String] = []
     
-    var selectedImage:String?
-    var selectedLabel:String?
+//    var selectedImage:String?
+//    var selectedLabel:String?
     
     let randomizedImages = ["health","cereal","background"]
     
@@ -44,7 +44,6 @@ class SearchTableViewController: UITableViewController {
     // Search Based on Keyword
     
     @IBAction func searchButton(_ sender: AnyObject) {
-        
         
         SwiftSpinner.show("Loading..")
         
@@ -98,6 +97,8 @@ class SearchTableViewController: UITableViewController {
                                 
                                 self.recipeChoices.append(result)
                                 self.reload()
+                                
+                                print("json is \(String(describing: jsonResult))")
                             }
                             
                             SwiftSpinner.hide()
@@ -185,7 +186,7 @@ class SearchTableViewController: UITableViewController {
 
                 let imageObject = UIImage(data:newData)
                             
-                let nameObject:String = "Name: \(recipeforRow.recipeName!)"
+                let nameObject:String = "\(recipeforRow.recipeName!)"
                 
                 cell.nameLabel.text = nameObject
                 cell.recipeImage.image = imageObject

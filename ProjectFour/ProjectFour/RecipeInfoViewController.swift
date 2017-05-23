@@ -64,7 +64,7 @@ class RecipeInfoViewController:UIViewController {
         // Make Image circular
         recipeImage.layer.borderWidth = 0
         recipeImage.layer.masksToBounds = false
-        recipeImage.layer.cornerRadius = recipeImage.frame.height/2
+        recipeImage.layer.cornerRadius = 5
         recipeImage.clipsToBounds = true
         recipeImage.image = recipe?.image
         
@@ -72,7 +72,7 @@ class RecipeInfoViewController:UIViewController {
         // Make Image border circular
         imageBorder.layer.borderWidth = 0
         imageBorder.layer.masksToBounds = false
-        imageBorder.layer.cornerRadius = imageBorder.frame.height/2
+        imageBorder.layer.cornerRadius = 5
         imageBorder.clipsToBounds = true
         
         //Adjust Name of Recipe to fit the Label regardless of size

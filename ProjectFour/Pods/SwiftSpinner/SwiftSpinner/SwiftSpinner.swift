@@ -10,7 +10,6 @@
 import UIKit
 
 public class SwiftSpinner: UIView {
-    
     // MARK: - Singleton
     
     //
@@ -30,10 +29,13 @@ public class SwiftSpinner: UIView {
     //
     
     public override init(frame: CGRect) {
+        
+        currentTitleFont = defaultTitleFont // By default we initialize to the same.
+        
         super.init(frame: frame)
         
         blurEffect = UIBlurEffect(style: blurEffectStyle)
-        blurView = UIVisualEffectView(effect: blurEffect)
+        blurView = UIVisualEffectView()
         addSubview(blurView)
         
         vibrancyView = UIVisualEffectView(effect: UIVibrancyEffect(blurEffect: blurEffect))
@@ -41,7 +43,7 @@ public class SwiftSpinner: UIView {
         
         let titleScale: CGFloat = 0.85
         titleLabel.frame.size = CGSize(width: frameSize.width * titleScale, height: frameSize.height * titleScale)
-        titleLabel.font = defaultTitleFont
+        titleLabel.font = currentTitleFont
         titleLabel.numberOfLines = 0
         titleLabel.textAlignment = .center
         titleLabel.lineBreakMode = .byWordWrapping
@@ -60,7 +62,7 @@ public class SwiftSpinner: UIView {
         outerCircle.strokeEnd = 0.45
         outerCircle.lineCap = kCALineCapRound
         outerCircle.fillColor = UIColor.clear.cgColor
-        outerCircle.strokeColor = UIColor.white.cgColor
+        outerCircle.strokeColor = outerCircleDefaultColor
         outerCircleView.layer.addSublayer(outerCircle)
         
         outerCircle.strokeStart = 0.0
@@ -77,7 +79,7 @@ public class SwiftSpinner: UIView {
         innerCircle.strokeEnd = 0.9
         innerCircle.lineCap = kCALineCapRound
         innerCircle.fillColor = UIColor.clear.cgColor
-        innerCircle.strokeColor = UIColor.gray.cgColor
+        innerCircle.strokeColor = innerCircleDefaultColor
         innerCircleView.layer.addSublayer(innerCircle)
         
         innerCircle.strokeStart = 0.0
@@ -96,6 +98,26 @@ public class SwiftSpinner: UIView {
     
     public lazy var titleLabel = UILabel()
     public var subtitleLabel: UILabel?
+
+    private let outerCircleDefaultColor = UIColor.white.cgColor
+    fileprivate var _outerColor: UIColor?
+    public var outerColor: UIColor? {
+        get { return _outerColor }
+        set(newColor) {
+            _outerColor = newColor
+            outerCircle.strokeColor = newColor?.cgColor ?? outerCircleDefaultColor
+        }
+    }
+
+    private let innerCircleDefaultColor = UIColor.gray.cgColor
+    fileprivate var _innerColor: UIColor?
+    public var innerColor: UIColor? {
+        get { return _innerColor }
+        set(newColor) {
+            _innerColor = newColor
+            innerCircle.strokeColor = newColor?.cgColor ?? innerCircleDefaultColor
+        }
+    }
     
     //
     // Custom superview for the spinner
@@ -122,7 +144,7 @@ public class SwiftSpinner: UIView {
         
         if spinner.superview == nil {
             //show the spinner
-            spinner.alpha = 0.0
+            spinner.blurView.contentView.alpha = 0
             
             guard let containerView = containerView() else {
                 fatalError("\n`UIApplication.keyWindow` is `nil`. If you're trying to show a spinner from your view controller's `viewDidLoad` method, do that from `viewWillAppear` instead. Alternatively use `useContainerView` to set a view where the spinner should show")
@@ -131,7 +153,10 @@ public class SwiftSpinner: UIView {
             containerView.addSubview(spinner)
             
             UIView.animate(withDuration: 0.33, delay: 0.0, options: .curveEaseOut, animations: {
-                spinner.alpha = 1.0
+                
+                spinner.blurView.contentView.alpha = 1
+                spinner.blurView.effect = spinner.blurEffect
+                
                 }, completion: nil)
             
             #if os(iOS)
@@ -167,7 +192,6 @@ public class SwiftSpinner: UIView {
     // Show the spinner activity on screen, after delay. If new call to show,
     // showWithDelay or hide is maked before execution this call is discarded
     //
-    @discardableResult
     public class func show(delay: Double, title: String, animated: Bool = true) {
         let token = UUID().uuidString
         delayedTokens.append(token)
@@ -210,11 +234,13 @@ public class SwiftSpinner: UIView {
             }
             
             UIView.animate(withDuration: 0.33, delay: 0.0, options: .curveEaseOut, animations: {
-                spinner.alpha = 0.0
+                
+                spinner.blurView.contentView.alpha = 0
+                spinner.blurView.effect = nil
+                
                 }, completion: {_ in
-                    spinner.alpha = 1.0
+                    spinner.blurView.contentView.alpha = 1
                     spinner.removeFromSuperview()
-                    spinner.titleLabel.font = spinner.defaultTitleFont
                     spinner.titleLabel.text = nil
                     
                     completion?()
@@ -231,8 +257,10 @@ public class SwiftSpinner: UIView {
         let spinner = SwiftSpinner.sharedInstance
         
         if let font = font {
+            spinner.currentTitleFont = font
             spinner.titleLabel.font = font
         } else {
+            spinner.currentTitleFont = spinner.defaultTitleFont
             spinner.titleLabel.font = spinner.defaultTitleFont
         }
     }
@@ -326,7 +354,7 @@ public class SwiftSpinner: UIView {
             subtitleLabel = UILabel()
             if let subtitle = subtitleLabel {
                 subtitle.text = subtitleText
-                subtitle.font = UIFont(name: defaultTitleFont.familyName, size: defaultTitleFont.pointSize * 0.8)
+                subtitle.font = UIFont(name: self.currentTitleFont.familyName, size: currentTitleFont.pointSize * 0.8)
                 subtitle.textColor = UIColor.white
                 subtitle.numberOfLines = 0
                 subtitle.textAlignment = .center
@@ -364,7 +392,9 @@ public class SwiftSpinner: UIView {
     private var blurView: UIVisualEffectView!
     private var vibrancyView: UIVisualEffectView!
     
-    var defaultTitleFont = UIFont(name: "HelveticaNeue", size: 22.0)!
+    private let defaultTitleFont = UIFont(name: "HelveticaNeue", size: 22.0)!
+    private var currentTitleFont : UIFont
+    
     let frameSize = CGSize(width: 200.0, height: 200.0)
     
     private lazy var outerCircleView = UIView()
@@ -387,7 +417,7 @@ public class SwiftSpinner: UIView {
         }
         
         let duration = Double(Float(arc4random()) /  Float(UInt32.max)) * 2.0 + 1.5
-        let randomRotation = Double(Float(arc4random()) /  Float(UInt32.max)) * M_PI_4 + M_PI_4
+        let randomRotation = Double(Float(arc4random()) /  Float(UInt32.max)) * (Double.pi / 4) + (Double.pi / 4)
         
         //outer circle
         UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.0, options: [], animations: {
@@ -410,7 +440,7 @@ public class SwiftSpinner: UIView {
         
         //inner circle
         UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.0, options: [], animations: {
-            self.currentInnerRotation += CGFloat(M_PI_4)
+            self.currentInnerRotation += CGFloat(Double.pi / 4)
             self.innerCircleView.transform = CGAffineTransform(rotationAngle: self.currentInnerRotation)
             }, completion: {_ in
                 self.delay(0.5, completion: {

@@ -1,18 +1,15 @@
 PODS:
-  - AsyncSwift (2.0.0)
-  - SideMenu (2.0.5)
-  - SwiftSpinner (1.0.2)
+  - AsyncSwift (2.0.1)
+  - SwiftSpinner (1.2.1)
 
 DEPENDENCIES:
   - AsyncSwift
-  - SideMenu
   - SwiftSpinner
 
 SPEC CHECKSUMS:
-  AsyncSwift: 6ba6ed9ecb51344458063f7c86fe447ab824e313
-  SideMenu: 0ecfd407b24e7d36c57fc50ca7f5d7cedb7c8841
-  SwiftSpinner: 1c80ff6ea1c47e2faa1dfce0fcd5e6b39a47fd51
+  AsyncSwift: 632138e42ead868b53c745fcde9bf733ce1527ad
+  SwiftSpinner: 62a28bbb4035f252a1e91b0e17fc40bdbbfa0aab
 
-PODFILE CHECKSUM: b1ae51d58453a2637d4c992769ea5f5c1604b0f8
+PODFILE CHECKSUM: ecd43130157f533a26f6d34a4a4223353dfb7645
 
-COCOAPODS: 1.1.0.rc.2
+COCOAPODS: 1.1.1

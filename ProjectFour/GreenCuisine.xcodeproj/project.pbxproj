@@ -7,17 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8B0EE6131DC7DE3400958B03 /* YoutubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0EE6121DC7DE3400958B03 /* YoutubeViewController.swift */; };
 		8B13BFF91DCA768300AA36A1 /* SourceSiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B13BFF81DCA768300AA36A1 /* SourceSiteViewController.swift */; };
 		8B1AEE571DBF4339008CFBF6 /* RecipeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1AEE561DBF4339008CFBF6 /* RecipeInfoViewController.swift */; };
 		8B1AEE5B1DBF50D2008CFBF6 /* RecipeChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1AEE5A1DBF50D2008CFBF6 /* RecipeChoices.swift */; };
-		8B591BF31DC91F4B00095903 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B591BF21DC91F4B00095903 /* CameraViewController.swift */; };
 		8B591BF51DC91F5F00095903 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B591BF41DC91F5F00095903 /* ViewController.swift */; };
 		8B591BFC1DC93CDF00095903 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B591BFA1DC93CDF00095903 /* FBSDKCoreKit.framework */; };
 		8B591BFD1DC93CDF00095903 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B591BFB1DC93CDF00095903 /* FBSDKLoginKit.framework */; };
 		8B591C021DC9462500095903 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B591C011DC9462500095903 /* Bolts.framework */; };
-		8B6119441DC8037B00A04CDE /* GreenThumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B6119431DC8037B00A04CDE /* GreenThumb.png */; };
-		8BB6A7361DC2B7FA00817591 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB6A7351DC2B7FA00817591 /* MapViewController.swift */; };
 		8BB6A7381DC2BBE600817591 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB6A7371DC2BBE600817591 /* CoreLocation.framework */; };
 		8BE7187A1DB98A340096577E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE718791DB98A340096577E /* AppDelegate.swift */; };
 		8BE7187F1DB98A340096577E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BE7187D1DB98A340096577E /* Main.storyboard */; };
@@ -42,26 +38,22 @@
 
 /* Begin PBXFileReference section */
 		27D88346E7E1F5E52BEF8999 /* Pods-ProjectFourTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectFourTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectFourTests/Pods-ProjectFourTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8B0EE6121DC7DE3400958B03 /* YoutubeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeViewController.swift; sourceTree = "<group>"; };
 		8B13BFF81DCA768300AA36A1 /* SourceSiteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceSiteViewController.swift; sourceTree = "<group>"; };
 		8B1AEE561DBF4339008CFBF6 /* RecipeInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeInfoViewController.swift; sourceTree = "<group>"; };
 		8B1AEE5A1DBF50D2008CFBF6 /* RecipeChoices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeChoices.swift; sourceTree = "<group>"; };
-		8B591BF21DC91F4B00095903 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		8B591BF41DC91F5F00095903 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8B591BFA1DC93CDF00095903 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		8B591BFB1DC93CDF00095903 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		8B591C001DC9453300095903 /* ProjectFour.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProjectFour.entitlements; sourceTree = "<group>"; };
 		8B591C011DC9462500095903 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		8B6119431DC8037B00A04CDE /* GreenThumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenThumb.png; sourceTree = "<group>"; };
-		8BB6A7351DC2B7FA00817591 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8BB6A7371DC2BBE600817591 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		8BE718761DB98A340096577E /* ProjectFour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectFour.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BE718761DB98A340096577E /* GreenCuisine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenCuisine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE718791DB98A340096577E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BE7187E1DB98A340096577E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8BE718801DB98A340096577E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BE718831DB98A340096577E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BE718851DB98A340096577E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ProjectFour/Info.plist; sourceTree = "<group>"; };
-		8BE7188A1DB98A340096577E /* ProjectFourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectFourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BE7188A1DB98A340096577E /* GreenCuisineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreenCuisineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE7188E1DB98A340096577E /* ProjectFourTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFourTests.swift; sourceTree = "<group>"; };
 		8BE718901DB98A340096577E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BEE116D1DC6AC6900865509 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
@@ -125,9 +117,6 @@
 				8BEE116D1DC6AC6900865509 /* SearchTableViewController.swift */,
 				8B1AEE561DBF4339008CFBF6 /* RecipeInfoViewController.swift */,
 				8B13BFF81DCA768300AA36A1 /* SourceSiteViewController.swift */,
-				8BB6A7351DC2B7FA00817591 /* MapViewController.swift */,
-				8B591BF21DC91F4B00095903 /* CameraViewController.swift */,
-				8B0EE6121DC7DE3400958B03 /* YoutubeViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -156,8 +145,8 @@
 		8BE718771DB98A340096577E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8BE718761DB98A340096577E /* ProjectFour.app */,
-				8BE7188A1DB98A340096577E /* ProjectFourTests.xctest */,
+				8BE718761DB98A340096577E /* GreenCuisine.app */,
+				8BE7188A1DB98A340096577E /* GreenCuisineTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -171,7 +160,6 @@
 				8B1AEE5C1DBF50DB008CFBF6 /* Views */,
 				8B1AEE621DBFC28A008CFBF6 /* Model */,
 				8B1AEE5D1DBF50E4008CFBF6 /* ViewControllers */,
-				8BEE11711DC6D94E00865509 /* Misc */,
 				8BE718801DB98A340096577E /* Assets.xcassets */,
 			);
 			path = ProjectFour;
@@ -184,14 +172,6 @@
 				8BE718901DB98A340096577E /* Info.plist */,
 			);
 			path = ProjectFourTests;
-			sourceTree = "<group>";
-		};
-		8BEE11711DC6D94E00865509 /* Misc */ = {
-			isa = PBXGroup;
-			children = (
-				8B6119431DC8037B00A04CDE /* GreenThumb.png */,
-			);
-			name = Misc;
 			sourceTree = "<group>";
 		};
 		96D6C1A6B250E773E672A4EC /* Pods */ = {
@@ -208,9 +188,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8BE718751DB98A340096577E /* ProjectFour */ = {
+		8BE718751DB98A340096577E /* GreenCuisine */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8BE718931DB98A340096577E /* Build configuration list for PBXNativeTarget "ProjectFour" */;
+			buildConfigurationList = 8BE718931DB98A340096577E /* Build configuration list for PBXNativeTarget "GreenCuisine" */;
 			buildPhases = (
 				9B1122A8EAB9BE3AD399DC21 /* [CP] Check Pods Manifest.lock */,
 				8BE718721DB98A340096577E /* Sources */,
@@ -223,14 +203,14 @@
 			);
 			dependencies = (
 			);
-			name = ProjectFour;
+			name = GreenCuisine;
 			productName = ProjectFour;
-			productReference = 8BE718761DB98A340096577E /* ProjectFour.app */;
+			productReference = 8BE718761DB98A340096577E /* GreenCuisine.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8BE718891DB98A340096577E /* ProjectFourTests */ = {
+		8BE718891DB98A340096577E /* GreenCuisineTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8BE718961DB98A340096577E /* Build configuration list for PBXNativeTarget "ProjectFourTests" */;
+			buildConfigurationList = 8BE718961DB98A340096577E /* Build configuration list for PBXNativeTarget "GreenCuisineTests" */;
 			buildPhases = (
 				4D43F6E12295D271D90C1574 /* [CP] Check Pods Manifest.lock */,
 				8BE718861DB98A340096577E /* Sources */,
@@ -244,9 +224,9 @@
 			dependencies = (
 				8BE7188C1DB98A340096577E /* PBXTargetDependency */,
 			);
-			name = ProjectFourTests;
+			name = GreenCuisineTests;
 			productName = ProjectFourTests;
-			productReference = 8BE7188A1DB98A340096577E /* ProjectFourTests.xctest */;
+			productReference = 8BE7188A1DB98A340096577E /* GreenCuisineTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -277,7 +257,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8BE718711DB98A340096577E /* Build configuration list for PBXProject "ProjectFour" */;
+			buildConfigurationList = 8BE718711DB98A340096577E /* Build configuration list for PBXProject "GreenCuisine" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -290,8 +270,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8BE718751DB98A340096577E /* ProjectFour */,
-				8BE718891DB98A340096577E /* ProjectFourTests */,
+				8BE718751DB98A340096577E /* GreenCuisine */,
+				8BE718891DB98A340096577E /* GreenCuisineTests */,
 			);
 		};
 /* End PBXProject section */
@@ -304,7 +284,6 @@
 				8BE718841DB98A340096577E /* LaunchScreen.storyboard in Resources */,
 				8BE718811DB98A340096577E /* Assets.xcassets in Resources */,
 				8BE7187F1DB98A340096577E /* Main.storyboard in Resources */,
-				8B6119441DC8037B00A04CDE /* GreenThumb.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,15 +394,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BB6A7361DC2B7FA00817591 /* MapViewController.swift in Sources */,
 				8B591BF51DC91F5F00095903 /* ViewController.swift in Sources */,
-				8B0EE6131DC7DE3400958B03 /* YoutubeViewController.swift in Sources */,
 				8B1AEE5B1DBF50D2008CFBF6 /* RecipeChoices.swift in Sources */,
 				8BEE11701DC6BE8100865509 /* RecipeChoicesTableViewCell.swift in Sources */,
 				8B13BFF91DCA768300AA36A1 /* SourceSiteViewController.swift in Sources */,
 				8BE7187A1DB98A340096577E /* AppDelegate.swift in Sources */,
 				8BEE116E1DC6AC6900865509 /* SearchTableViewController.swift in Sources */,
-				8B591BF31DC91F4B00095903 /* CameraViewController.swift in Sources */,
 				8B1AEE571DBF4339008CFBF6 /* RecipeInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,7 +417,7 @@
 /* Begin PBXTargetDependency section */
 		8BE7188C1DB98A340096577E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8BE718751DB98A340096577E /* ProjectFour */;
+			target = 8BE718751DB98A340096577E /* GreenCuisine */;
 			targetProxy = 8BE7188B1DB98A340096577E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -575,7 +551,7 @@
 				);
 				INFOPLIST_FILE = ProjectFour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.ProjectFour;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.GreenCuisine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -595,7 +571,7 @@
 				);
 				INFOPLIST_FILE = ProjectFour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.ProjectFour;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.GreenCuisine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -613,7 +589,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.ProjectFourTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProjectFour.app/ProjectFour";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GreenCuisine.app/GreenCuisine";
 			};
 			name = Debug;
 		};
@@ -629,14 +605,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.ProjectFourTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProjectFour.app/ProjectFour";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GreenCuisine.app/GreenCuisine";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8BE718711DB98A340096577E /* Build configuration list for PBXProject "ProjectFour" */ = {
+		8BE718711DB98A340096577E /* Build configuration list for PBXProject "GreenCuisine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8BE718911DB98A340096577E /* Debug */,
@@ -645,7 +621,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8BE718931DB98A340096577E /* Build configuration list for PBXNativeTarget "ProjectFour" */ = {
+		8BE718931DB98A340096577E /* Build configuration list for PBXNativeTarget "GreenCuisine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8BE718941DB98A340096577E /* Debug */,
@@ -654,7 +630,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8BE718961DB98A340096577E /* Build configuration list for PBXNativeTarget "ProjectFourTests" */ = {
+		8BE718961DB98A340096577E /* Build configuration list for PBXNativeTarget "GreenCuisineTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8BE718971DB98A340096577E /* Debug */,

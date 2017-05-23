@@ -13,18 +13,16 @@ class RecipeChoicesTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var recipeImage: UIImageView!
-        
-    @IBOutlet weak var borderViewOutlet: UIView!
     
     @IBOutlet weak var recipeImageOutlet: UIImageView!
     
+    @IBOutlet weak var labelBorder: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         recipeImage.layer.cornerRadius = 5
-        borderViewOutlet.layer.cornerRadius = 5
-        
+        labelBorder.layer.cornerRadius = 5
     }
     
         
