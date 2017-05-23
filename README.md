@@ -14,7 +14,9 @@ I started out by designing the UI and UX flow for my application:
 
 # High Fidelity 
 
-![screen shot 2017-05-22 at 8 12 23 pm](https://cloud.githubusercontent.com/assets/20975504/26337141/92b9d58a-3f2b-11e7-8a18-29b6a1a85b53.png)![screen shot 2017-05-22 at 8 12 59 pm](https://cloud.githubusercontent.com/assets/20975504/26337146/997ad464-3f2b-11e7-98b6-3011ded5377a.png)
+![screen shot 2017-05-22 at 8 12 23 pm](https://cloud.githubusercontent.com/assets/20975504/26337141/92b9d58a-3f2b-11e7-8a18-29b6a1a85b53.png) 
+
+![screen shot 2017-05-22 at 8 12 59 pm](https://cloud.githubusercontent.com/assets/20975504/26337146/997ad464-3f2b-11e7-98b6-3011ded5377a.png)
 
 # Code Example
 
