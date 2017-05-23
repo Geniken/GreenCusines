@@ -8,8 +8,6 @@ Finding a healthy way to eat while keeping your palate satisfied is hard as heal
 
 # Low Fidelity Sketches
 
-I started out by designing the UI and UX flow for my application:
-
 ![img_0964](https://cloud.githubusercontent.com/assets/20975504/20114831/c120988e-a5aa-11e6-972f-1f9a7a604ed6.JPG)
 
 # High Fidelity 
@@ -41,13 +39,9 @@ I started out by designing the UI and UX flow for my application:
 
 # Features
 
-## Search/Filter
 Allows user to search based on any food group or ingredient and have a comprehensive list of recipes populate and allows user to filter their search based on their dietary restrictions ensuring a more fluid and dynamic approach to the search. Coming soon in beta 2.1
 
-## Instructions
 Allows user to navigate to a page where they can see the full list of ingredients and also navigate to the source site for the recipe instructions. 
 
-## Aesthetics
-Added a loading animation for the searchbar, created a random background generator for the initial tableview controller.
 
 
