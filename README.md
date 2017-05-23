@@ -18,23 +18,43 @@ Finding a healthy way to eat while keeping your palate satisfied is hard as heal
 
 # Code Example
 
-    private func randomImage() -> UIImage {
-        let randomBackground = Int(arc4random_uniform(UInt32(randomizedImages.count)))
+ @IBAction func searchButton(_ sender: AnyObject) {
         
-        let randomImageBackground = UIImage(named:randomizedImages[randomBackground])
+        SwiftSpinner.show("Loading..")
         
-        return randomImageBackground!
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
-        let imageView = UIImageView(image: randomImage())
-        self.tableView.backgroundView = imageView
-        imageView.alpha = 0.8
-        imageView.clipsToBounds = true
-        imageView.contentMode = .scaleAspectFill
-        
-    }
+        Async.background {
+            
+            if let url = URL(string:"https://api.edamam.com/search?q="+self.searchBar.text!.replacingOccurrences(of: " ", with: "+")+"&app_id=e2513178&app_key=c5fe2bae8f394c5bc0e4ba35ad51aa12") {
+                
+                let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+                    
+                    if error != nil {
+                        
+                        print ("error")
+                        
+                    } else if (self.searchBar.text?.isEmpty)!{
+                        
+                        self.recipeChoices.removeAll()
+                        SwiftSpinner.hide()
+                        self.tableView.reloadData()
+                    
+                    } else {
+                        
+                        guard let data = try? Data(contentsOf: url) else {return}
+                        
+                        do {
+                            let jsonRaw = try JSONSerialization.jsonObject(with: data, options: [])
+                            guard jsonRaw is NSDictionary else {
+                                print("DICTIONARY CAST FAILED")
+                                return
+                            }
+                        } catch {
+                            print("JSON SERIALIZATION FAILED")
+                            return
+                        }
+                        
+                        let jsonResult = try? JSONSerialization.jsonObject(with: data, options: []) as! NSDictionary
+
 
 
 # Features
